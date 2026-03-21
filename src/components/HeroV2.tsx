@@ -1,7 +1,6 @@
 import { motion } from 'motion/react';
 import { Bot, ArrowRight, Zap, MessageSquareCode } from 'lucide-react';
 import { ScrollIndicator } from './ScrollIndicator';
-import { waURL, CONFIG } from '../config';
 import { stagger } from '../shared/animations';
 
 export function HeroV2({ onOpenSimulator }: { onOpenSimulator?: () => void }) {
@@ -73,9 +72,7 @@ export function HeroV2({ onOpenSimulator }: { onOpenSimulator?: () => void }) {
             <div className="relative group">
               <div className="absolute -inset-0.5 bg-gradient-to-r from-[#0090FF] to-[#00D1FF] rounded-xl blur opacity-30 group-hover:opacity-60 transition duration-500"></div>
               <a
-                href={waURL(CONFIG.wa.msgHero)}
-                target="_blank"
-                rel="noopener noreferrer"
+                href="#/funil"
                 className="relative flex items-center justify-center gap-2 bg-gradient-to-r from-[#0090FF] to-[#00D1FF] text-white px-5 sm:px-7 py-4 rounded-xl font-black text-[10px] sm:text-sm uppercase tracking-wide sm:tracking-widest leading-snug text-center transition-all hover:scale-[1.02] overflow-hidden shadow-[0_4px_14px_rgba(0,144,255,0.3)]"
               >
                 <div className="absolute inset-0 -translate-x-full group-hover:animate-[shimmer_1.5s_infinite] bg-gradient-to-r from-transparent via-white/20 to-transparent" />

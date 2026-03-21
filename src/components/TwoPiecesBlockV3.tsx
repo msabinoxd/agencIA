@@ -1,6 +1,5 @@
 import { motion } from 'motion/react';
 import { ArrowRight, Zap } from 'lucide-react';
-import { waURL, CONFIG } from '../config';
 
 export function TwoPiecesBlockV3() {
   return (
@@ -132,9 +131,7 @@ export function TwoPiecesBlockV3() {
           className="flex justify-center"
         >
           <a
-            href={waURL(CONFIG.wa.msgHero)}
-            target="_blank"
-            rel="noopener noreferrer"
+            href="#/funil"
             className="inline-flex items-center gap-3 bg-white hover:bg-[#F0F9FF] text-[#0090FF] border-2 border-[#0090FF] px-8 py-4 rounded-xl font-bold text-sm uppercase tracking-widest transition-all hover:scale-[1.02] shadow-[0_4px_14px_rgba(0,144,255,0.15)]"
           >
             Quero ver como funciona o ecossistema completo

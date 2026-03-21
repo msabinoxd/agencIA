@@ -1,7 +1,6 @@
 import { motion, AnimatePresence } from 'motion/react';
 import { Menu, X } from 'lucide-react';
 import { useState } from 'react';
-import { waURL, CONFIG } from '../config';
 import { Logo } from './Logo';
 
 const navLinks = [
@@ -36,9 +35,7 @@ export function Header() {
         {/* CTA Desktop */}
         <div className="hidden md:block">
           <a
-            href={waURL(CONFIG.wa.msgHero)}
-            target="_blank"
-            rel="noopener noreferrer"
+            href="#/funil"
             className="inline-block bg-gradient-to-r from-[#0090FF] to-[#00D1FF] hover:opacity-90 text-white px-6 py-2.5 rounded-xl font-black uppercase tracking-widest text-[11px] transition-all hover:scale-105 shadow-[0_4px_14px_rgba(0,144,255,0.3)]"
           >
             Falar com Especialista
@@ -77,9 +74,7 @@ export function Header() {
                 </a>
               ))}
               <a
-                href={waURL(CONFIG.wa.msgHero)}
-                target="_blank"
-                rel="noopener noreferrer"
+                href="#/funil"
                 onClick={() => setIsOpen(false)}
                 className="mt-2 text-center bg-gradient-to-r from-[#0090FF] to-[#00D1FF] text-white px-6 py-4 rounded-xl font-black uppercase tracking-widest text-xs shadow-lg"
               >
