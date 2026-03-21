@@ -2,6 +2,22 @@ import { motion } from 'motion/react';
 import { Network, Database, Zap, Users, ArrowRight, CheckCircle2 } from 'lucide-react';
 import { waURL } from '../config';
 
+import logoOdontoCompany from '../assets/logos/odontocompany.svg';
+import logoSorridents from '../assets/logos/sorridents.png';
+import logoOdoSpecial from '../assets/logos/odospecial.svg';
+import logoBFacial from '../assets/logos/bfacial.svg';
+import logoCotia from '../assets/logos/cotia.svg';
+import logoRDStation from '../assets/logos/rdstation.svg';
+
+const clientLogos = [
+  { src: logoOdontoCompany, alt: 'OdontoCompany' },
+  { src: logoSorridents,    alt: 'Sorridents' },
+  { src: logoOdoSpecial,    alt: 'Odonto Special' },
+  { src: logoBFacial,       alt: 'B Facial Clinic' },
+  { src: logoCotia,         alt: 'Cotia Clínica' },
+  { src: logoRDStation,     alt: 'RD Station' },
+];
+
 const automations = [
     {
         title: 'Tráfego & Funil',
@@ -113,15 +129,20 @@ export function AutomationStackV3() {
                     })}
                 </div>
 
-                {/* Integration Showcase */}
+                {/* Client Logos */}
                 <motion.div
                     initial={{ opacity: 0 }}
                     whileInView={{ opacity: 1 }}
                     viewport={{ once: true }}
-                    className="mt-20 flex flex-wrap justify-center items-center gap-12 opacity-40 grayscale hover:grayscale-0 hover:opacity-100 transition-all duration-700"
+                    className="mt-20 flex flex-wrap justify-center items-center gap-10"
                 >
-                    {['OdontoCompany', 'Sorridents', 'Odonto Special', 'B Facial Clinic', 'Cotia Clínica', 'RD Station'].map(brand => (
-                        <span key={brand} className="inline-flex items-center px-5 py-2.5 rounded-xl border border-[#E9ECEF] bg-white text-sm font-bold text-[#4A4A4A] tracking-tight shadow-[var(--sh)]">{brand}</span>
+                    {clientLogos.map(logo => (
+                        <img
+                            key={logo.alt}
+                            src={logo.src}
+                            alt={logo.alt}
+                            className="h-8 w-auto object-contain grayscale opacity-50 hover:opacity-80 hover:grayscale-0 transition-all duration-300"
+                        />
                     ))}
                 </motion.div>
             </div>
