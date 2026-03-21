@@ -11,7 +11,7 @@ export function HeroV2({ onOpenSimulator }: { onOpenSimulator?: () => void }) {
       <div className="absolute top-1/4 left-1/4 w-72 h-72 bg-[#0090FF]/10 rounded-full blur-[100px] pointer-events-none" />
       <div className="absolute bottom-1/4 right-1/4 w-72 h-72 bg-[#00D1FF]/8 rounded-full blur-[100px] pointer-events-none" />
 
-      <div className="max-w-7xl mx-auto px-6 relative z-10 grid lg:grid-cols-2 gap-10 lg:gap-16 items-center">
+      <div className="max-w-7xl mx-auto px-6 relative z-10 grid lg:grid-cols-2 gap-10 lg:gap-16 items-start">
 
         {/* Left: Copy */}
         <motion.div

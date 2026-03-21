@@ -209,7 +209,7 @@ export default function InteractiveChatWidget() {
                 </div>
 
                 {/* Área de mensagens — altura fixa com scroll */}
-                <div ref={messagesContainerRef} className="flex flex-col gap-2 h-[180px] lg:h-[280px] overflow-y-auto pr-1 scroll-smooth">
+                <div ref={messagesContainerRef} className="flex flex-col gap-2 h-[180px] lg:h-[380px] overflow-y-auto pr-1 scroll-smooth">
                     <AnimatePresence initial={false}>
                         {messages.map((msg, i) => (
                             <motion.div
