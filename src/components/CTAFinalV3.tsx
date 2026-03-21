@@ -130,22 +130,29 @@ export function CTAFinalV3() {
           initial={{ opacity: 0, y: 10 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          className="text-center text-lg font-bold text-[#1A1A1A] mb-6"
+          className="text-center text-2xl md:text-3xl font-bold mb-4 leading-snug"
         >
-          Preencha a aplicação. Nossa equipe analisa e entra em contato em até 24 horas.
+          <span className="text-[#1A1A1A]">Esta pode ser a decisão mais rentável</span>
+          <br />
+          <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#0090FF] to-[#00D1FF]">que sua clínica toma este ano.</span>
         </motion.p>
 
-        {/* Microcopy acima do botão */}
-        <motion.p
+        {/* Subtítulo */}
+        <motion.div
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
           viewport={{ once: true }}
-          className="text-center text-sm text-[#888888] mb-6 max-w-lg mx-auto"
+          className="text-center mb-6 max-w-lg mx-auto space-y-2"
         >
-          Apenas clínicas com perfil adequado são convidadas para uma sessão estratégica. Vagas limitadas por capacidade de entrega da equipe.
-        </motion.p>
+          <p className="text-sm text-[#4A4A4A] leading-relaxed">
+            Em 20 minutos de conversa, nossa equipe mapeia os gargalos comerciais da sua clínica e mostra — com números reais — quanto você está deixando na mesa todo mês.
+          </p>
+          <p className="text-sm text-[#888888] italic leading-relaxed">
+            Sem pitch de vendas. Sem pressão. Se não fizer sentido para os dois lados, encerramos a conversa sem compromisso.
+          </p>
+        </motion.div>
 
-        {/* Scarcity */}
+        {/* Badge */}
         <motion.div
           initial={{ opacity: 0, y: 10 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -153,12 +160,8 @@ export function CTAFinalV3() {
           transition={{ delay: 0.1 }}
           className="flex items-center justify-center gap-3 mb-8"
         >
-          <div className="flex items-center gap-2 px-5 py-2.5 rounded-full bg-red-50 border border-red-200 text-red-600 text-sm font-bold">
-            <span className="relative flex h-2 w-2">
-              <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-red-500 opacity-75"></span>
-              <span className="relative inline-flex rounded-full h-2 w-2 bg-red-500"></span>
-            </span>
-            Vagas abertas para análise — número limitado por capacidade de entrega
+          <div className="flex items-center gap-2 px-5 py-2.5 rounded-full bg-[rgba(0,144,255,0.08)] border border-[#0090FF]/20 text-[#0090FF] text-sm font-bold">
+            ⚡ Resposta em até 1 hora em horário comercial
           </div>
         </motion.div>
 
@@ -180,7 +183,7 @@ export function CTAFinalV3() {
               style={{ animation: 'ctaPulse 2.5s ease-in-out infinite' }}
             >
               <div className="absolute inset-0 -translate-x-full group-hover:animate-[shimmer_1.5s_infinite] bg-gradient-to-r from-transparent via-white/30 to-transparent" />
-              Solicitar sessão estratégica
+              Quero minha sessão estratégica gratuita
               <ArrowRight className="w-6 h-6 group-hover:translate-x-1 transition-transform" />
             </motion.a>
           </div>
@@ -191,9 +194,9 @@ export function CTAFinalV3() {
                 <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-[#0090FF] opacity-75"></span>
                 <span className="relative inline-flex rounded-full h-2 w-2 bg-[#0090FF]"></span>
               </span>
-              Preencha a aplicação · Leva menos de 2 minutos
+              Leva menos de 2 minutos · Resposta em até 1h · Sem compromisso
             </div>
-            <p className="text-xs text-[#888888]">Análise em até 24h · Sem compromisso · Vagas limitadas</p>
+            <p className="text-xs text-[#888888]">🔒 Seus dados são confidenciais · Sem spam · Cancele quando quiser</p>
           </div>
         </motion.div>
 

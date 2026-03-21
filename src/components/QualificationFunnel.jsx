@@ -1,5 +1,6 @@
 import { useState } from 'react'
 import { motion, AnimatePresence } from 'motion/react'
+import { useNavigate } from 'react-router-dom'
 
 // ─── PERGUNTAS ────────────────────────────────────────────────────────────────
 const STEPS = [
@@ -263,11 +264,11 @@ const DISQUALIFY_MSG = {
 
 // ─── COMPONENTE ───────────────────────────────────────────────────────────────
 export default function QualificationFunnel() {
+  const navigate = useNavigate()
   const [step, setStep]           = useState(0)
   const [answers, setAnswers]     = useState({})
   const [selected, setSelected]   = useState(null)
   const [disqualified, setDisq]   = useState(null)
-  const [submitted, setSubmitted] = useState(false)
   const [direction, setDirection] = useState(1)
   const [contact, setContact]     = useState({ nome: '', clinica: '', whatsapp: '' })
   const [submitting, setSubmitting] = useState(false)
@@ -326,7 +327,7 @@ export default function QualificationFunnel() {
     console.log('Lead qualificado:', payload)
     await new Promise(r => setTimeout(r, 1200))
     setSubmitting(false)
-    setSubmitted(true)
+    navigate('/obrigado')
   }
 
   // ── Score automático para o vendedor ────────────────────────────────────────
@@ -367,28 +368,6 @@ export default function QualificationFunnel() {
     )
   }
 
-  // ── TELA SUCESSO ────────────────────────────────────────────────────────────
-  if (submitted) {
-    return (
-      <section className="py-8 px-4 w-full">
-        <div className="max-w-xl mx-auto text-center">
-          <div className="w-20 h-20 rounded-full bg-[rgba(0,144,255,0.08)] flex items-center justify-center mx-auto mb-6 text-4xl">
-            ✅
-          </div>
-          <h2 className="text-3xl font-bold text-[#1A1A1A] mb-3">Aplicação recebida.</h2>
-          <p className="text-[#6B7280] text-lg leading-relaxed mb-2">
-            Nossa equipe vai analisar o perfil da sua clínica e entrar em
-            contato em até{' '}
-            <strong className="text-[#1A1A1A]">24 horas úteis</strong>.
-          </p>
-          <p className="text-[#9CA3AF] text-sm">
-            Fique atento ao WhatsApp:{' '}
-            <strong className="text-[#6B7280]">{contact.whatsapp}</strong>
-          </p>
-        </div>
-      </section>
-    )
-  }
 
   // ── FUNIL PRINCIPAL ─────────────────────────────────────────────────────────
   return (
