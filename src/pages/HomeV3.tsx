@@ -17,7 +17,7 @@ const AutomationStackV3 = lazy(() => import('../components/AutomationStackV3').t
 const ConnectionBridge = lazy(() => import('../components/ConnectionBridge').then(m => ({ default: m.ConnectionBridge })));
 const SocialProofV3 = lazy(() => import('../components/SocialProofV3').then(m => ({ default: m.SocialProofV3 })));
 const FAQ = lazy(() => import('../components/FAQ').then(m => ({ default: m.FAQ })));
-const QualificationFunnel = lazy(() => import('../components/QualificationFunnel'));
+const CTAFinalV3 = lazy(() => import('../components/CTAFinalV3').then(m => ({ default: m.CTAFinalV3 })));
 
 const AgentSimulator = lazy(() => import('../components/AgentSimulator').then(m => ({ default: m.AgentSimulator })));
 
@@ -71,8 +71,8 @@ export function HomeV3() {
           {/* 12. OBJEÇÕES — Remoção de risco */}
           <FAQ />
 
-          {/* 13. AÇÃO — Funil de qualificação estratégico */}
-          <QualificationFunnel />
+          {/* 13. AÇÃO — Merecimento + filtro + aplicação */}
+          <CTAFinalV3 />
         </Suspense>
       </main>
 

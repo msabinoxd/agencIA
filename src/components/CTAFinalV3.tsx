@@ -173,9 +173,7 @@ export function CTAFinalV3() {
           <div className="relative group">
             <div className="absolute -inset-1 bg-gradient-to-r from-[#0090FF] to-[#00D1FF] rounded-full blur opacity-30 group-hover:opacity-60 transition duration-500"></div>
             <motion.a
-              href={waURL(CONFIG.wa.msgFinal)}
-              target="_blank"
-              rel="noopener noreferrer"
+              href="#/funil"
               whileHover={{ scale: 1.02 }}
               whileTap={{ scale: 0.98 }}
               className="relative flex items-center justify-center gap-3 bg-gradient-to-r from-[#0090FF] to-[#00D1FF] text-white px-10 py-5 rounded-full font-bold text-lg transition-all overflow-hidden"
@@ -193,9 +191,9 @@ export function CTAFinalV3() {
                 <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-[#0090FF] opacity-75"></span>
                 <span className="relative inline-flex rounded-full h-2 w-2 bg-[#0090FF]"></span>
               </span>
-              Abre o WhatsApp · Resposta em instantes
+              Preencha a aplicação · Leva menos de 2 minutos
             </div>
-            <p className="text-xs text-[#888888]">Resposta em instantes · Sem compromisso · Vagas limitadas</p>
+            <p className="text-xs text-[#888888]">Análise em até 24h · Sem compromisso · Vagas limitadas</p>
           </div>
         </motion.div>
 
