@@ -6,18 +6,18 @@ import { CONFIG } from '../config';
 const values = [
   {
     icon: Target,
-    title: "Foco em Conversão",
-    desc: "Não criamos apenas chatbots. Desenhamos funis de vendas inteligentes focados em aumentar seu faturamento."
+    title: "Método Validado",
+    desc: "7 Pilares da Persuasão testados em OdontoCompany, Sorridents e Cotia Clínica. Não é teoria — são R$50M+ em resultados reais."
   },
   {
     icon: Lightbulb,
-    title: "Inteligência Real",
-    desc: "Nossa IA entende contexto, intenção e objeções, oferecendo um atendimento natural e humanizado."
+    title: "IA Persuasiva",
+    desc: "A Intalky AI não é chatbot. É um agente treinado para conduzir negociações, fazer follow-up e gerenciar CRM como um SDR de alta performance."
   },
   {
     icon: Rocket,
-    title: "Escala sem Limites",
-    desc: "Atenda 10 ou 10.000 leads simultaneamente com a mesma qualidade e tempo de resposta (menos de 3 segundos)."
+    title: "Equipe Completa",
+    desc: "Tráfego, funil, IA, treinamento semanal, consultoria e suporte. Um time de especialistas trabalhando pelo seu resultado toda semana."
   }
 ];
 
@@ -42,10 +42,10 @@ export function About() {
                 Sobre a {CONFIG.brand.name}
               </motion.div>
               <motion.h2 variants={fadeUp} className="text-3xl md:text-5xl font-bold text-[#1A1A1A] tracking-tight mb-6">
-                Muito mais que automação. Uma <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#0090FF] to-[#00D1FF]">assessoria comercial</span> completa.
+                Muito mais que automação. Um <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#0090FF] to-[#00D1FF]">método de R$ 50 milhões.</span>
               </motion.h2>
               <motion.p variants={fadeUp} className="text-lg text-[#4A4A4A] leading-relaxed">
-                Nascemos para resolver o maior gargalo das empresas modernas: o atendimento. Combinamos inteligência artificial de ponta com estratégias comerciais validadas para transformar seu WhatsApp em uma verdadeira máquina de vendas.
+                Somos a junção de duas expertises raras: <strong className="text-[#1A1A1A]">Danilo Oliveira</strong>, criador do método dos 7 Pilares da Persuasão com R$50M+ em vendas no nicho de saúde, e <strong className="text-[#1A1A1A]">Marcos</strong>, Full Stack Marketer formado pela Digital Marketer com 10+ anos em marketing de performance. A venda como consequência inevitável.
               </motion.p>
             </div>
 
@@ -93,10 +93,10 @@ export function About() {
 
                 <div className="space-y-4">
                   {[
-                    "Mapeamento de Processos",
-                    "Treinamento de IA Personalizado",
-                    "Integração com CRM",
-                    "Acompanhamento de Resultados"
+                    "Método dos 7 Pilares da Persuasão",
+                    "IA treinada para conduzir vendas",
+                    "Treinamento semanal da equipe",
+                    "Consultoria de marketing semanal"
                   ].map((text, i) => (
                     <div key={i} className="flex items-center gap-3">
                       <CheckCircle2 className="w-5 h-5 text-[#0090FF] shrink-0" />
@@ -109,7 +109,7 @@ export function About() {
                   <div className="bg-[#0090FF]/5 border border-[#0090FF]/20 rounded-xl p-4 flex items-center justify-between">
                     <div>
                       <p className="text-[#888888] text-xs uppercase tracking-wider font-semibold mb-1">Nossa Missão</p>
-                      <p className="text-[#0090FF] font-medium text-sm">Escalar suas vendas sem perder a essência humana.</p>
+                      <p className="text-[#0090FF] font-medium text-sm">Erradicar o amadorismo comercial e transformar a venda em consequência inevitável.</p>
                     </div>
                   </div>
                 </div>

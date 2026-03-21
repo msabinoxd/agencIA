@@ -11,31 +11,31 @@ const team = [
   {
     name: 'Marcos',
     role: 'Full Stack Marketer',
-    description: 'Arquiteto de funis de venda, automações e integrações. Certificado pela Digital Marketer.',
+    description: 'Full Stack Marketer formado pela Digital Marketer · 10+ anos em marketing de performance · Estrategista do ecossistema digital da Intalky.',
     image: marcosImg,
   },
   {
     name: 'Danilo',
-    role: 'Comercial',
-    description: 'O motor de vendas. Focado em fechar negócios e expandir a agência.',
+    role: 'Expert em Vendas & Persuasão',
+    description: 'Criador dos 7 Pilares da Persuasão · R$50M+ em vendas no nicho de saúde · Mentor de equipes de alta performance · OdontoCompany · Sorridents.',
     image: daniloImg,
   },
   {
     name: 'Letícia',
     role: 'Atendimento / SDR',
-    description: 'A linha de frente. Garante que cada lead seja bem recebido e qualificado.',
+    description: 'SDR especialista em qualificação de leads · Treinada com os 7 Pilares da Persuasão · Atendimento de alta conversão.',
     image: leticiaImg,
   },
   {
     name: 'Rafaela',
     role: 'Atendimento / SDR',
-    description: 'Conexão com o cliente. Transforma conversas em oportunidades reais.',
+    description: 'SDR e relacionamento comercial · Pós-venda e jornada de valor do cliente · Atendimento humanizado de alta performance.',
     image: rafaelaImg,
   },
   {
     name: 'Edileuza',
-    role: 'Tráfego',
-    description: 'A estrategista de dados. Otimiza campanhas para o máximo de ROI.',
+    role: 'Tráfego Pago',
+    description: 'Especialista em Meta Ads & Google Ads · CAC mínimo e ROI máximo para clínicas de saúde · Rastreamento e otimização de campanhas.',
     image: edileuzaImg,
   },
 ];

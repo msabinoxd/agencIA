@@ -4,25 +4,25 @@ import { ScrollIndicator } from './ScrollIndicator';
 
 const testimonials = [
   {
-    name: "Marcos Silva",
-    role: "CEO, Empresa de Serviços",
-    content: "Antes da automação, perdíamos dezenas de leads nos finais de semana. Agora, a IA qualifica e já agenda as reuniões para segunda-feira. Nossa conversão aumentou 40%.",
-    results: "+40% em Vendas",
-    image: "https://i.pravatar.cc/150?img=11"
+    name: "Cotia Clínica",
+    role: "Case de Consultoria — Danilo Oliveira",
+    content: "Em 12 meses, o faturamento mensal saltou de R$ 125.000 para R$ 481.000. Paramos de adivinhar e começamos a operar com dados, CRM e processos. O Danilo mudou nossa forma de vender.",
+    results: "4x o Faturamento",
+    image: "https://i.pravatar.cc/150?img=60"
   },
   {
-    name: "Ana Paula",
-    role: "Diretora Comercial, E-commerce",
-    content: "O tráfego pago sempre funcionou, mas o time de vendas não dava conta de responder rápido. A IA assumiu a linha de frente e o custo de aquisição (CAC) despencou.",
+    name: "Dra. Júlia Beraldo",
+    role: "B Facial Clinic — Case Intalky AI",
+    content: "A Intalky AI superou a performance das nossas consultoras humanas de vendas. Mais agendamentos, menos custo operacional e atendimento 24/7 sem perda de qualidade. Resultado impressionante.",
+    results: "IA > Consultoras",
+    image: "https://i.pravatar.cc/150?img=47"
+  },
+  {
+    name: "Diretor Comercial",
+    role: "Clínica de Saúde",
+    content: "O tráfego sempre funcionou, mas o atendimento era o gargalo. Com a IA qualificando em 3 segundos e o Danilo treinando nosso time toda semana, o CAC caiu e o fechamento explodiu.",
     results: "-60% no CAC",
-    image: "https://i.pravatar.cc/150?img=5"
-  },
-  {
-    name: "Roberto Almeida",
-    role: "Fundador, Clínica de Estética",
-    content: "A integração com nosso CRM foi o divisor de águas. O robô sabe exatamente se o cliente é novo ou recorrente e faz o atendimento perfeito para cada caso.",
-    results: "Atendimento 24/7",
-    image: "https://i.pravatar.cc/150?img=8"
+    image: "https://i.pravatar.cc/150?img=33"
   }
 ];
 
@@ -37,8 +37,8 @@ export function SocialProof() {
             viewport={{ once: true }}
             className="text-3xl md:text-5xl font-bold text-[#1A1A1A] mb-6 tracking-tight"
           >
-            Resultados que falam <br />
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#0090FF] to-[#00D1FF]">por si mesmos.</span>
+            R$ 50M+ em vendas gerados. <br />
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#0090FF] to-[#00D1FF]">Cases reais.</span>
           </motion.h2>
           <motion.p
             initial={{ opacity: 0, y: 20 }}
@@ -47,7 +47,7 @@ export function SocialProof() {
             transition={{ delay: 0.1 }}
             className="text-lg text-[#4A4A4A]"
           >
-            Não acredite apenas em nós. Veja o impacto real da nossa automação nos negócios dos nossos clientes.
+            Resultados validados em grandes redes como OdontoCompany, Sorridents e Odonto Special.
           </motion.p>
         </div>
 

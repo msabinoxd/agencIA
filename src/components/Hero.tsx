@@ -22,7 +22,7 @@ export function Hero({ onOpenSimulator }: { onOpenSimulator?: () => void }) {
         >
           <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white border border-[#E9ECEF] shadow-[var(--sh)] w-fit">
             <span className="flex h-2 w-2 rounded-full bg-[#0090FF] animate-pulse"></span>
-            <span className="text-xs font-black text-[#4A4A4A] uppercase tracking-widest">Inteligência Comercial & Escala</span>
+            <span className="text-xs font-black text-[#4A4A4A] uppercase tracking-widest">Especialistas em Clínicas de Saúde & Negócios em Escala</span>
           </div>
 
           <motion.h1
@@ -49,7 +49,7 @@ export function Hero({ onOpenSimulator }: { onOpenSimulator?: () => void }) {
           </motion.h1>
 
           <p className="text-xl text-[#4A4A4A] leading-relaxed max-w-xl font-medium">
-            Atendimento, qualificação e fechamento 100% automatizados. <span className="text-[#1A1A1A] font-bold">Escala real</span> sem depender de contratações complexas.
+            Método dos <span className="text-[#1A1A1A] font-bold">7 Pilares da Persuasão</span> + IA treinada para conduzir negociações. Sua agenda cheia começa aqui.
           </p>
 
           <div className="flex flex-col sm:flex-row gap-4 mt-6">
@@ -76,16 +76,16 @@ export function Hero({ onOpenSimulator }: { onOpenSimulator?: () => void }) {
 
           <div className="flex items-center gap-10 mt-10 pt-10 border-t border-[#E9ECEF]">
             <div className="flex flex-col">
-              <span className="text-4xl font-black text-[#0090FF] italic">15+</span>
-              <span className="text-[10px] font-black text-[#888888] uppercase tracking-[0.2em]">Anos de <br /> Expertise</span>
+              <span className="text-4xl font-black text-[#0090FF] italic">R$50M+</span>
+              <span className="text-[10px] font-black text-[#888888] uppercase tracking-[0.2em]">Em Vendas <br /> Gerados</span>
             </div>
             <div className="flex flex-col">
-              <span className="text-4xl font-black text-[#0090FF] italic">100%</span>
-              <span className="text-[10px] font-black text-[#888888] uppercase tracking-[0.2em]">Foco em <br /> Conversão</span>
+              <span className="text-4xl font-black text-[#0090FF] italic">4x</span>
+              <span className="text-[10px] font-black text-[#888888] uppercase tracking-[0.2em]">Crescimento <br /> em 12 Meses</span>
             </div>
             <div className="flex flex-col">
               <span className="text-4xl font-black text-[#0090FF] italic">24/7</span>
-              <span className="text-[10px] font-black text-[#888888] uppercase tracking-[0.2em]">Operação <br /> Full-Time</span>
+              <span className="text-[10px] font-black text-[#888888] uppercase tracking-[0.2em]">IA Ativa <br /> Full-Time</span>
             </div>
           </div>
         </motion.div>
@@ -125,7 +125,7 @@ export function Hero({ onOpenSimulator }: { onOpenSimulator?: () => void }) {
                   transition={{ delay: 0.5 }}
                   className="bg-white text-[#4A4A4A] p-4 rounded-3xl rounded-tl-none max-w-[85%] text-sm self-start shadow-[var(--sh)] border border-[#E9ECEF] leading-relaxed"
                 >
-                  Olá! Analisamos seu último anúncio. O lead acaba de chegar. Iniciando qualificação... ⚡
+                  Olá! Acabei de receber um lead do seu anúncio de Invisalign. Iniciando qualificação agora... ⚡
                 </motion.div>
 
                 <motion.div
@@ -134,7 +134,7 @@ export function Hero({ onOpenSimulator }: { onOpenSimulator?: () => void }) {
                   transition={{ delay: 2 }}
                   className="bg-gradient-to-br from-[#0090FF] to-[#00D1FF] text-white p-4 rounded-3xl rounded-tr-none max-w-[85%] text-sm self-end shadow-[0_4px_14px_rgba(0,144,255,0.3)] leading-relaxed font-bold"
                 >
-                  Perfeito. Solicite o orçamento médio e o tempo de decisão.
+                  Ótimo. Pergunte sobre a principal queixa do sorriso e o prazo para decisão.
                 </motion.div>
 
                 <motion.div
@@ -143,7 +143,7 @@ export function Hero({ onOpenSimulator }: { onOpenSimulator?: () => void }) {
                   transition={{ delay: 3.5 }}
                   className="bg-white text-[#4A4A4A] p-4 rounded-3xl rounded-tl-none max-w-[85%] text-sm self-start shadow-[var(--sh)] border border-[#E9ECEF] leading-relaxed"
                 >
-                  Lead qualificado! Possui verba de R$ 5k+ e urgência imediata. Reunião agendada na sua agenda para amanhã às 14h. ✅
+                  Lead qualificado! Quer Invisalign, tem urgência e verba disponível. Consulta agendada para amanhã às 14h. ✅
                 </motion.div>
               </div>
 

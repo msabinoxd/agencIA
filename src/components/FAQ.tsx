@@ -5,32 +5,36 @@ import { CONFIG } from '../config';
 
 const faqs = [
   {
-    question: "A IA vai parecer um robô e afastar meus clientes?",
-    answer: "Não. Nossa IA utiliza processamento de linguagem natural avançado (NLP) para conversar exatamente com o tom de voz da sua marca. Ela entende contexto, intenção e até áudios, oferecendo um atendimento humanizado, fluido e zero engessado."
+    question: "Funciona para clínica odontológica?",
+    answer: "Sim, é nossa especialidade. Trabalhamos com OdontoCompany, Sorridents, Odonto Special, B Facial Clinic e Cotia Clínica, entre outras. A Intalky AI é treinada para o fluxo específico de clínicas: anúncio → lead → qualificação → agendamento de avaliação → fechamento do plano de tratamento."
   },
   {
-    question: "E se o lead precisar de atendimento humano?",
-    answer: "A IA é treinada para reconhecer quando uma situação exige intervenção humana (ex: dúvidas muito complexas, negociações específicas ou clientes irritados). Nesses casos, ela pausa a automação e transfere o atendimento perfeitamente para a sua equipe, já com todo o resumo e histórico da conversa."
+    question: "A IA vai parecer um robô e afastar meus pacientes?",
+    answer: "Não. A Intalky AI é treinada com os 7 Pilares da Persuasão de Danilo Oliveira para conversar de forma natural e empática. Ela entende contexto, intenção e até manda áudios com tom humano — seu paciente não vai perceber que é IA."
   },
   {
-    question: "Funciona com meu CRM atual?",
-    answer: "Sim! Integramos com os principais CRMs do mercado (RD Station, HubSpot, ActiveCampaign, Kommo, Pipedrive, entre outros). A IA atualiza a etapa do funil, adiciona tags e salva o histórico das conversas automaticamente, sem nenhum clique do seu time."
-  },
-  {
-    question: "Quanto tempo leva para colocar no ar?",
-    answer: "Nosso processo de setup, mapeamento de processos e treinamento da IA leva em média de 7 a 14 dias. Nós cuidamos de toda a parte técnica e entregamos a solução pronta, testada e integrada ao seu ecossistema."
-  },
-  {
-    question: "Preciso trocar meu WhatsApp Business?",
-    answer: "Não. Conectamos a IA diretamente ao seu número de WhatsApp Business atual através da API Oficial (WABA). Você não perde seu número, não perde clientes e não corre risco de banimento."
+    question: "Qual a diferença entre Intalky Essencial e Pro?",
+    answer: "O Intalky Essencial é focado no topo do funil: a IA atende, qualifica e agenda a consulta. Sua equipe assume para o fechamento. O Intalky Pro vai além: a IA gerencia o CRM completo, faz follow-up ativo com leads que não responderam, cuida do pós-venda, reativação de pacientes inativos e toda a jornada de valor do cliente. Zero lead esquecido."
   },
   {
     question: "Como fica a supervisão? Posso confiar 100% na IA?",
-    answer: "Você tem acesso a um painel completo onde pode monitorar todas as conversas em tempo real. Além disso, implementamos 'guardrails' (regras de segurança) estritas para garantir que a IA nunca invente informações (alucinação) ou fuja do escopo de vendas da sua empresa."
+    answer: "Você tem acesso a um painel completo para monitorar todas as conversas em tempo real. Além disso, nossa equipe supervisiona ativamente o CRM, fazemos treinamento semanal com Danilo Oliveira (roleplay, objeções, análise de métricas) e consultoria de marketing com Marcos. Suporte em horário comercial sempre disponível."
+  },
+  {
+    question: "Funciona com meu CRM atual?",
+    answer: "Sim! Integramos com os principais CRMs (RD Station, HubSpot, ActiveCampaign, Kommo, Pipedrive, entre outros). A IA atualiza o funil, adiciona tags e salva o histórico das conversas automaticamente, sem nenhum clique do seu time."
+  },
+  {
+    question: "Quanto tempo leva para colocar no ar?",
+    answer: "O setup, mapeamento de processos e treinamento da IA levam de 7 a 14 dias. Cuidamos de toda a parte técnica e entregamos a solução pronta, testada e integrada ao seu ecossistema."
+  },
+  {
+    question: "Preciso trocar meu WhatsApp Business?",
+    answer: "Não. Conectamos a IA ao seu número atual via API Oficial do WhatsApp (WABA). Você não perde seu número, não perde histórico de clientes e não corre risco de banimento."
   },
   {
     question: "Qual o investimento?",
-    answer: "O investimento varia de acordo com o seu volume mensal de leads e a complexidade das integrações (CRM, ERP, Agenda). Agende uma demonstração gratuita para entendermos seu cenário e apresentarmos uma proposta personalizada já com o cálculo de ROI (Retorno sobre Investimento)."
+    answer: "Varia de acordo com o plano (Essencial ou Pro) e o volume de leads da sua clínica. Agende uma conversa de 20 minutos — calculamos o ROI do seu negócio na hora e apresentamos uma proposta personalizada sem compromisso."
   }
 ];
 

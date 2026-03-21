@@ -34,9 +34,9 @@ export function PainSolution() {
           {/* A Dor (Problema) */}
           <div className="space-y-4">
             <h2 className="text-3xl md:text-5xl font-bold text-[#888888] leading-tight tracking-tight">
-              <span className="line-through decoration-red-500/50 hover:text-[#4A4A4A] transition-colors">Atendimento lento.</span><br />
-              <span className="line-through decoration-red-500/50 hover:text-[#4A4A4A] transition-colors">Robôs que irritam clientes.</span><br />
-              <span className="line-through decoration-red-500/50 hover:text-[#4A4A4A] transition-colors">Leads perdidos para a concorrência.</span>
+              <span className="line-through decoration-red-500/50 hover:text-[#4A4A4A] transition-colors">Agenda vazia mesmo investindo em tráfego.</span><br />
+              <span className="line-through decoration-red-500/50 hover:text-[#4A4A4A] transition-colors">IA que só responde FAQ, não converte.</span><br />
+              <span className="line-through decoration-red-500/50 hover:text-[#4A4A4A] transition-colors">Leads perdidos enquanto a clínica está fechada.</span>
             </h2>
           </div>
 
@@ -57,11 +57,11 @@ export function PainSolution() {
           {/* A Solução */}
           <div className="space-y-6">
             <h2 className="text-4xl md:text-6xl font-bold text-[#1A1A1A] leading-tight tracking-tight">
-              Revolucione com <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#0090FF] to-[#00D1FF]">IA Humanizada.</span>
+              A venda como consequência de um <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#0090FF] to-[#00D1FF]">atendimento de excelência.</span>
             </h2>
 
             <p className="text-lg md:text-xl text-[#4A4A4A] max-w-3xl mx-auto leading-relaxed">
-              <strong className="text-[#1A1A1A]">78% das vendas</strong> vão para a empresa que responde primeiro. Pare de perder dinheiro e deixe nossa inteligência artificial qualificar seus leads em <strong className="text-[#0090FF]">3 segundos</strong>.
+              <strong className="text-[#1A1A1A]">78% das vendas</strong> vão para quem responde primeiro. Com o método dos <strong className="text-[#0090FF]">7 Pilares da Persuasão</strong> e IA treinada para conduzir a negociação, seus leads viram agendamentos em <strong className="text-[#0090FF]">3 segundos</strong>.
             </p>
           </div>
         </motion.div>

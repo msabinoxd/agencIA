@@ -6,45 +6,45 @@ import { useRef } from 'react';
 const features = [
   {
     icon: <Zap className="w-6 h-6 text-[#0090FF]" />,
-    title: "1. Velocidade de Conversão",
-    description: "O tempo de resposta é crucial para a conversão. O robô atende múltiplos clientes simultaneamente, 24 horas por dia, 7 dias por semana, garantindo que nenhum lead esfrie.",
-    metric: "Tempo de resposta: < 3s",
-    image: "https://images.unsplash.com/photo-1512428559087-560fa5ceab42?q=80&w=800&auto=format&fit=crop"
+    title: "1. Tráfego Pago Estratégico",
+    description: "Meta Ads e Google Ads calibrados para o ICP da sua clínica. Cada real investido é rastreado até o fechamento — sem achismo, só dado.",
+    metric: "ROI médio: 8:1",
+    image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?q=80&w=800&auto=format&fit=crop"
   },
   {
-    icon: <Bot className="w-6 h-6 text-emerald-500" />,
-    title: "2. Atendimento Humanizado",
-    description: "Nossa IA é treinada para conversar de forma natural, entendendo o contexto e a intenção do lead, sem parecer um robô engessado. Ela se adapta ao tom de voz da sua marca.",
-    metric: "Taxa de engajamento: 85%+",
+    icon: <Bot className="w-6 h-6 text-[#0090FF]" />,
+    title: "2. Funil de Vendas",
+    description: "Funil desenhado com os 7 Pilares da Persuasão de Danilo Oliveira. Do clique no anúncio ao agendamento confirmado — cada etapa otimizada para converter.",
+    metric: "Conversão: +3x",
     image: "https://images.unsplash.com/photo-1531482615713-2afd69097998?q=80&w=800&auto=format&fit=crop"
   },
   {
-    icon: <ShieldCheck className="w-6 h-6 text-emerald-500" />,
-    title: "3. Qualificação Inteligente",
-    description: "A IA faz as perguntas certas para filtrar curiosos e entregar apenas leads quentes e qualificados para o seu time de vendas, otimizando o tempo da sua equipe.",
-    metric: "Leads desqualificados filtrados: 60%",
+    icon: <MessageSquare className="w-6 h-6 text-[#0090FF]" />,
+    title: "3. Intalky Essencial",
+    description: "A IA atende, qualifica e agenda consultas em menos de 3 segundos, 24 horas por dia. Nunca mais perca um lead por demora no atendimento.",
+    metric: "Resposta: < 3s",
+    image: "https://images.unsplash.com/photo-1512428559087-560fa5ceab42?q=80&w=800&auto=format&fit=crop"
+  },
+  {
+    icon: <ShieldCheck className="w-6 h-6 text-[#0090FF]" />,
+    title: "4. Intalky Pro",
+    description: "A IA gerencia o CRM, faz follow-up ativo, pós-venda e cuida de toda a jornada de valor do paciente. Churn zero. LTV máximo.",
+    metric: "Follow-up: automático",
     image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=800&auto=format&fit=crop"
   },
   {
-    icon: <MessageSquare className="w-6 h-6 text-[#0090FF]" />,
-    title: "4. Agendamento Automático",
-    description: "Integrado à sua agenda, o robô marca reuniões, envia links de pagamento e dispara lembretes automaticamente, reduzindo drasticamente o no-show.",
-    metric: "Aumento em agendamentos: 3x",
-    image: "https://images.unsplash.com/photo-1506784983877-45594efa4cbe?q=80&w=800&auto=format&fit=crop"
-  },
-  {
-    icon: <Users className="w-6 h-6 text-emerald-500" />,
-    title: "5. Transição Perfeita",
-    description: "Quando necessário, o robô transfere o atendimento para um vendedor humano de forma suave, passando todo o histórico da conversa e o perfil do lead.",
-    metric: "Satisfação do cliente (NPS): 92",
+    icon: <Users className="w-6 h-6 text-[#0090FF]" />,
+    title: "5. Treinamento Semanal",
+    description: "Sessões semanais com Danilo Oliveira para treinar sua equipe comercial: roleplay, gestão de objeções, análise de CRM e métricas de performance.",
+    metric: "SDRs 2x mais eficientes",
     image: "https://images.unsplash.com/photo-1552664730-d307ca884978?q=80&w=800&auto=format&fit=crop"
   },
   {
     icon: <BarChart3 className="w-6 h-6 text-[#0090FF]" />,
-    title: "6. Dados Estratégicos",
-    description: "Acompanhe métricas de conversão, principais dúvidas dos clientes e o desempenho do seu funil diretamente no CRM. Decisões baseadas em dados, não em achismos.",
-    metric: "Visibilidade do funil: 100%",
-    image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?q=80&w=800&auto=format&fit=crop"
+    title: "6. Consultoria & Suporte",
+    description: "Consultoria semanal de vendas e marketing com o time Intalky, alinhamento estratégico de crescimento e suporte em horário comercial. Você nunca está sozinho.",
+    metric: "Suporte: horário comercial",
+    image: "https://images.unsplash.com/photo-1506784983877-45594efa4cbe?q=80&w=800&auto=format&fit=crop"
   }
 ];
 
@@ -70,7 +70,7 @@ export function Solutions() {
             className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white border border-[#E9ECEF] shadow-[var(--sh)] mb-6"
           >
             <Bot className="w-4 h-4 text-[#0090FF]" />
-            <span className="text-xs font-medium text-[#4A4A4A] uppercase tracking-wider">O Motor de Vendas</span>
+            <span className="text-xs font-medium text-[#4A4A4A] uppercase tracking-wider">O Ecossistema Completo</span>
           </motion.div>
 
           <motion.h2
@@ -80,8 +80,8 @@ export function Solutions() {
             transition={{ delay: 0.1 }}
             className="text-4xl md:text-5xl font-bold text-[#1A1A1A] mb-6 tracking-tight"
           >
-            Como a IA transforma <br />
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#0090FF] to-[#00D1FF]">curiosos em clientes.</span>
+            Seis pilares que transformam leads <br />
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#0090FF] to-[#00D1FF]">em faturamento previsível.</span>
           </motion.h2>
 
           <motion.p
@@ -91,7 +91,7 @@ export function Solutions() {
             transition={{ delay: 0.2 }}
             className="text-lg text-[#4A4A4A]"
           >
-            Um fluxo contínuo e inteligente de qualificação. Veja como nosso robô atua em cada etapa do primeiro contato.
+            Da captação ao pós-venda, cada etapa do seu funil coberta por especialistas e IA.
           </motion.p>
         </div>
 

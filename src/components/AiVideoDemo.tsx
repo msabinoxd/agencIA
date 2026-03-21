@@ -13,17 +13,17 @@ const workflowCards = [
     id: 'leads', icon: MessageSquare, title: 'Análise de Leads',
     badge: 'NLP Engine',
     description: 'Processamento de linguagem natural para extrair intenção de compra em milissegundos.',
-    textColor: 'text-emerald-600', iconHover: 'group-hover:text-emerald-600',
-    bgGlow: 'bg-emerald-500/20', gradient: 'from-emerald-500/5 to-transparent',
-    borderHover: 'hover:border-emerald-500/30', glow: 'hover:shadow-[0_8px_24px_rgba(52,211,153,0.15)]'
+    textColor: 'text-[#0090FF]', iconHover: 'group-hover:text-[#0090FF]',
+    bgGlow: 'bg-[#0090FF]/20', gradient: 'from-[#0090FF]/5 to-transparent',
+    borderHover: 'hover:border-[#0090FF]/30', glow: 'hover:shadow-[0_8px_24px_rgba(0,144,255,0.15)]'
   },
   {
     id: 'qualify', icon: Target, title: 'Qualificação IA',
     badge: 'Smart Scoring',
     description: 'Filtro inteligente de objeções e cálculo de probabilidade de fechamento em tempo real.',
-    textColor: 'text-violet-600', iconHover: 'group-hover:text-violet-600',
-    bgGlow: 'bg-violet-500/20', gradient: 'from-violet-500/5 to-transparent',
-    borderHover: 'hover:border-violet-500/30', glow: 'hover:shadow-[0_8px_24px_rgba(139,92,246,0.15)]'
+    textColor: 'text-[#00D1FF]', iconHover: 'group-hover:text-[#00D1FF]',
+    bgGlow: 'bg-[#0090FF]/20', gradient: 'from-[#0090FF]/5 to-transparent',
+    borderHover: 'hover:border-[#0090FF]/30', glow: 'hover:shadow-[0_8px_24px_rgba(0,144,255,0.15)]'
   },
   {
     id: 'crm', icon: Database, title: 'Gestão de CRM',
@@ -36,10 +36,10 @@ const workflowCards = [
   {
     id: 'calendar', icon: Calendar, title: 'Agendamentos',
     badge: 'Smart Calendar',
-    description: 'Cruzamento de disponibilidade e marcação de reuniões direto na agenda do closer.',
-    textColor: 'text-amber-600', iconHover: 'group-hover:text-amber-600',
-    bgGlow: 'bg-amber-500/20', gradient: 'from-amber-500/5 to-transparent',
-    borderHover: 'hover:border-amber-500/30', glow: 'hover:shadow-[0_8px_24px_rgba(245,158,11,0.15)]'
+    description: 'Confirmação de consultas e marcação direto na agenda da clínica. Zero no-show.',
+    textColor: 'text-[#1A1A1A]', iconHover: 'group-hover:text-[#0090FF]',
+    bgGlow: 'bg-[#0090FF]/20', gradient: 'from-[#0090FF]/5 to-transparent',
+    borderHover: 'hover:border-[#0090FF]/30', glow: 'hover:shadow-[0_8px_24px_rgba(0,144,255,0.15)]'
   },
 ];
 
@@ -52,10 +52,10 @@ const tasks = [
 ];
 
 const chatSequence = [
-  { role: 'user', text: 'Olá! Vi o anúncio e queria saber como funciona a automação.' },
-  { role: 'agent', text: 'Olá! Que ótimo ter você aqui. Nossa IA atende seus leads em segundos, qualifica e agenda reuniões direto no seu calendário. Qual o seu volume atual de leads por dia?' },
-  { role: 'user', text: 'Cerca de 50 leads por dia. O time não dá conta de responder rápido.' },
-  { role: 'agent', text: 'Perfeito! Com esse volume, a IA pode recuperar até 40% das vendas perdidas por demora no atendimento. Quer ver uma simulação na prática?' }
+  { role: 'user', text: 'Oi! Vi o anúncio de Invisalign e queria saber o valor e como funciona.' },
+  { role: 'agent', text: 'Olá! Que ótimo! Para te passar as melhores condições, me conta: o que mais te incomoda no seu sorriso hoje?' },
+  { role: 'user', text: 'Os dentes estão tortos e eu tenho vergonha de sorrir em fotos.' },
+  { role: 'agent', text: 'Entendo perfeitamente. Temos opções que resolvem isso sem aparelho metálico. Você prefere agendar uma avaliação esta semana ou na próxima? 😊' }
 ];
 
 export function AiVideoDemo() {
@@ -135,38 +135,38 @@ export function AiVideoDemo() {
             <div>
               <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-[#0090FF]/10 border border-[#0090FF]/20 text-[#0090FF] text-xs font-semibold uppercase tracking-wider mb-6">
                 <Sparkles className="w-3.5 h-3.5" />
-                Workspace Inteligente
+                Dois Planos. Um Resultado.
               </div>
               <h2 className="text-3xl md:text-5xl font-bold text-[#1A1A1A] mb-6 tracking-tight leading-tight">
-                Você sabe atrair leads. <br />
-                <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#0090FF] to-[#00D1FF]">Nós garantimos o atendimento.</span>
+                Dois níveis de automação. <br />
+                <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#0090FF] to-[#00D1FF]">Um resultado: mais faturamento.</span>
               </h2>
               <p className="text-lg text-[#4A4A4A] leading-relaxed">
-                O maior gargalo das empresas hoje não é gerar tráfego, é <strong className="text-[#1A1A1A]">atender com velocidade e qualidade</strong>. Tráfego sem um atendimento eficiente é dinheiro jogado fora.
+                Do atendimento básico à gestão completa da jornada do paciente. Escolha o nível certo para a sua clínica — e <strong className="text-[#1A1A1A]">escale sem contratar mais pessoas</strong>.
               </p>
             </div>
 
             <div className="space-y-6">
               <div className="flex gap-4 group">
-                <div className="w-12 h-12 rounded-xl bg-[#F8F9FA] border border-[#E9ECEF] flex items-center justify-center shrink-0 group-hover:border-emerald-500/50 group-hover:bg-emerald-500/10 transition-colors duration-300 shadow-[var(--sh)]">
-                  <Database className="w-6 h-6 text-emerald-500" />
+                <div className="w-12 h-12 rounded-xl bg-[#F8F9FA] border border-[#E9ECEF] flex items-center justify-center shrink-0 group-hover:border-[#0090FF]/50 group-hover:bg-[#0090FF]/10 transition-colors duration-300 shadow-[var(--sh)]">
+                  <Database className="w-6 h-6 text-[#0090FF]" />
                 </div>
                 <div>
-                  <h3 className="text-xl font-semibold text-[#1A1A1A] mb-2 group-hover:text-emerald-600 transition-colors duration-300">Integração Total com CRM</h3>
+                  <h3 className="text-xl font-semibold text-[#1A1A1A] mb-2 group-hover:text-[#0090FF] transition-colors duration-300">Intalky Essencial</h3>
                   <p className="text-[#4A4A4A] text-sm leading-relaxed">
-                    A IA não apenas conversa, ela lê e alimenta seu CRM em tempo real. Ela sabe exatamente em qual etapa do funil o lead está.
+                    A IA atende, qualifica e agenda consultas automaticamente. Sua equipe recebe apenas leads prontos para fechar.
                   </p>
                 </div>
               </div>
 
               <div className="flex gap-4 group">
-                <div className="w-12 h-12 rounded-xl bg-[#F8F9FA] border border-[#E9ECEF] flex items-center justify-center shrink-0 group-hover:border-violet-500/50 group-hover:bg-violet-500/10 transition-colors duration-300 shadow-[var(--sh)]">
-                  <Target className="w-6 h-6 text-violet-500" />
+                <div className="w-12 h-12 rounded-xl bg-[#F8F9FA] border border-[#E9ECEF] flex items-center justify-center shrink-0 group-hover:border-[#0090FF]/50 group-hover:bg-[#0090FF]/10 transition-colors duration-300 shadow-[var(--sh)]">
+                  <Target className="w-6 h-6 text-[#0090FF]" />
                 </div>
                 <div>
-                  <h3 className="text-xl font-semibold text-[#1A1A1A] mb-2 group-hover:text-violet-600 transition-colors duration-300">Abordagem Contextual</h3>
+                  <h3 className="text-xl font-semibold text-[#1A1A1A] mb-2 group-hover:text-[#0090FF] transition-colors duration-300">Intalky Pro</h3>
                   <p className="text-[#4A4A4A] text-sm leading-relaxed">
-                    Um lead frio recebe conteúdo de nutrição. Um lead quente recebe um link de checkout ou agendamento. Decisões estratégicas 24/7.
+                    A IA gerencia o CRM, faz follow-up ativo, pós-venda e cuida de toda a jornada de valor do paciente. Zero lead esquecido.
                   </p>
                 </div>
               </div>

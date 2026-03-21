@@ -28,8 +28,8 @@ export function HumanSupervision() {
             transition={{ delay: 0.1 }}
             className="text-3xl md:text-5xl font-bold text-[#1A1A1A] mb-6 tracking-tight leading-tight"
           >
-            IA no volante. <br />
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#0090FF] to-[#00D1FF]">Humanos na supervisão.</span>
+            IA executa em escala. <br />
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#0090FF] to-[#00D1FF]">Nós garantimos o resultado.</span>
           </motion.h2>
 
           <motion.p
@@ -39,7 +39,7 @@ export function HumanSupervision() {
             transition={{ delay: 0.2 }}
             className="text-lg text-[#4A4A4A] leading-relaxed"
           >
-            Assim como um carro autônomo precisa de monitoramento para garantir 100% de segurança, nossa automação não trabalha "às cegas". A IA executa em escala, mas as decisões críticas são sempre supervisionadas.
+            Não basta automatizar. É preciso supervisão estratégica, treinamento constante da equipe e ajustes finos para que cada lead vire faturamento. É isso que nos separa do mercado.
           </motion.p>
         </div>
 
@@ -108,9 +108,9 @@ export function HumanSupervision() {
               </div>
 
               <div className="pt-2 pb-8">
-                <h3 className="text-[#1A1A1A] font-semibold text-xl md:text-2xl mb-3">Auditoria da Agência</h3>
+                <h3 className="text-[#1A1A1A] font-semibold text-xl md:text-2xl mb-3">Supervisão Ativa da Intalky</h3>
                 <p className="text-[#4A4A4A] leading-relaxed text-sm md:text-base">
-                  Nossa equipe monitora ativamente as interações da IA dentro do CRM, ajustando rotas, corrigindo desvios e garantindo que a qualificação esteja perfeitamente alinhada com a sua estratégia.
+                  Nossa equipe monitora todas as interações da IA no CRM, ajustando fluxos, corrigindo desvios e garantindo que a qualificação esteja alinhada com a estratégia da sua clínica.
                 </p>
               </div>
             </div>
@@ -124,9 +124,9 @@ export function HumanSupervision() {
               </div>
 
               <div className="pt-2">
-                <h3 className="text-[#1A1A1A] font-semibold text-xl md:text-2xl mb-3">Controle Total do Cliente</h3>
+                <h3 className="text-[#1A1A1A] font-semibold text-xl md:text-2xl mb-3">Treinamento Semanal + Consultoria</h3>
                 <p className="text-[#4A4A4A] leading-relaxed text-sm md:text-base">
-                  Sua equipe comercial tem acesso em tempo real. Se um lead de alto valor exigir um toque mais pessoal, seu vendedor pode assumir o controle da conversa instantaneamente, pausando a IA.
+                  Sessões semanais com Danilo Oliveira para roleplay, gestão de objeções e análise de CRM. Consultoria de marketing com Marcos e suporte em horário comercial. Você nunca está sozinho.
                 </p>
               </div>
             </div>

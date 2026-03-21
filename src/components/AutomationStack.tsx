@@ -3,22 +3,22 @@ import { Network, Database, Zap, Users, ArrowRight, CheckCircle2 } from 'lucide-
 
 const automations = [
     {
-        title: 'Integração com n8n',
-        desc: 'Conectamos seu WhatsApp a centenas de ferramentas (CRM, Planilhas, Email) com fluxos inteligentes.',
+        title: 'Tráfego & Funil',
+        desc: 'Meta Ads e Google Ads calibrados para o ICP da sua clínica + funil desenhado com os 7 Pilares da Persuasão de Danilo Oliveira.',
         icon: Network,
-        features: ['Sincronização em tempo real', 'Webhooks personalizados', 'Lógica condicional avançada']
+        features: ['ICP validado', 'Pixel de rastreamento', 'Funil de alta conversão']
     },
     {
-        title: 'Aquisição de Leads',
-        desc: 'Automatizamos o transbordo de anúncios direto para o funil de atendimento sem perda de dados.',
-        icon: Users,
-        features: ['Trackeamento de origem', 'Qualificação imediata', 'Distribuição inteligente']
-    },
-    {
-        title: 'CRM & Follow-up',
-        desc: 'Nunca mais esqueça um lead. A IA atualiza seu CRM e faz follow-ups em horários estratégicos.',
+        title: 'Intalky AI',
+        desc: 'A única IA do mercado treinada com neurociência de vendas. Atende, qualifica, faz follow-up e gerencia o CRM 24/7.',
         icon: Database,
-        features: ['Gestão de pipeline', 'Lembretes automáticos', 'Histórico centralizado']
+        features: ['Resposta em < 3s', 'Follow-up automático', 'Integração total CRM']
+    },
+    {
+        title: 'Gestão & Treinamento',
+        desc: 'Treinamento semanal da equipe com Danilo Oliveira + consultoria de marketing com Marcos + suporte em horário comercial.',
+        icon: Users,
+        features: ['Roleplay semanal', 'Consultoria de vendas', 'Suporte comercial']
     }
 ];
 
@@ -37,7 +37,7 @@ export function AutomationStack() {
                         className="flex items-center justify-center gap-2 mb-6"
                     >
                         <Zap className="w-5 h-5 text-[#0090FF]" />
-                        <span className="text-sm font-bold text-[#0090FF] tracking-widest uppercase">Poder de Automação</span>
+                        <span className="text-sm font-bold text-[#0090FF] tracking-widest uppercase">Nossa Plataforma</span>
                     </motion.div>
 
                     <motion.h2
@@ -47,7 +47,7 @@ export function AutomationStack() {
                         transition={{ delay: 0.1 }}
                         className="text-4xl md:text-5xl font-black text-[#1A1A1A] mb-6"
                     >
-                        O Cérebro da sua <br /> <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#0090FF] to-[#00D1FF]">Escala Comercial</span>
+                        O arsenal que nenhum concorrente <br /> <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#0090FF] to-[#00D1FF]">tem ao mesmo tempo.</span>
                     </motion.h2>
 
                     <motion.p
@@ -57,7 +57,7 @@ export function AutomationStack() {
                         transition={{ delay: 0.2 }}
                         className="text-lg text-[#4A4A4A]"
                     >
-                        Não usamos apenas ferramentas, construímos ecossistemas que trabalham 24/7 enquanto você foca na estratégia.
+                        Método testado em R$50M+ em vendas. Tecnologia de ponta. Time especializado. Tudo junto, funcionando 24/7.
                     </motion.p>
                 </div>
 
@@ -111,7 +111,7 @@ export function AutomationStack() {
                     viewport={{ once: true }}
                     className="mt-20 flex flex-wrap justify-center items-center gap-12 opacity-40 grayscale hover:grayscale-0 hover:opacity-100 transition-all duration-700"
                 >
-                    {['HubSpot', 'Salesforce', 'n8n.io', 'Google Sheets', 'ActiveCampaign', 'Pipedrive'].map(brand => (
+                    {['OdontoCompany', 'Sorridents', 'Odonto Special', 'B Facial Clinic', 'Cotia Clínica', 'RD Station'].map(brand => (
                         <span key={brand} className="text-xl font-black text-[#4A4A4A] px-2 tracking-tighter">{brand}</span>
                     ))}
                 </motion.div>
