@@ -42,9 +42,9 @@ const team = [
 
 export function Team() {
   return (
-    <section id="equipe" className="py-32 bg-zinc-950 relative overflow-hidden">
-      {/* Background Glows */}
-      <div className="absolute top-0 left-1/2 -translate-x-1/2 w-full max-w-3xl h-[500px] bg-accent-blue/5 rounded-full blur-[120px] pointer-events-none" />
+    <section id="equipe" className="py-32 bg-[#F8F9FA] relative overflow-hidden">
+      {/* Background Glow */}
+      <div className="absolute top-0 left-1/2 -translate-x-1/2 w-full max-w-3xl h-[500px] bg-[#0090FF]/5 rounded-full blur-[120px] pointer-events-none" />
 
       <div className="max-w-7xl mx-auto px-6 relative z-10">
         <div className="text-center max-w-2xl mx-auto mb-20">
@@ -55,16 +55,16 @@ export function Team() {
             variants={stagger}
             className="flex flex-col items-center gap-4"
           >
-            <motion.div variants={fadeUp} className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-accent-blue/5 border border-accent-blue/10">
-              <span className="w-2 h-2 rounded-full bg-accent-cyan animate-pulse" />
-              <span className="text-xs font-black text-zinc-300 uppercase tracking-widest">Especialistas em Escala</span>
+            <motion.div variants={fadeUp} className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-[#0090FF]/10 border border-[#0090FF]/20">
+              <span className="w-2 h-2 rounded-full bg-[#00D1FF] animate-pulse" />
+              <span className="text-xs font-black text-[#4A4A4A] uppercase tracking-widest">Especialistas em Escala</span>
             </motion.div>
 
-            <motion.h2 variants={fadeUp} className="text-4xl md:text-5xl font-black text-white tracking-tight">
-              A inteligência por trás da <span className="text-transparent bg-clip-text bg-gradient-to-r from-accent-blue to-accent-cyan italic">Automação</span>
+            <motion.h2 variants={fadeUp} className="text-4xl md:text-5xl font-black text-[#1A1A1A] tracking-tight">
+              A inteligência por trás da <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#0090FF] to-[#00D1FF] italic">Automação</span>
             </motion.h2>
 
-            <motion.p variants={fadeUp} className="text-lg text-zinc-400 font-medium tracking-tight">
+            <motion.p variants={fadeUp} className="text-lg text-[#4A4A4A] font-medium tracking-tight">
               Nossa equipe combina expertise humana com inteligência artificial para entregar resultados fora da curva.
             </motion.p>
           </motion.div>
@@ -81,7 +81,7 @@ export function Team() {
             <motion.div
               key={member.name}
               variants={fadeUp}
-              className="group relative h-[450px] rounded-[40px] overflow-hidden bg-zinc-900 border border-white/5 hover:border-accent-blue/30 transition-all duration-500 shadow-2xl"
+              className="group relative h-[450px] rounded-[40px] overflow-hidden bg-[#E9ECEF] border border-[#E9ECEF] hover:border-[#0090FF]/30 transition-all duration-500 shadow-[var(--sh)]"
             >
               {/* Image */}
               <img
@@ -90,30 +90,30 @@ export function Team() {
                 referrerPolicy="no-referrer"
                 className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-110 grayscale group-hover:grayscale-0"
                 onError={(e) => {
-                  (e.target as HTMLImageElement).src = `https://ui-avatars.com/api/?name=${member.name}&background=0ea5e9&color=fff&size=512&font-size=0.33`;
+                  (e.target as HTMLImageElement).src = `https://ui-avatars.com/api/?name=${member.name}&background=0090FF&color=fff&size=512&font-size=0.33`;
                 }}
               />
 
               {/* Gradient Overlay */}
-              <div className="absolute inset-0 bg-gradient-to-t from-zinc-950 via-zinc-950/20 to-transparent opacity-80 group-hover:opacity-95 transition-opacity duration-500" />
+              <div className="absolute inset-0 bg-gradient-to-t from-[#1A1A1A] via-[#1A1A1A]/20 to-transparent opacity-80 group-hover:opacity-95 transition-opacity duration-500" />
 
               {/* Content */}
               <div className="absolute inset-0 p-8 flex flex-col justify-end">
                 <div className="transform translate-y-20 group-hover:translate-y-0 transition-transform duration-500 ease-out">
-                  <div className="mb-4 inline-block px-3 py-1 rounded-full bg-accent-blue/10 border border-accent-blue/20 backdrop-blur-md">
-                    <span className="text-[10px] font-black uppercase tracking-widest text-accent-cyan">{member.role}</span>
+                  <div className="mb-4 inline-block px-3 py-1 rounded-full bg-[#0090FF]/10 border border-[#0090FF]/20 backdrop-blur-md">
+                    <span className="text-[10px] font-black uppercase tracking-widest text-[#00D1FF]">{member.role}</span>
                   </div>
 
                   <h3 className="text-2xl font-black text-white mb-2 italic">{member.name}</h3>
 
-                  <p className="text-sm text-zinc-400 opacity-0 group-hover:opacity-100 transition-opacity duration-500 delay-100 leading-relaxed font-medium">
+                  <p className="text-sm text-zinc-300 opacity-0 group-hover:opacity-100 transition-opacity duration-500 delay-100 leading-relaxed font-medium">
                     {member.description}
                   </p>
                 </div>
               </div>
 
               {/* Top Glow Line on Hover */}
-              <div className="absolute top-0 left-0 right-0 h-1.5 bg-gradient-to-r from-transparent via-accent-cyan to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+              <div className="absolute top-0 left-0 right-0 h-1.5 bg-gradient-to-r from-transparent via-[#00D1FF] to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
             </motion.div>
           ))}
         </motion.div>
