@@ -42,26 +42,26 @@ export function PainSolution() {
 
           {/* Elemento Transitório Visual */}
           <div className="relative h-40 md:h-48 w-full flex justify-center items-center my-8">
-            <div className="absolute w-px h-full bg-gradient-to-b from-red-500/50 via-[#E9ECEF] to-emerald-500/50" />
+            <div className="absolute w-px h-full bg-gradient-to-b from-red-500/50 via-[#E9ECEF] to-[#0090FF]/50" />
             <motion.div
               animate={{ y: [-40, 40, -40] }}
               transition={{ repeat: Infinity, duration: 2.5, ease: "easeInOut" }}
-              className="w-2 h-2 md:w-3 md:h-3 rounded-full bg-emerald-500 shadow-[0_0_15px_rgba(16,185,129,0.5)] z-10"
+              className="w-2 h-2 md:w-3 md:h-3 rounded-full bg-[#0090FF] shadow-[0_0_15px_rgba(0,144,255,0.5)] z-10"
             />
             <div className="absolute top-1/2 -translate-y-1/2 ml-24 md:ml-32 flex flex-col items-start gap-1 opacity-50">
               <span className="text-[9px] md:text-[10px] uppercase tracking-[0.2em] text-[#888888] whitespace-nowrap">Continue</span>
-              <span className="text-[9px] md:text-[10px] uppercase tracking-[0.2em] text-emerald-500 whitespace-nowrap">Rolando</span>
+              <span className="text-[9px] md:text-[10px] uppercase tracking-[0.2em] text-[#0090FF] whitespace-nowrap">Rolando</span>
             </div>
           </div>
 
           {/* A Solução */}
           <div className="space-y-6">
             <h2 className="text-4xl md:text-6xl font-bold text-[#1A1A1A] leading-tight tracking-tight">
-              Revolucione com <span className="text-transparent bg-clip-text bg-gradient-to-r from-emerald-500 to-emerald-600">IA Humanizada.</span>
+              Revolucione com <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#0090FF] to-[#00D1FF]">IA Humanizada.</span>
             </h2>
 
             <p className="text-lg md:text-xl text-[#4A4A4A] max-w-3xl mx-auto leading-relaxed">
-              <strong className="text-[#1A1A1A]">78% das vendas</strong> vão para a empresa que responde primeiro. Pare de perder dinheiro e deixe nossa inteligência artificial qualificar seus leads em <strong className="text-emerald-500">3 segundos</strong>.
+              <strong className="text-[#1A1A1A]">78% das vendas</strong> vão para a empresa que responde primeiro. Pare de perder dinheiro e deixe nossa inteligência artificial qualificar seus leads em <strong className="text-[#0090FF]">3 segundos</strong>.
             </p>
           </div>
         </motion.div>

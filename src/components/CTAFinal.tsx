@@ -82,6 +82,23 @@ export function CTAFinal() {
           ))}
         </motion.div>
 
+        {/* Scarcity / Urgência */}
+        <motion.div
+          initial={{ opacity: 0, y: 10 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ delay: 0.15 }}
+          className="flex items-center justify-center gap-3 mb-8"
+        >
+          <div className="flex items-center gap-2 px-5 py-2.5 rounded-full bg-red-50 border border-red-200 text-red-600 text-sm font-bold">
+            <span className="relative flex h-2 w-2">
+              <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-red-500 opacity-75"></span>
+              <span className="relative inline-flex rounded-full h-2 w-2 bg-red-500"></span>
+            </span>
+            Apenas 3 vagas disponíveis esta semana
+          </div>
+        </motion.div>
+
         <motion.div
           variants={scaleIn}
           initial="hidden"
@@ -110,12 +127,15 @@ export function CTAFinal() {
             </motion.a>
           </div>
 
-          <div className="flex items-center gap-2 text-sm text-[#888888] font-medium bg-white px-4 py-2 rounded-full border border-[#E9ECEF] shadow-[var(--sh)]">
-            <span className="relative flex h-2 w-2">
-              <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-[#0090FF] opacity-75"></span>
-              <span className="relative inline-flex rounded-full h-2 w-2 bg-[#0090FF]"></span>
-            </span>
-            Abre o WhatsApp · Resposta em até 2h
+          <div className="flex flex-col items-center gap-2">
+            <div className="flex items-center gap-2 text-sm text-[#888888] font-medium bg-white px-4 py-2 rounded-full border border-[#E9ECEF] shadow-[var(--sh)]">
+              <span className="relative flex h-2 w-2">
+                <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-[#0090FF] opacity-75"></span>
+                <span className="relative inline-flex rounded-full h-2 w-2 bg-[#0090FF]"></span>
+              </span>
+              Abre o WhatsApp · Resposta em até 2h
+            </div>
+            <p className="text-xs text-[#888888]">Sem compromisso · Setup em 48h · Cancele quando quiser</p>
           </div>
         </motion.div>
       </div>
