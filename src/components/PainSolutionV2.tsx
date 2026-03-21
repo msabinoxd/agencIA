@@ -37,7 +37,7 @@ const pains = [
 
 export function PainSolutionV2() {
   return (
-    <section className="relative py-24 overflow-hidden bg-[#F8F9FA]">
+    <section className="relative py-16 md:py-24 overflow-hidden bg-[#F8F9FA]">
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[700px] h-[700px] bg-red-500/3 rounded-full blur-[120px] pointer-events-none" />
 
       <div className="max-w-7xl mx-auto px-6 relative z-10">

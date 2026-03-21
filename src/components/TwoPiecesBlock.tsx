@@ -4,7 +4,7 @@ import { waURL, CONFIG } from '../config';
 
 export function TwoPiecesBlock() {
   return (
-    <section className="relative py-24 overflow-hidden bg-white border-t border-b border-[#E9ECEF]">
+    <section className="relative py-16 md:py-24 overflow-hidden bg-white border-t border-b border-[#E9ECEF]">
       {/* Background glow */}
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-[#0090FF]/4 rounded-full blur-[120px] pointer-events-none" />
 

@@ -42,7 +42,7 @@ const team = [
 
 export function Team() {
   return (
-    <section id="equipe" className="py-32 bg-[#F8F9FA] relative overflow-hidden">
+    <section id="equipe" className="py-16 md:py-32 bg-[#F8F9FA] relative overflow-hidden">
       {/* Background Glow */}
       <div className="absolute top-0 left-1/2 -translate-x-1/2 w-full max-w-3xl h-[500px] bg-[#0090FF]/5 rounded-full blur-[120px] pointer-events-none" />
 
@@ -100,15 +100,15 @@ export function Team() {
               <div className="absolute inset-0 bg-gradient-to-t from-[#1A1A1A] via-[#1A1A1A]/20 to-transparent opacity-80 group-hover:opacity-95 transition-opacity duration-500" />
 
               {/* Content */}
-              <div className="absolute inset-0 p-8 flex flex-col justify-end">
-                <div className="transform translate-y-20 group-hover:translate-y-0 transition-transform duration-500 ease-out">
+              <div className="absolute inset-0 p-5 md:p-8 flex flex-col justify-end">
+                <div className="transform md:translate-y-20 md:group-hover:translate-y-0 transition-transform duration-500 ease-out">
                   <div className="mb-4 inline-block px-3 py-1 rounded-full bg-[#0090FF]/10 border border-[#0090FF]/20 backdrop-blur-md">
                     <span className="text-[10px] font-black uppercase tracking-widest text-[#00D1FF]">{member.role}</span>
                   </div>
 
                   <h3 className="text-2xl font-black text-white mb-2 italic">{member.name}</h3>
 
-                  <p className="text-sm text-zinc-300 opacity-0 group-hover:opacity-100 transition-opacity duration-500 delay-100 leading-relaxed font-medium">
+                  <p className="text-sm text-zinc-300 md:opacity-0 group-hover:opacity-100 transition-opacity duration-500 delay-100 leading-relaxed font-medium">
                     {member.description}
                   </p>
                 </div>

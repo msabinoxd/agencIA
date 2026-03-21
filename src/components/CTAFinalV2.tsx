@@ -19,7 +19,7 @@ const forYou = [
 
 export function CTAFinalV2() {
   return (
-    <section className="py-32 relative overflow-hidden bg-[#F8F9FA] border-t border-[#E9ECEF]">
+    <section className="py-16 md:py-32 relative overflow-hidden bg-[#F8F9FA] border-t border-[#E9ECEF]">
       {/* Background Glows */}
       <motion.div
         animate={{ scale: [1, 1.2, 1], opacity: [0.2, 0.4, 0.2] }}
@@ -182,7 +182,7 @@ export function CTAFinalV2() {
               style={{ animation: 'ctaPulse 2.5s ease-in-out infinite' }}
             >
               <div className="absolute inset-0 -translate-x-full group-hover:animate-[shimmer_1.5s_infinite] bg-gradient-to-r from-transparent via-white/30 to-transparent" />
-              Enviar minha aplicação
+              Solicitar sessão estratégica
               <ArrowRight className="w-6 h-6 group-hover:translate-x-1 transition-transform" />
             </motion.a>
           </div>
@@ -193,9 +193,9 @@ export function CTAFinalV2() {
                 <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-[#0090FF] opacity-75"></span>
                 <span className="relative inline-flex rounded-full h-2 w-2 bg-[#0090FF]"></span>
               </span>
-              Abre o WhatsApp · Resposta em até 24h
+              Abre o WhatsApp · Resposta em instantes
             </div>
-            <p className="text-xs text-[#888888]">Resposta em até 24h úteis · Sem compromisso · Vagas limitadas</p>
+            <p className="text-xs text-[#888888]">Resposta em instantes · Sem compromisso · Vagas limitadas</p>
           </div>
         </motion.div>
 

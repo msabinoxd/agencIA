@@ -76,7 +76,7 @@ export function About() {
             <div className="absolute inset-0 bg-[linear-gradient(to_right,#E9ECEF_1px,transparent_1px),linear-gradient(to_bottom,#E9ECEF_1px,transparent_1px)] bg-[size:24px_24px] [mask-image:radial-gradient(ellipse_60%_50%_at_50%_50%,#000_70%,transparent_100%)]" />
 
             {/* Main Visual Card */}
-            <div className="relative w-full max-w-md bg-white border border-[#E9ECEF] shadow-[0_8px_40px_rgba(0,0,0,0.1)] rounded-3xl p-8">
+            <div className="relative w-full max-w-md bg-white border border-[#E9ECEF] shadow-[0_8px_40px_rgba(0,0,0,0.1)] rounded-3xl p-5 md:p-8">
               <div className="absolute -top-10 -right-10 w-32 h-32 bg-[#0090FF]/10 blur-3xl rounded-full" />
               <div className="absolute -bottom-10 -left-10 w-32 h-32 bg-[#00D1FF]/10 blur-3xl rounded-full" />
 

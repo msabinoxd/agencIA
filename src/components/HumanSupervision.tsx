@@ -53,7 +53,7 @@ export function HumanSupervision() {
             transition={{ duration: 0.8 }}
             className="relative"
           >
-            <div className="relative aspect-square max-w-sm mx-auto">
+            <div className="relative aspect-square max-w-[220px] sm:max-w-sm mx-auto">
               {/* Círculo Central (IA) */}
               <div className="absolute inset-0 flex items-center justify-center">
                 <div className="w-40 h-40 md:w-48 md:h-48 rounded-full bg-white border border-[#0090FF]/30 flex items-center justify-center relative z-10 shadow-[0_0_50px_rgba(0,144,255,0.15)]">
