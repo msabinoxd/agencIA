@@ -19,7 +19,7 @@ const FLOWS = [
         id: 'preco',
         triggers: ['custa', 'preço', 'valor', 'quanto', 'caro', 'investimento', 'parcela', 'financiamento'],
         responses: [
-            'Entendo que o investimento é uma parte importante da decisão! But antes de falar em valores, preciso entender o seu caso — cada sorriso é único e o custo varia muito. 😊',
+            'Entendo que o investimento é uma parte importante da decisão! Mas antes de falar em valores, preciso entender o seu caso — cada sorriso é único e o custo varia muito. 😊',
             'Me conta: o que mais te incomoda no seu sorriso hoje? Isso me ajuda a mostrar o que faz mais sentido para você — às vezes o tratamento ideal é bem mais acessível do que as pessoas imaginam.',
         ],
     },
