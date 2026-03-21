@@ -8,8 +8,8 @@ export function Logo({ className = "h-8" }: { className?: string }) {
         <svg viewBox="0 0 100 100" className="h-full w-full">
           <defs>
             <linearGradient id="intalky-gradient" x1="0%" y1="0%" x2="100%" y2="100%">
-              <stop offset="0%" stopColor="var(--color-accent-blue)" />
-              <stop offset="100%" stopColor="var(--color-accent-cyan)" />
+              <stop offset="0%" stopColor="#0090FF" />
+              <stop offset="100%" stopColor="#00D1FF" />
             </linearGradient>
           </defs>
           {/* Head Shape */}
@@ -26,8 +26,8 @@ export function Logo({ className = "h-8" }: { className?: string }) {
         </svg>
       </div>
       <div className="flex flex-col leading-tight">
-        <span className="text-2xl font-black text-white tracking-tighter uppercase italic">Intalky</span>
-        <span className="text-[10px] font-medium text-primary-400 tracking-widest uppercase">Assessoria & Automação</span>
+        <span className="text-2xl font-black text-[#1A1A1A] tracking-tighter uppercase italic">Intalky</span>
+        <span className="text-[10px] font-medium text-[#4A4A4A] tracking-widest uppercase">Assessoria & Automação</span>
       </div>
     </div>
   );
