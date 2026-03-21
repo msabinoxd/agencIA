@@ -349,7 +349,7 @@ export default function QualificationFunnel() {
   if (disqualified) {
     const msg = DISQUALIFY_MSG[disqualified]
     return (
-      <section className="py-24 px-4 bg-[#F8F9FA]">
+      <section className="py-8 px-4 w-full">
         <div className="max-w-xl mx-auto text-center">
           <div className="w-16 h-16 rounded-full bg-amber-50 flex items-center justify-center mx-auto mb-6 text-3xl">
             🤝
@@ -370,7 +370,7 @@ export default function QualificationFunnel() {
   // ── TELA SUCESSO ────────────────────────────────────────────────────────────
   if (submitted) {
     return (
-      <section className="py-24 px-4 bg-[#F8F9FA]">
+      <section className="py-8 px-4 w-full">
         <div className="max-w-xl mx-auto text-center">
           <div className="w-20 h-20 rounded-full bg-[rgba(0,144,255,0.08)] flex items-center justify-center mx-auto mb-6 text-4xl">
             ✅
@@ -392,11 +392,11 @@ export default function QualificationFunnel() {
 
   // ── FUNIL PRINCIPAL ─────────────────────────────────────────────────────────
   return (
-    <section className="py-24 px-4 bg-[#F8F9FA]" id="aplicacao">
+    <section className="py-8 px-4 w-full" id="aplicacao">
       <div className="max-w-2xl mx-auto">
 
         {/* Cabeçalho */}
-        <div className="text-center mb-10">
+        <div className="text-center mb-6">
           <span className="inline-flex items-center gap-2 bg-[rgba(0,144,255,0.08)] text-[#0090FF] text-xs font-semibold px-4 py-2 rounded-full mb-5">
             <span className="w-1.5 h-1.5 rounded-full bg-[#0090FF] animate-pulse" />
             APLICAÇÃO · VAGAS LIMITADAS

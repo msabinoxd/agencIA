@@ -15,7 +15,7 @@ export function FunilPage() {
           ← Voltar para o site
         </a>
       </header>
-      <main>
+      <main className="min-h-[calc(100vh-57px)] flex items-center justify-center">
         <QualificationFunnel />
       </main>
     </div>
