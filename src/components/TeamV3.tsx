@@ -5,7 +5,7 @@ import marcosImg from '../assets/team/Marcos.png';
 import daniloImg from '../assets/team/Danilo.jpg';
 import leticiaImg from '../assets/team/Letícia.jpeg';
 import rafaelaImg from '../assets/team/Rafaela.jpeg';
-import edileuzaImg from '../assets/team/Edileuza.jpg';
+import edileuzaImg from '../assets/team/Edileuza.png';
 
 const team = [
   {
