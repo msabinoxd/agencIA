@@ -1,12 +1,11 @@
-import { useState, useEffect, useRef } from 'react';
+import { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'motion/react';
 import {
-  Database, Target, TrendingUp, Calendar, Sparkles,
+  Database, Target, Calendar, Sparkles,
   MessageSquare, Bot, CheckCircle2, Circle, Loader2, Smartphone,
-  ArrowRight
 } from 'lucide-react';
+import ConfirmationChatWidget from './ConfirmationChatWidget';
 import { ScrollIndicator } from './ScrollIndicator';
-import { CONFIG } from '../config';
 
 const workflowCards = [
   {
@@ -51,20 +50,10 @@ const tasks = [
   'Paciente confirmou presença ✅'
 ];
 
-const chatSequence = [
-  { role: 'agent', text: 'Oi! Sua consulta é amanhã às 14h na Clínica Sorriso. Você confirma a presença? 😊' },
-  { role: 'user', text: 'Sim! Confirmo.' },
-  { role: 'agent', text: 'Perfeito! Separei o endereço e uma dica para chegar com facilidade 📍. Te vejo amanhã!' },
-  { role: 'agent', text: '🔔 [Sistema] No-show evitado. Taxa de comparecimento: 94%.' }
-];
 
 export function AiVideoDemo() {
   const [activeTab, setActiveTab] = useState<'chat' | 'workflow'>('workflow');
   const [progress, setProgress] = useState(0);
-
-  const [chatStep, setChatStep] = useState(0);
-  const [isTyping, setIsTyping] = useState(false);
-  const chatContainerRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
     if (activeTab === 'workflow') {
@@ -74,47 +63,6 @@ export function AiVideoDemo() {
       }, 2500);
       return () => clearInterval(timer);
     }
-  }, [activeTab]);
-
-  useEffect(() => {
-    let mounted = true;
-    if (activeTab === 'chat') {
-      const runChat = async () => {
-        setChatStep(0);
-        setIsTyping(false);
-
-        const delays = [
-          { type: 'msg', delay: 800 },
-          { type: 'type', delay: 600 },
-          { type: 'msg', delay: 2500 },
-          { type: 'type', delay: 1500 },
-          { type: 'msg', delay: 1500 },
-          { type: 'type', delay: 800 },
-          { type: 'msg', delay: 2500 },
-        ];
-
-        let currentStep = 0;
-        for (const step of delays) {
-          if (!mounted) break;
-          if (step.type === 'type') {
-            setIsTyping(true);
-            await new Promise(r => setTimeout(r, step.delay));
-          } else {
-            setIsTyping(false);
-            currentStep++;
-            setChatStep(currentStep);
-            setTimeout(() => {
-              if (chatContainerRef.current) {
-                chatContainerRef.current.scrollTop = chatContainerRef.current.scrollHeight;
-              }
-            }, 100);
-            await new Promise(r => setTimeout(r, step.delay));
-          }
-        }
-      };
-      runChat();
-    }
-    return () => { mounted = false; };
   }, [activeTab]);
 
   return (
@@ -342,70 +290,9 @@ export function AiVideoDemo() {
                       animate={{ opacity: 1, y: 0 }}
                       exit={{ opacity: 0, y: -10 }}
                       transition={{ duration: 0.3 }}
-                      className="h-full flex flex-col bg-white rounded-2xl border border-[#E9ECEF] overflow-hidden relative"
+                      className="h-full"
                     >
-                      {/* Chat Header */}
-                      <div className="bg-[#F8F9FA] px-4 py-3 border-b border-[#E9ECEF] flex items-center gap-3 shrink-0">
-                        <div className="w-8 h-8 rounded-full bg-gradient-to-br from-[#0090FF] to-[#00D1FF] flex items-center justify-center shadow-[0_4px_10px_rgba(0,144,255,0.3)]">
-                          <Bot className="w-4 h-4 text-white" />
-                        </div>
-                        <div>
-                          <h3 className="text-[#1A1A1A] font-medium text-xs">Assistente {CONFIG.brand.name}</h3>
-                          <p className="text-[#0090FF] text-[10px] flex items-center gap-1">
-                            <span className="w-1.5 h-1.5 rounded-full bg-[#0090FF] animate-pulse"></span> Online
-                          </p>
-                        </div>
-                      </div>
-
-                      {/* Chat Messages */}
-                      <div
-                        ref={chatContainerRef}
-                        className="flex-1 overflow-y-auto flex flex-col gap-4 p-4 scroll-smooth bg-[#F8F9FA]"
-                      >
-                        <AnimatePresence>
-                          {chatSequence.slice(0, chatStep).map((msg, idx) => (
-                            <motion.div
-                              key={idx}
-                              initial={{ opacity: 0, y: 10, scale: 0.95 }}
-                              animate={{ opacity: 1, y: 0, scale: 1 }}
-                              transition={{ duration: 0.3 }}
-                              className={`max-w-[85%] text-sm shadow-[var(--sh)] ${
-                                msg.role === 'user'
-                                  ? 'bg-white text-[#4A4A4A] p-3.5 rounded-2xl rounded-tr-sm self-end border border-[#E9ECEF]'
-                                  : 'bg-gradient-to-br from-[#0090FF] to-[#00D1FF] text-white p-3.5 rounded-2xl rounded-tl-sm self-start shadow-[0_4px_14px_rgba(0,144,255,0.2)]'
-                              }`}
-                            >
-                              {msg.text}
-                            </motion.div>
-                          ))}
-                        </AnimatePresence>
-
-                        {/* Typing Indicator */}
-                        <AnimatePresence>
-                          {isTyping && (
-                            <motion.div
-                              initial={{ opacity: 0, y: 10 }}
-                              animate={{ opacity: 1, y: 0 }}
-                              exit={{ opacity: 0, scale: 0.9 }}
-                              className="bg-white border border-[#E9ECEF] p-3.5 rounded-2xl rounded-tl-sm self-start flex items-center gap-1.5 shadow-[var(--sh)]"
-                            >
-                              <motion.div animate={{ y: [0, -4, 0] }} transition={{ repeat: Infinity, duration: 0.6, delay: 0 }} className="w-1.5 h-1.5 bg-[#0090FF] rounded-full" />
-                              <motion.div animate={{ y: [0, -4, 0] }} transition={{ repeat: Infinity, duration: 0.6, delay: 0.2 }} className="w-1.5 h-1.5 bg-[#0090FF] rounded-full" />
-                              <motion.div animate={{ y: [0, -4, 0] }} transition={{ repeat: Infinity, duration: 0.6, delay: 0.4 }} className="w-1.5 h-1.5 bg-[#0090FF] rounded-full" />
-                            </motion.div>
-                          )}
-                        </AnimatePresence>
-                      </div>
-
-                      {/* Chat Input Mockup */}
-                      <div className="p-3 bg-white border-t border-[#E9ECEF] shrink-0">
-                        <div className="bg-[#F8F9FA] border border-[#E9ECEF] rounded-full px-4 py-2 flex items-center justify-between">
-                          <span className="text-xs text-[#888888]">Digite sua mensagem...</span>
-                          <div className="w-6 h-6 rounded-full bg-[#0090FF]/10 flex items-center justify-center">
-                            <ArrowRight className="w-3 h-3 text-[#0090FF]" />
-                          </div>
-                        </div>
-                      </div>
+                      <ConfirmationChatWidget />
                     </motion.div>
                   )}
                 </AnimatePresence>
