@@ -21,14 +21,14 @@ export function HeroV2({ onOpenSimulator }: { onOpenSimulator?: () => void }) {
           className="flex flex-col gap-5"
         >
           {/* Badge */}
-          <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-white border border-[#E9ECEF] shadow-[var(--sh)] w-fit">
-            <span className="flex h-2 w-2 rounded-full bg-[#0090FF] animate-pulse shrink-0"></span>
-            <span className="text-[11px] font-black text-[#4A4A4A] uppercase tracking-widest leading-none">Para Clínicas Odontológicas & Estéticas</span>
+          <div className="inline-flex items-start gap-2 px-3 py-1.5 rounded-full bg-white border border-[#E9ECEF] shadow-[var(--sh)] max-w-full">
+            <span className="flex h-2 w-2 rounded-full bg-[#0090FF] animate-pulse shrink-0 mt-[3px]"></span>
+            <span className="text-[9px] sm:text-[11px] font-black text-[#4A4A4A] uppercase tracking-wider sm:tracking-widest leading-tight">Para Clínicas Odontológicas & Estéticas</span>
           </div>
 
           {/* Headline */}
           <motion.h1
-            className="text-4xl sm:text-5xl lg:text-6xl font-black text-[#1A1A1A] tracking-tighter leading-[1.05]"
+            className="text-[28px] sm:text-5xl lg:text-6xl font-black text-[#1A1A1A] tracking-tighter leading-[1.05]"
             variants={stagger}
             initial="hidden"
             animate="visible"
@@ -76,7 +76,7 @@ export function HeroV2({ onOpenSimulator }: { onOpenSimulator?: () => void }) {
                 href={waURL(CONFIG.wa.msgHero)}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="relative flex items-center justify-center gap-2 bg-gradient-to-r from-[#0090FF] to-[#00D1FF] text-white px-7 py-4 rounded-xl font-black text-sm uppercase tracking-widest transition-all hover:scale-[1.02] overflow-hidden shadow-[0_4px_14px_rgba(0,144,255,0.3)]"
+                className="relative flex items-center justify-center gap-2 bg-gradient-to-r from-[#0090FF] to-[#00D1FF] text-white px-5 sm:px-7 py-4 rounded-xl font-black text-[10px] sm:text-sm uppercase tracking-wide sm:tracking-widest leading-snug text-center transition-all hover:scale-[1.02] overflow-hidden shadow-[0_4px_14px_rgba(0,144,255,0.3)]"
               >
                 <div className="absolute inset-0 -translate-x-full group-hover:animate-[shimmer_1.5s_infinite] bg-gradient-to-r from-transparent via-white/20 to-transparent" />
                 Quero entender onde meu processo comercial tem furo
@@ -92,20 +92,20 @@ export function HeroV2({ onOpenSimulator }: { onOpenSimulator?: () => void }) {
           </div>
 
           {/* Stats */}
-          <div className="flex items-center gap-8 pt-6 mt-2 border-t border-[#E9ECEF]">
+          <div className="flex items-center gap-3 sm:gap-8 pt-6 mt-2 border-t border-[#E9ECEF]">
             <div className="flex flex-col">
-              <span className="text-3xl font-black text-[#0090FF] italic">R$50M+</span>
-              <span className="text-[10px] font-black text-[#888888] uppercase tracking-[0.15em] leading-tight mt-0.5">Em Vendas<br />Gerados</span>
+              <span className="text-2xl sm:text-3xl font-black text-[#0090FF] italic">R$50M+</span>
+              <span className="text-[8px] sm:text-[10px] font-black text-[#888888] uppercase tracking-tight sm:tracking-[0.15em] leading-tight mt-0.5">Em Vendas<br />Gerados</span>
             </div>
             <div className="w-px h-10 bg-[#E9ECEF]" />
             <div className="flex flex-col">
-              <span className="text-3xl font-black text-[#0090FF] italic">4x</span>
-              <span className="text-[10px] font-black text-[#888888] uppercase tracking-[0.15em] leading-tight mt-0.5">Crescimento<br />em 12 Meses</span>
+              <span className="text-2xl sm:text-3xl font-black text-[#0090FF] italic">4x</span>
+              <span className="text-[8px] sm:text-[10px] font-black text-[#888888] uppercase tracking-tight sm:tracking-[0.15em] leading-tight mt-0.5">Crescimento<br />em 12 Meses</span>
             </div>
             <div className="w-px h-10 bg-[#E9ECEF]" />
             <div className="flex flex-col">
-              <span className="text-3xl font-black text-[#0090FF] italic">-70%</span>
-              <span className="text-[10px] font-black text-[#888888] uppercase tracking-[0.15em] leading-tight mt-0.5">Redução<br />de No-Show</span>
+              <span className="text-2xl sm:text-3xl font-black text-[#0090FF] italic">-70%</span>
+              <span className="text-[8px] sm:text-[10px] font-black text-[#888888] uppercase tracking-tight sm:tracking-[0.15em] leading-tight mt-0.5">Redução<br />de No-Show</span>
             </div>
           </div>
         </motion.div>
