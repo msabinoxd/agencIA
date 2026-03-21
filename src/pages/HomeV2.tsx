@@ -1,4 +1,4 @@
-import { useState, lazy, Suspense } from 'react';
+import { useState, lazy, Suspense, useEffect } from 'react';
 import { Header } from '../components/Header';
 import { HeroV2 } from '../components/HeroV2';
 import { WhatsAppFloat } from '../components/WhatsAppFloat';
@@ -25,6 +25,12 @@ const AgentSimulator = lazy(() => import('../components/AgentSimulator').then(m 
 
 export function HomeV2() {
   const [showSimulator, setShowSimulator] = useState(false);
+
+  useEffect(() => {
+    const prev = document.title;
+    document.title = 'Intalky — Você está perdendo pacientes que já queriam comprar. Veja por quê.';
+    return () => { document.title = prev; };
+  }, []);
 
   return (
     <div className="min-h-screen bg-[#F8F9FA] text-[#1A1A1A] font-sans selection:bg-[#0090FF]/20 selection:text-[#0090FF] transition-colors duration-500">

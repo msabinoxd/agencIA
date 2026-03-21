@@ -55,24 +55,21 @@ export function PainSolutionV2() {
             Diagnóstico da sua operação
           </div>
           <h2 className="text-3xl md:text-5xl font-bold text-[#1A1A1A] tracking-tight mb-4">
-            A maioria das clínicas está{' '}
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-red-400 to-red-600">sangrando dinheiro em silêncio.</span>{' '}
-            A sua também pode estar.
+            Cinco situações que custam{' '}
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-red-400 to-red-600">R$50.000 ou mais por mês</span>{' '}
+            para a maioria das clínicas. Qual delas você reconhece?
           </h2>
-          <p className="text-lg text-[#4A4A4A] mb-8">
-            E o pior: ninguém percebe porque as perdas acontecem aos poucos.
-          </p>
 
           {/* 3 intro paragraphs */}
-          <div className="space-y-4 text-left bg-white border border-[#E9ECEF] rounded-2xl p-6 shadow-[var(--sh)]">
+          <div className="space-y-4 text-left bg-white border border-[#E9ECEF] rounded-2xl p-6 shadow-[var(--sh)] mb-0">
             <p className="text-[#4A4A4A] leading-relaxed">
-              Você sabe exatamente quanto gasta com tráfego todo mês. Mas sabe quanto desse dinheiro está sendo jogado fora porque o lead <strong className="text-[#1A1A1A]">some antes de virar paciente?</strong>
+              Não é exagero. São contas simples que a maioria dos donos de clínica <strong className="text-[#1A1A1A]">nunca parou para fazer.</strong>
             </p>
             <p className="text-[#4A4A4A] leading-relaxed">
-              O problema raramente é o anúncio. É o que acontece <strong className="text-[#1A1A1A]">depois:</strong> o lead chega, ninguém responde rápido, o SDR não sabe conduzir a conversa, o follow-up não existe. O lead foi embora com seu dinheiro de mídia paga.
+              O lead que não recebeu resposta rápida e foi para o concorrente. O paciente que agendou, não apareceu e ninguém fez follow-up. A SDR que você treinou por três meses e pediu demissão na semana seguinte. O bot que "atende" mas só manda tabela de preços quando o lead pede um sorriso diferente.
             </p>
-            <p className="text-[#4A4A4A] leading-relaxed font-medium">
-              Mapeamos os <strong className="text-red-500">5 pontos de sangramento</strong> que mais afetam clínicas odontológicas e estéticas. Identifique os que existem na sua operação:
+            <p className="text-[#4A4A4A] leading-relaxed italic">
+              Gestores que pensam como empresários não aceitam viver no escuro. Eles querem saber exatamente onde estão sangrando — para poder estancar.
             </p>
           </div>
         </motion.div>

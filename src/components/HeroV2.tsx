@@ -28,13 +28,13 @@ export function HeroV2({ onOpenSimulator }: { onOpenSimulator?: () => void }) {
 
           {/* Headline */}
           <motion.h1
-            className="text-4xl sm:text-5xl lg:text-6xl font-black text-[#1A1A1A] tracking-tighter leading-[1]"
+            className="text-4xl sm:text-5xl lg:text-6xl font-black text-[#1A1A1A] tracking-tighter leading-[1.05]"
             variants={stagger}
             initial="hidden"
             animate="visible"
           >
-            {["Você", "investe", "em", "tráfego.", "Os", "leads", "chegam.", "E", "a", "maioria", "some", "sem", "virar", "paciente."].map((word, i) => {
-              const isHighlight = word === 'some' || word === 'paciente.';
+            {["Toda", "semana,", "sua", "clínica", "perde", "pacientes", "que", "já", "demonstraram", "interesse.", "E", "você", "sabe", "disso."].map((word, i) => {
+              const isHighlight = word === 'perde' || word === 'pacientes';
               return (
                 <motion.span
                   key={i}
@@ -51,14 +51,22 @@ export function HeroV2({ onOpenSimulator }: { onOpenSimulator?: () => void }) {
           </motion.h1>
 
           {/* Subheadline */}
-          <p className="text-base md:text-lg text-[#4A4A4A] leading-relaxed max-w-lg font-semibold">
-            Não é culpa do lead. É culpa do <span className="text-[#1A1A1A] font-bold">processo comercial.</span>
+          <p className="text-base md:text-lg text-[#4A4A4A] leading-relaxed max-w-lg">
+            Não é problema de tráfego. Não é problema de marketing. É que o dinheiro que você investe para trazer o lead evapora no momento em que ele precisava de um processo comercial — e encontrou um <span className="text-[#1A1A1A] font-bold">vácuo.</span>
           </p>
 
-          {/* Support paragraph */}
-          <p className="text-sm text-[#4A4A4A] leading-relaxed max-w-lg">
-            Na maioria das clínicas, o que acontece depois que o lead chega é um caos silencioso: demora para responder, SDR despreparado, follow-up que nunca acontece. O lead foi embora — e levou seu dinheiro de tráfego com ele.
-          </p>
+          {/* 3 parágrafos de apoio */}
+          <div className="space-y-2 max-w-lg">
+            <p className="text-sm text-[#4A4A4A] leading-relaxed">
+              Você investe em anúncios. Os leads chegam. Alguns agendam. Outros somem sem explicação. E aqueles que aparecem na avaliação... nem sempre saem com o tratamento fechado.
+            </p>
+            <p className="text-sm text-[#4A4A4A] leading-relaxed font-semibold">
+              Enquanto isso, o dinheiro do tráfego continua sendo debitado todo mês. Sem piedade.
+            </p>
+            <p className="text-sm text-[#4A4A4A] leading-relaxed">
+              O problema não está onde você procura. Está no que acontece <span className="text-[#1A1A1A] font-bold">depois que o lead clica.</span>
+            </p>
+          </div>
 
           {/* CTAs */}
           <div className="flex flex-col sm:flex-row gap-3 mt-2">
@@ -71,7 +79,7 @@ export function HeroV2({ onOpenSimulator }: { onOpenSimulator?: () => void }) {
                 className="relative flex items-center justify-center gap-2 bg-gradient-to-r from-[#0090FF] to-[#00D1FF] text-white px-7 py-4 rounded-xl font-black text-sm uppercase tracking-widest transition-all hover:scale-[1.02] overflow-hidden shadow-[0_4px_14px_rgba(0,144,255,0.3)]"
               >
                 <div className="absolute inset-0 -translate-x-full group-hover:animate-[shimmer_1.5s_infinite] bg-gradient-to-r from-transparent via-white/20 to-transparent" />
-                Quero entender onde estou perdendo pacientes
+                Quero entender onde meu processo comercial tem furo
                 <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform shrink-0" />
               </a>
             </div>
