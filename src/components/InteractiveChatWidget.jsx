@@ -104,11 +104,14 @@ export default function InteractiveChatWidget() {
     const [isResponding, setIsResponding] = useState(false)
     const [showSuccess, setShowSuccess] = useState(false)
     const messagesEndRef = useRef(null)
+    const messagesContainerRef = useRef(null)
     const inputRef = useRef(null)
 
-    // Auto-scroll para última mensagem
+    // Auto-scroll para última mensagem (sem mover a página)
     useEffect(() => {
-        messagesEndRef.current?.scrollIntoView({ behavior: 'smooth' })
+        if (messagesContainerRef.current) {
+            messagesContainerRef.current.scrollTop = messagesContainerRef.current.scrollHeight
+        }
     }, [messages, isTyping])
 
     function detectFlow(text) {
@@ -199,14 +202,14 @@ export default function InteractiveChatWidget() {
                             <path d="M7 2v11h3v9l7-12h-4l4-8z" />
                         </svg>
                         <div>
-                            <p className="text-[10px] font-bold text-[#1A1A1A] leading-none">Response: 3s</p>
+                            <p className="text-[10px] font-bold text-[#1A1A1A] leading-none">Resposta: 3s</p>
                             <p className="text-[9px] text-[#9CA3AF] leading-none mt-0.5">CLOSER DIGITAL</p>
                         </div>
                     </div>
                 </div>
 
                 {/* Área de mensagens — altura fixa com scroll */}
-                <div className="flex flex-col gap-2 h-[180px] lg:h-[280px] overflow-y-auto pr-1 scroll-smooth">
+                <div ref={messagesContainerRef} className="flex flex-col gap-2 h-[180px] lg:h-[280px] overflow-y-auto pr-1 scroll-smooth">
                     <AnimatePresence initial={false}>
                         {messages.map((msg, i) => (
                             <motion.div

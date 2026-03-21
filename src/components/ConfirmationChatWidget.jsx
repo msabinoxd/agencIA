@@ -72,10 +72,12 @@ export default function ConfirmationChatWidget() {
   const [inputVal, setInputVal] = useState('')
   const [isTyping, setIsTyping] = useState(false)
   const [isResponding, setIsResponding] = useState(false)
-  const endRef = useRef(null)
+  const containerRef = useRef(null)
 
   useEffect(() => {
-    endRef.current?.scrollIntoView({ behavior: 'smooth' })
+    if (containerRef.current) {
+      containerRef.current.scrollTop = containerRef.current.scrollHeight
+    }
   }, [messages, isTyping])
 
   function detectFlow(text) {
@@ -159,7 +161,7 @@ export default function ConfirmationChatWidget() {
       </div>
 
       {/* Mensagens */}
-      <div className="flex-1 overflow-y-auto flex flex-col gap-2.5 p-4 scroll-smooth bg-[#F8F9FA]">
+      <div ref={containerRef} className="flex-1 overflow-y-auto flex flex-col gap-2.5 p-4 scroll-smooth bg-[#F8F9FA]">
         <AnimatePresence initial={false}>
           {messages.map((msg, i) => (
             <motion.div
@@ -209,7 +211,6 @@ export default function ConfirmationChatWidget() {
             </div>
           </motion.div>
         )}
-        <div ref={endRef} />
       </div>
 
       {/* Chips de resposta rápida */}

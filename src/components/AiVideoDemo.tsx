@@ -10,7 +10,7 @@ import { ScrollIndicator } from './ScrollIndicator';
 const workflowCards = [
   {
     id: 'leads', icon: MessageSquare, title: 'Análise de Leads',
-    badge: 'NLP Engine',
+    badge: 'Motor NLP',
     description: 'Processamento de linguagem natural para extrair intenção de compra em milissegundos.',
     textColor: 'text-[#0090FF]', iconHover: 'group-hover:text-[#0090FF]',
     bgGlow: 'bg-[#0090FF]/20', gradient: 'from-[#0090FF]/5 to-transparent',
@@ -18,7 +18,7 @@ const workflowCards = [
   },
   {
     id: 'qualify', icon: Target, title: 'Qualificação IA',
-    badge: 'Smart Scoring',
+    badge: 'Pontuação Inteligente',
     description: 'Filtro inteligente de objeções e cálculo de probabilidade de fechamento em tempo real.',
     textColor: 'text-[#00D1FF]', iconHover: 'group-hover:text-[#00D1FF]',
     bgGlow: 'bg-[#0090FF]/20', gradient: 'from-[#0090FF]/5 to-transparent',
@@ -26,7 +26,7 @@ const workflowCards = [
   },
   {
     id: 'crm', icon: Database, title: 'Gestão de CRM',
-    badge: 'Auto-Sync',
+    badge: 'Sinc. Automática',
     description: 'Sincronização bidirecional. Atualiza funil, tags e histórico sem nenhum toque humano.',
     textColor: 'text-[#0090FF]', iconHover: 'group-hover:text-[#0090FF]',
     bgGlow: 'bg-[#0090FF]/20', gradient: 'from-[#0090FF]/5 to-transparent',
@@ -34,7 +34,7 @@ const workflowCards = [
   },
   {
     id: 'calendar', icon: Calendar, title: 'Agendamentos',
-    badge: 'Smart Calendar',
+    badge: 'Agenda Inteligente',
     description: 'Confirmação de consultas e marcação direto na agenda da clínica. Zero no-show.',
     textColor: 'text-[#1A1A1A]', iconHover: 'group-hover:text-[#0090FF]',
     bgGlow: 'bg-[#0090FF]/20', gradient: 'from-[#0090FF]/5 to-transparent',
@@ -139,7 +139,7 @@ export function AiVideoDemo() {
                   <div className="w-3 h-3 rounded-full bg-emerald-400/80" />
                   <div className="ml-auto flex items-center gap-2 text-[10px] text-emerald-600 font-mono uppercase tracking-wider bg-emerald-500/10 px-2 py-1 rounded-full border border-emerald-500/20">
                     <span className="w-1.5 h-1.5 rounded-full bg-emerald-500 animate-pulse" />
-                    System Online
+                    Sistema Online
                   </div>
                 </div>
 

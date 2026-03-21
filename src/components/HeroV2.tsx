@@ -127,8 +127,8 @@ export function HeroV2({ onOpenSimulator }: { onOpenSimulator?: () => void }) {
               <Zap className="w-5 h-5 text-[#0090FF]" />
             </div>
             <div>
-              <p className="text-[#1A1A1A] text-sm font-black italic">Response: 3s</p>
-              <p className="text-[#888888] text-[10px] font-bold uppercase tracking-widest">Instant Scale</p>
+              <p className="text-[#1A1A1A] text-sm font-black italic">Resposta: 3s</p>
+              <p className="text-[#888888] text-[10px] font-bold uppercase tracking-widest">Escala Instantânea</p>
             </div>
           </motion.div>
 
@@ -141,8 +141,8 @@ export function HeroV2({ onOpenSimulator }: { onOpenSimulator?: () => void }) {
               <MessageSquareCode className="w-5 h-5 text-[#00D1FF]" />
             </div>
             <div>
-              <p className="text-[#1A1A1A] text-sm font-black italic">Smart Filtro</p>
-              <p className="text-[#888888] text-[10px] font-bold uppercase tracking-widest">Lead Qualifier</p>
+              <p className="text-[#1A1A1A] text-sm font-black italic">Filtro Inteligente</p>
+              <p className="text-[#888888] text-[10px] font-bold uppercase tracking-widest">Qualificador de Leads</p>
             </div>
           </motion.div>
         </motion.div>
