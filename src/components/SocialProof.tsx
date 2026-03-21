@@ -88,6 +88,8 @@ export function SocialProof() {
                     <img
                       src={testimonial.image}
                       alt={testimonial.name}
+                      loading="lazy"
+                      decoding="async"
                       referrerPolicy="no-referrer"
                       className="relative w-14 h-14 rounded-full object-cover border-2 border-[#E9ECEF] group-hover:border-[#0090FF]/30 transition-colors duration-500"
                     />

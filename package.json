@@ -23,6 +23,7 @@
     "vite": "^6.2.0"
   },
   "devDependencies": {
+    "@resvg/resvg-js": "^2.6.2",
     "@types/node": "^22.14.0",
     "autoprefixer": "^10.4.21",
     "gh-pages": "^6.3.0",

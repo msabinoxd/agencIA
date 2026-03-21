@@ -161,6 +161,8 @@ export function Solutions() {
                       <img
                         src={feature.image}
                         alt={feature.title}
+                        loading="lazy"
+                        decoding="async"
                         className="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-500 scale-105 group-hover:scale-100"
                         referrerPolicy="no-referrer"
                       />

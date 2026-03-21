@@ -87,6 +87,8 @@ export function Team() {
               <img
                 src={member.image}
                 alt={member.name}
+                loading="lazy"
+                decoding="async"
                 referrerPolicy="no-referrer"
                 className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-110 grayscale group-hover:grayscale-0"
                 onError={(e) => {

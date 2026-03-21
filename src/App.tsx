@@ -2,6 +2,8 @@ import { useState, lazy, Suspense } from 'react';
 import { Header } from './components/Header';
 import { Hero } from './components/Hero';
 import { WhatsAppFloat } from './components/WhatsAppFloat';
+import { CookieBanner } from './components/CookieBanner';
+import { Footer } from './components/Footer';
 import { AnimatePresence } from 'motion/react';
 
 // Funil de vendas — ordem cronológica de conversão (neuromarketing)
@@ -66,7 +68,9 @@ export default function App() {
         </Suspense>
       </main>
 
+      <Footer />
       <WhatsAppFloat />
+      <CookieBanner />
 
       <AnimatePresence>
         {showSimulator && (
