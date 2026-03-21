@@ -3,21 +3,21 @@ import { Header } from '../components/Header';
 import { HeroV2 } from '../components/HeroV2';
 import { WhatsAppFloat } from '../components/WhatsAppFloat';
 import { CookieBanner } from '../components/CookieBanner';
-import { Footer } from '../components/Footer';
+import { FooterV3 } from '../components/FooterV3';
 import { AnimatePresence } from 'motion/react';
 
-const PainSolutionV2 = lazy(() => import('../components/PainSolutionV2').then(m => ({ default: m.PainSolutionV2 })));
-const TwoPiecesBlock = lazy(() => import('../components/TwoPiecesBlock').then(m => ({ default: m.TwoPiecesBlock })));
+const PainSolutionV3 = lazy(() => import('../components/PainSolutionV3').then(m => ({ default: m.PainSolutionV3 })));
+const TwoPiecesBlockV3 = lazy(() => import('../components/TwoPiecesBlockV3').then(m => ({ default: m.TwoPiecesBlockV3 })));
 const AiVideoDemo = lazy(() => import('../components/AiVideoDemo').then(m => ({ default: m.AiVideoDemo })));
 const Solutions = lazy(() => import('../components/Solutions').then(m => ({ default: m.Solutions })));
-const About = lazy(() => import('../components/About').then(m => ({ default: m.About })));
-const Team = lazy(() => import('../components/Team').then(m => ({ default: m.Team })));
-const HumanSupervision = lazy(() => import('../components/HumanSupervision').then(m => ({ default: m.HumanSupervision })));
-const AutomationStack = lazy(() => import('../components/AutomationStack').then(m => ({ default: m.AutomationStack })));
+const AboutV3 = lazy(() => import('../components/AboutV3').then(m => ({ default: m.AboutV3 })));
+const TeamV3 = lazy(() => import('../components/TeamV3').then(m => ({ default: m.TeamV3 })));
+const HumanSupervisionV3 = lazy(() => import('../components/HumanSupervisionV3').then(m => ({ default: m.HumanSupervisionV3 })));
+const AutomationStackV3 = lazy(() => import('../components/AutomationStackV3').then(m => ({ default: m.AutomationStackV3 })));
 const ConnectionBridge = lazy(() => import('../components/ConnectionBridge').then(m => ({ default: m.ConnectionBridge })));
-const SocialProof = lazy(() => import('../components/SocialProof').then(m => ({ default: m.SocialProof })));
+const SocialProofV3 = lazy(() => import('../components/SocialProofV3').then(m => ({ default: m.SocialProofV3 })));
 const FAQ = lazy(() => import('../components/FAQ').then(m => ({ default: m.FAQ })));
-const CTAFinalV2 = lazy(() => import('../components/CTAFinalV2').then(m => ({ default: m.CTAFinalV2 })));
+const CTAFinalV3 = lazy(() => import('../components/CTAFinalV3').then(m => ({ default: m.CTAFinalV3 })));
 
 const AgentSimulator = lazy(() => import('../components/AgentSimulator').then(m => ({ default: m.AgentSimulator })));
 
@@ -39,10 +39,10 @@ export function HomeV3() {
 
         <Suspense fallback={<div className="min-h-[60vh] bg-[#F8F9FA]" />}>
           {/* 2. DOR — Custo quantificado */}
-          <PainSolutionV2 />
+          <PainSolutionV3 />
 
           {/* 3. VIRADA — A IA não resolve sozinha (pico emocional, logo após a dor) */}
-          <TwoPiecesBlock />
+          <TwoPiecesBlockV3 />
 
           {/* 4. DEMONSTRAÇÃO — Ver para crer */}
           <AiVideoDemo />
@@ -51,32 +51,32 @@ export function HomeV3() {
           <Solutions />
 
           {/* 6. AUTORIDADE — Quem somos (antes das features) */}
-          <About />
+          <AboutV3 />
 
           {/* 7. HUMANIZAÇÃO — Time real */}
-          <Team />
+          <TeamV3 />
 
           {/* 8. CONFIANÇA — Nossa plataforma */}
-          <HumanSupervision />
+          <HumanSupervisionV3 />
 
           {/* 9. AUTORIDADE — Stack completo / Seis Pilares */}
-          <AutomationStack />
+          <AutomationStackV3 />
 
           {/* 10. TRANSIÇÃO VISUAL */}
           <ConnectionBridge />
 
           {/* 11. PROVA SOCIAL — Cases, R$50M+, FOMO */}
-          <SocialProof />
+          <SocialProofV3 />
 
           {/* 12. OBJEÇÕES — Remoção de risco */}
           <FAQ />
 
           {/* 13. AÇÃO — Merecimento + filtro + aplicação */}
-          <CTAFinalV2 />
+          <CTAFinalV3 />
         </Suspense>
       </main>
 
-      <Footer />
+      <FooterV3 />
       <WhatsAppFloat />
       <CookieBanner />
 

@@ -2,13 +2,13 @@ import { useState } from 'react';
 import { CONFIG } from '../config';
 import { PrivacyPolicy } from './PrivacyPolicy';
 
-export function Footer() {
+export function FooterV3() {
   const [showPrivacy, setShowPrivacy] = useState(false);
 
   return (
     <>
-      <footer className="bg-[#1A1A1A] py-8 px-6">
-        <div className="max-w-7xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-4">
+      <footer className="bg-[#1A1A1A] pt-8 pb-20 sm:pb-8 px-6">
+        <div className="max-w-7xl mx-auto flex flex-col items-center gap-4 text-center sm:flex-row sm:justify-between sm:text-left">
           <div className="flex items-center gap-3">
             <div className="w-7 h-7 rounded-lg bg-gradient-to-br from-[#0090FF] to-[#00D1FF] flex items-center justify-center shrink-0">
               <span className="text-white text-[10px] font-black">IN</span>

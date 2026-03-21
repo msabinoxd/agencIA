@@ -1,28 +1,32 @@
 import { motion } from 'motion/react';
 import { Network, Database, Zap, Users, ArrowRight, CheckCircle2 } from 'lucide-react';
+import { waURL } from '../config';
 
 const automations = [
     {
         title: 'Tráfego & Funil',
         desc: 'Meta Ads e Google Ads calibrados para o ICP da sua clínica + funil desenhado com os 7 Pilares da Persuasão de Danilo Oliveira.',
         icon: Network,
-        features: ['ICP validado', 'Pixel de rastreamento', 'Funil de alta conversão']
+        features: ['ICP validado', 'Pixel de rastreamento', 'Funil de alta conversão'],
+        waMsg: 'Olá! Quero saber mais sobre Tráfego & Funil da Intalky.'
     },
     {
         title: 'Intalky AI',
         desc: 'A única IA do mercado treinada com neurociência de vendas. Atende, qualifica, faz follow-up e gerencia o CRM 24/7.',
         icon: Database,
-        features: ['Resposta em < 3s', 'Follow-up automático', 'Integração total CRM']
+        features: ['Resposta em < 3s', 'Follow-up automático', 'Integração total CRM'],
+        waMsg: 'Olá! Quero saber mais sobre a Intalky AI para minha clínica.'
     },
     {
         title: 'Gestão & Treinamento',
         desc: 'Treinamento semanal da equipe com Danilo Oliveira + consultoria de marketing com Marcos + suporte em horário comercial.',
         icon: Users,
-        features: ['Roleplay semanal', 'Consultoria de vendas', 'Suporte comercial']
+        features: ['Roleplay semanal', 'Consultoria de vendas', 'Suporte comercial'],
+        waMsg: 'Olá! Quero saber mais sobre Gestão & Treinamento da Intalky.'
     }
 ];
 
-export function AutomationStack() {
+export function AutomationStackV3() {
     return (
         <section id="automacao" className="py-32 bg-[#F8F9FA] relative overflow-hidden">
             {/* Background Grid */}
@@ -94,9 +98,14 @@ export function AutomationStack() {
                                     </ul>
 
                                     <div className="mt-8 pt-6 border-t border-[#E9ECEF] opacity-0 group-hover:opacity-100 transition-all duration-500 translate-y-2 group-hover:translate-y-0">
-                                        <button className="flex items-center gap-2 text-[#0090FF] text-sm font-bold uppercase tracking-wider hover:gap-3 transition-all">
+                                        <a
+                                            href={waURL(item.waMsg)}
+                                            target="_blank"
+                                            rel="noopener noreferrer"
+                                            className="flex items-center gap-2 text-[#0090FF] text-sm font-bold uppercase tracking-wider hover:gap-3 transition-all"
+                                        >
                                             Ver detalhes <ArrowRight className="w-4 h-4" />
-                                        </button>
+                                        </a>
                                     </div>
                                 </div>
                             </motion.div>
@@ -112,7 +121,7 @@ export function AutomationStack() {
                     className="mt-20 flex flex-wrap justify-center items-center gap-12 opacity-40 grayscale hover:grayscale-0 hover:opacity-100 transition-all duration-700"
                 >
                     {['OdontoCompany', 'Sorridents', 'Odonto Special', 'B Facial Clinic', 'Cotia Clínica', 'RD Station'].map(brand => (
-                        <span key={brand} className="text-xl font-black text-[#4A4A4A] px-2 tracking-tighter">{brand}</span>
+                        <span key={brand} className="inline-flex items-center px-5 py-2.5 rounded-xl border border-[#E9ECEF] bg-white text-sm font-bold text-[#4A4A4A] tracking-tight shadow-[var(--sh)]">{brand}</span>
                     ))}
                 </motion.div>
             </div>
