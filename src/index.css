@@ -41,22 +41,55 @@ body {
   @apply antialiased;
 }
 
-h1, h2, h3 {
+h1,
+h2,
+h3 {
   font-family: var(--font-display);
 }
 
 @keyframes waPulse {
-  0% { box-shadow: 0 0 0 0 rgba(0, 144, 255, 0.5); }
-  70% { box-shadow: 0 0 0 15px rgba(0, 144, 255, 0); }
-  100% { box-shadow: 0 0 0 0 rgba(0, 144, 255, 0); }
+  0% {
+    box-shadow: 0 0 0 0 rgba(0, 144, 255, 0.5);
+  }
+
+  70% {
+    box-shadow: 0 0 0 15px rgba(0, 144, 255, 0);
+  }
+
+  100% {
+    box-shadow: 0 0 0 0 rgba(0, 144, 255, 0);
+  }
 }
 
 @keyframes ctaPulse {
-  0% { box-shadow: 0 0 0 0 rgba(0, 144, 255, 0.4); }
-  70% { box-shadow: 0 0 0 25px rgba(0, 144, 255, 0); }
-  100% { box-shadow: 0 0 0 0 rgba(0, 144, 255, 0); }
+  0% {
+    box-shadow: 0 0 0 0 rgba(0, 144, 255, 0.4);
+  }
+
+  70% {
+    box-shadow: 0 0 0 25px rgba(0, 144, 255, 0);
+  }
+
+  100% {
+    box-shadow: 0 0 0 0 rgba(0, 144, 255, 0);
+  }
 }
 
 @keyframes shimmer {
-  100% { transform: translateX(100%); }
+  100% {
+    transform: translateX(100%);
+  }
+}
+
+@keyframes bounce {
+
+  0%,
+  60%,
+  100% {
+    transform: translateY(0);
+  }
+
+  30% {
+    transform: translateY(-4px);
+  }
 }
