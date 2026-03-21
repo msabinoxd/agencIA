@@ -5,8 +5,6 @@ import { waURL, CONFIG } from '../config';
 import { stagger } from '../shared/animations';
 
 export function Hero({ onOpenSimulator }: { onOpenSimulator?: () => void }) {
-  const words = "Venda no Piloto Automático com IA.".split(' ');
-
   return (
     <section className="relative min-h-screen flex items-center justify-center pt-32 pb-24 lg:pt-20 lg:pb-0 overflow-hidden bg-[#F8F9FA]">
       {/* Background Gradients */}
@@ -22,7 +20,7 @@ export function Hero({ onOpenSimulator }: { onOpenSimulator?: () => void }) {
         >
           <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white border border-[#E9ECEF] shadow-[var(--sh)] w-fit">
             <span className="flex h-2 w-2 rounded-full bg-[#0090FF] animate-pulse"></span>
-            <span className="text-xs font-black text-[#4A4A4A] uppercase tracking-widest">Especialistas em Clínicas de Saúde & Negócios em Escala</span>
+            <span className="text-xs font-black text-[#4A4A4A] uppercase tracking-widest">Para Clínicas Odontológicas & Estéticas</span>
           </div>
 
           <motion.h1
@@ -31,8 +29,8 @@ export function Hero({ onOpenSimulator }: { onOpenSimulator?: () => void }) {
             initial="hidden"
             animate="visible"
           >
-            {words.map((word, i) => {
-              const isHighlight = word === 'Piloto' || word === 'Automático';
+            {["Agenda", "Cheia.", "Zero", "No-Show.", "IA", "que", "Nunca", "Pede", "Demissão."].map((word, i) => {
+              const isHighlight = word === 'Zero' || word === 'No-Show.';
               return (
                 <motion.span
                   key={i}
@@ -49,7 +47,7 @@ export function Hero({ onOpenSimulator }: { onOpenSimulator?: () => void }) {
           </motion.h1>
 
           <p className="text-xl text-[#4A4A4A] leading-relaxed max-w-xl font-medium">
-            Método dos <span className="text-[#1A1A1A] font-bold">7 Pilares da Persuasão</span> + IA treinada para conduzir negociações. Sua agenda cheia começa aqui.
+            IA treinada com os <span className="text-[#1A1A1A] font-bold">7 Pilares da Persuasão</span> de Danilo Oliveira. O SDR digital que confirma consultas, qualifica leads e nunca vai embora.
           </p>
 
           <div className="flex flex-col sm:flex-row gap-4 mt-6">
@@ -84,8 +82,8 @@ export function Hero({ onOpenSimulator }: { onOpenSimulator?: () => void }) {
               <span className="text-[10px] font-black text-[#888888] uppercase tracking-[0.2em]">Crescimento <br /> em 12 Meses</span>
             </div>
             <div className="flex flex-col">
-              <span className="text-4xl font-black text-[#0090FF] italic">24/7</span>
-              <span className="text-[10px] font-black text-[#888888] uppercase tracking-[0.2em]">IA Ativa <br /> Full-Time</span>
+              <span className="text-4xl font-black text-[#0090FF] italic">-70%</span>
+              <span className="text-[10px] font-black text-[#888888] uppercase tracking-[0.2em]">Redução <br /> de No-Show</span>
             </div>
           </div>
         </motion.div>
@@ -144,6 +142,15 @@ export function Hero({ onOpenSimulator }: { onOpenSimulator?: () => void }) {
                   className="bg-white text-[#4A4A4A] p-4 rounded-3xl rounded-tl-none max-w-[85%] text-sm self-start shadow-[var(--sh)] border border-[#E9ECEF] leading-relaxed"
                 >
                   Lead qualificado! Quer Invisalign, tem urgência e verba disponível. Consulta agendada para amanhã às 14h. ✅
+                </motion.div>
+
+                <motion.div
+                  initial={{ opacity: 0, x: -20, scale: 0.9 }}
+                  animate={{ opacity: 1, x: 0, scale: 1 }}
+                  transition={{ delay: 5 }}
+                  className="bg-[#0090FF]/5 border border-[#0090FF]/20 text-[#1A1A1A] p-4 rounded-3xl rounded-tl-none max-w-[85%] text-sm self-start leading-relaxed font-medium"
+                >
+                  🔔 Lembrete enviado. Paciente confirmou presença. No-show: 0.
                 </motion.div>
               </div>
 

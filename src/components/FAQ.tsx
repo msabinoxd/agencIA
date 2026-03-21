@@ -29,8 +29,12 @@ const faqs = [
     answer: "O setup, mapeamento de processos e treinamento da IA levam de 7 a 14 dias. Cuidamos de toda a parte técnica e entregamos a solução pronta, testada e integrada ao seu ecossistema."
   },
   {
-    question: "Preciso trocar meu WhatsApp Business?",
-    answer: "Não. Conectamos a IA ao seu número atual via API Oficial do WhatsApp (WABA). Você não perde seu número, não perde histórico de clientes e não corre risco de banimento."
+    question: "Como a IA reduz o no-show?",
+    answer: "A Intalky AI dispara uma sequência de confirmação 24h antes da consulta — mensagem de texto + áudio humanizado com a voz do assistente. Se o paciente não responder, a IA reengaja ativamente com uma nova mensagem personalizada. Se ainda não houver resposta, o sistema alerta sua equipe para ligação manual. Com esse fluxo, nossas clínicas parceiras registram redução média de 70% nos no-shows."
+  },
+  {
+    question: "A IA substitui minha equipe de SDR?",
+    answer: "Não substitui — complementa de forma estratégica. A IA cuida do volume 24/7: atende todos os leads, qualifica, agenda e faz follow-up. Seus SDRs humanos focam nos leads de maior valor e nos fechamentos complexos, onde o toque humano importa. E o melhor: quando um SDR sai (e eles saem), a metodologia dos 7 Pilares da Persuasão continua operando na IA. Zero ramp-up. Zero risco."
   },
   {
     question: "Qual o investimento?",

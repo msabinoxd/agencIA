@@ -44,18 +44,18 @@ const workflowCards = [
 ];
 
 const tasks = [
-  'Lendo histórico do WhatsApp',
-  'Extraindo pontos-chave',
-  'Identificando intenção de compra',
-  'Verificando Google Calendar',
-  'Atualizando RD Station'
+  'Lead capturado do anúncio de Invisalign',
+  'Qualificando: queixa, urgência e verba',
+  'Consulta agendada na agenda da clínica',
+  'Confirmação enviada 24h antes (áudio)',
+  'Paciente confirmou presença ✅'
 ];
 
 const chatSequence = [
-  { role: 'user', text: 'Oi! Vi o anúncio de Invisalign e queria saber o valor e como funciona.' },
-  { role: 'agent', text: 'Olá! Que ótimo! Para te passar as melhores condições, me conta: o que mais te incomoda no seu sorriso hoje?' },
-  { role: 'user', text: 'Os dentes estão tortos e eu tenho vergonha de sorrir em fotos.' },
-  { role: 'agent', text: 'Entendo perfeitamente. Temos opções que resolvem isso sem aparelho metálico. Você prefere agendar uma avaliação esta semana ou na próxima? 😊' }
+  { role: 'agent', text: 'Oi! Sua consulta é amanhã às 14h na Clínica Sorriso. Você confirma a presença? 😊' },
+  { role: 'user', text: 'Sim! Confirmo.' },
+  { role: 'agent', text: 'Perfeito! Separei o endereço e uma dica para chegar com facilidade 📍. Te vejo amanhã!' },
+  { role: 'agent', text: '🔔 [Sistema] No-show evitado. Taxa de comparecimento: 94%.' }
 ];
 
 export function AiVideoDemo() {
@@ -138,11 +138,11 @@ export function AiVideoDemo() {
                 Dois Planos. Um Resultado.
               </div>
               <h2 className="text-3xl md:text-5xl font-bold text-[#1A1A1A] mb-6 tracking-tight leading-tight">
-                Dois níveis de automação. <br />
-                <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#0090FF] to-[#00D1FF]">Um resultado: mais faturamento.</span>
+                Da captação à confirmação de consulta.{' '}
+                <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#0090FF] to-[#00D1FF]">Sem no-show. Sem depender de SDR.</span>
               </h2>
               <p className="text-lg text-[#4A4A4A] leading-relaxed">
-                Do atendimento básico à gestão completa da jornada do paciente. Escolha o nível certo para a sua clínica — e <strong className="text-[#1A1A1A]">escale sem contratar mais pessoas</strong>.
+                Veja como a Intalky AI qualifica o lead, agenda a consulta e ainda confirma a presença — <strong className="text-[#1A1A1A]">tudo automaticamente</strong>.
               </p>
             </div>
 
@@ -152,9 +152,9 @@ export function AiVideoDemo() {
                   <Database className="w-6 h-6 text-[#0090FF]" />
                 </div>
                 <div>
-                  <h3 className="text-xl font-semibold text-[#1A1A1A] mb-2 group-hover:text-[#0090FF] transition-colors duration-300">Intalky Essencial</h3>
+                  <h3 className="text-xl font-semibold text-[#1A1A1A] mb-2 group-hover:text-[#0090FF] transition-colors duration-300">Confirmação Inteligente</h3>
                   <p className="text-[#4A4A4A] text-sm leading-relaxed">
-                    A IA atende, qualifica e agenda consultas automaticamente. Sua equipe recebe apenas leads prontos para fechar.
+                    A IA envia áudios de confirmação, detecta não-respostas e reengaja proativamente. Redução de no-show de até 70%.
                   </p>
                 </div>
               </div>
@@ -164,9 +164,9 @@ export function AiVideoDemo() {
                   <Target className="w-6 h-6 text-[#0090FF]" />
                 </div>
                 <div>
-                  <h3 className="text-xl font-semibold text-[#1A1A1A] mb-2 group-hover:text-[#0090FF] transition-colors duration-300">Intalky Pro</h3>
+                  <h3 className="text-xl font-semibold text-[#1A1A1A] mb-2 group-hover:text-[#0090FF] transition-colors duration-300">SDR Digital Permanente</h3>
                   <p className="text-[#4A4A4A] text-sm leading-relaxed">
-                    A IA gerencia o CRM, faz follow-up ativo, pós-venda e cuida de toda a jornada de valor do paciente. Zero lead esquecido.
+                    Treinada com os 7 Pilares da Persuasão. Atende às 23h, não pede aumento e nunca pede demissão.
                   </p>
                 </div>
               </div>

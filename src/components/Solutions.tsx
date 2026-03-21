@@ -7,7 +7,7 @@ const features = [
   {
     icon: <Zap className="w-6 h-6 text-[#0090FF]" />,
     title: "1. Tráfego Pago Estratégico",
-    description: "Meta Ads e Google Ads calibrados para o ICP da sua clínica. Cada real investido é rastreado até o fechamento — sem achismo, só dado.",
+    description: "Ads que chegam na pessoa certa, na hora certa. Menos leads ruins, mais agenda cheia. Cada real investido é rastreado até o fechamento — sem achismo, só dado.",
     metric: "ROI médio: 8:1",
     image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?q=80&w=800&auto=format&fit=crop"
   },
@@ -21,21 +21,21 @@ const features = [
   {
     icon: <MessageSquare className="w-6 h-6 text-[#0090FF]" />,
     title: "3. Intalky Essencial",
-    description: "A IA atende, qualifica e agenda consultas em menos de 3 segundos, 24 horas por dia. Nunca mais perca um lead por demora no atendimento.",
+    description: "A IA atende, qualifica e agenda consultas em menos de 3 segundos, 24 horas por dia. Inclui confirmação automática e redução ativa de no-show.",
     metric: "Resposta: < 3s",
     image: "https://images.unsplash.com/photo-1512428559087-560fa5ceab42?q=80&w=800&auto=format&fit=crop"
   },
   {
     icon: <ShieldCheck className="w-6 h-6 text-[#0090FF]" />,
     title: "4. Intalky Pro",
-    description: "A IA gerencia o CRM, faz follow-up ativo, pós-venda e cuida de toda a jornada de valor do paciente. Churn zero. LTV máximo.",
+    description: "O SDR digital que nunca pede demissão — follow-up, pós-venda e reativação de pacientes inativos. A IA gerencia o CRM completo. Churn zero. LTV máximo.",
     metric: "Follow-up: automático",
     image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=800&auto=format&fit=crop"
   },
   {
     icon: <Users className="w-6 h-6 text-[#0090FF]" />,
     title: "5. Treinamento Semanal",
-    description: "Sessões semanais com Danilo Oliveira para treinar sua equipe comercial: roleplay, gestão de objeções, análise de CRM e métricas de performance.",
+    description: "Sessões semanais com Danilo Oliveira para treinar sua equipe comercial: roleplay, gestão de objeções, análise de CRM e métricas. Porque quando o SDR humano aprender e sair, a metodologia fica na IA.",
     metric: "SDRs 2x mais eficientes",
     image: "https://images.unsplash.com/photo-1552664730-d307ca884978?q=80&w=800&auto=format&fit=crop"
   },

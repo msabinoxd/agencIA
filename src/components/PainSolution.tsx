@@ -1,73 +1,160 @@
-import { motion, useScroll, useTransform } from 'motion/react';
-import { useRef } from 'react';
+import { motion } from 'motion/react';
+import { CalendarX, UserMinus, Clock, Bot, MoonStar } from 'lucide-react';
 import { ScrollIndicator } from './ScrollIndicator';
 
+const pains = [
+  {
+    icon: CalendarX,
+    title: "Lead agenda. Cadeira vazia.",
+    scenario: "Você investiu em tráfego, o lead agendou a avaliação. No dia marcado: cadeira vazia. Sem aviso.",
+    impact: "3 no-shows/dia × R$800 = R$52.800/mês perdido"
+  },
+  {
+    icon: UserMinus,
+    title: "Você treina. Ela pede demissão.",
+    scenario: "3 meses de treinamento com o método do Danilo. Ela aprendeu tudo. Na semana seguinte: pediu demissão.",
+    impact: "1 SDR que sai = R$12.000 em custo + 90 dias de ramp-up do próximo"
+  },
+  {
+    icon: Clock,
+    title: "Lead quente. Resposta fria.",
+    scenario: "O anúncio funcionou. O lead clicou. Mas sua equipe estava ocupada — ou a clínica estava fechada.",
+    impact: "78% das vendas vão para quem responde primeiro"
+  },
+  {
+    icon: Bot,
+    title: "Bot que responde FAQ. Lead que abandona.",
+    scenario: "Você tem um \"robô\". Mas ele só manda tabela de preços. O lead perguntou algo diferente e sumiu.",
+    impact: "Leads não convertidos por bot genérico: 60-85% do total"
+  },
+  {
+    icon: MoonStar,
+    title: "18h: a clínica fechou. 20h: o lead chegou.",
+    scenario: "O anúncio rodou à noite. O lead entrou em contato. Ninguém respondeu. Você ligou no dia seguinte.",
+    impact: "\"Já resolvi com outra clínica.\" — frase que mais dói."
+  }
+];
+
 export function PainSolution() {
-  const ref = useRef(null);
-  const { scrollYProgress } = useScroll({
-    target: ref,
-    offset: ["start end", "end start"]
-  });
-
-  const y = useTransform(scrollYProgress, [0, 1], ["-20%", "20%"]);
-  const opacity = useTransform(scrollYProgress, [0, 0.5, 1], [0.3, 0.8, 0.3]);
-
   return (
-    <section ref={ref} className="relative py-32 overflow-hidden bg-[#F8F9FA] flex items-center justify-center min-h-[70vh]">
-      {/* Parallax Background */}
-      <motion.div
-        style={{ y, opacity }}
-        className="absolute inset-0 z-0 pointer-events-none"
-      >
-        <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=2070&auto=format&fit=crop')] bg-cover bg-center mix-blend-luminosity grayscale opacity-10" />
-        <div className="absolute inset-0 bg-gradient-to-b from-[#F8F9FA] via-[#F8F9FA]/60 to-[#F8F9FA]" />
-      </motion.div>
+    <section className="relative py-24 overflow-hidden bg-[#F8F9FA]">
+      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[700px] h-[700px] bg-red-500/3 rounded-full blur-[120px] pointer-events-none" />
 
-      <div className="max-w-5xl mx-auto px-6 relative z-10 text-center">
+      <div className="max-w-7xl mx-auto px-6 relative z-10">
+
+        {/* Header */}
         <motion.div
-          initial={{ opacity: 0, y: 40 }}
+          initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, margin: "-100px" }}
-          transition={{ duration: 0.8, ease: "easeOut" }}
-          className="space-y-12"
+          viewport={{ once: true, margin: "-80px" }}
+          transition={{ duration: 0.7 }}
+          className="text-center max-w-3xl mx-auto mb-16"
         >
-          {/* A Dor (Problema) */}
-          <div className="space-y-4">
-            <h2 className="text-3xl md:text-5xl font-bold text-[#888888] leading-tight tracking-tight">
-              <span className="line-through decoration-red-500/50 hover:text-[#4A4A4A] transition-colors">Agenda vazia mesmo investindo em tráfego.</span><br />
-              <span className="line-through decoration-red-500/50 hover:text-[#4A4A4A] transition-colors">IA que só responde FAQ, não converte.</span><br />
-              <span className="line-through decoration-red-500/50 hover:text-[#4A4A4A] transition-colors">Leads perdidos enquanto a clínica está fechada.</span>
-            </h2>
+          <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-red-50 border border-red-200/60 text-red-500 text-xs font-semibold uppercase tracking-wider mb-6">
+            <span className="w-1.5 h-1.5 rounded-full bg-red-500 animate-pulse" />
+            Diagnóstico da sua operação
           </div>
+          <h2 className="text-3xl md:text-5xl font-bold text-[#1A1A1A] tracking-tight mb-4">
+            Nós conhecemos sua operação{' '}
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-red-400 to-red-600">de ponta a ponta.</span>
+          </h2>
+          <p className="text-lg text-[#4A4A4A]">
+            Essas cinco dores estão custando mais do que você imagina toda semana.
+          </p>
+        </motion.div>
 
-          {/* Elemento Transitório Visual */}
-          <div className="relative h-40 md:h-48 w-full flex justify-center items-center my-8">
-            <div className="absolute w-px h-full bg-gradient-to-b from-red-500/50 via-[#E9ECEF] to-[#0090FF]/50" />
+        {/* Pain Cards Grid: 3 top + 2 bottom centered */}
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5 mb-5">
+          {pains.slice(0, 3).map((pain, idx) => {
+            const Icon = pain.icon;
+            return (
+              <motion.div
+                key={idx}
+                initial={{ opacity: 0, y: 24 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true, margin: "-60px" }}
+                transition={{ duration: 0.6, delay: idx * 0.1 }}
+                className="group bg-white border border-[#E9ECEF] hover:border-red-200 rounded-3xl p-6 flex flex-col gap-4 shadow-[var(--sh)] hover:shadow-[0_8px_30px_rgba(239,68,68,0.08)] transition-all duration-400"
+              >
+                <div className="w-11 h-11 rounded-2xl bg-red-50 border border-red-100 flex items-center justify-center group-hover:bg-red-100 transition-colors shrink-0">
+                  <Icon className="w-5 h-5 text-red-400" />
+                </div>
+                <div>
+                  <h3 className="text-[#1A1A1A] font-bold text-lg mb-2 leading-tight">{pain.title}</h3>
+                  <p className="text-[#4A4A4A] text-sm leading-relaxed">{pain.scenario}</p>
+                </div>
+                <div className="mt-auto pt-4 border-t border-[#E9ECEF] group-hover:border-red-100 transition-colors">
+                  <p className="text-red-500 text-xs font-bold font-mono">{pain.impact}</p>
+                </div>
+              </motion.div>
+            );
+          })}
+        </div>
+
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-5 max-w-2xl mx-auto lg:max-w-none lg:grid-cols-2 lg:px-[16.67%]">
+          {pains.slice(3).map((pain, idx) => {
+            const Icon = pain.icon;
+            return (
+              <motion.div
+                key={idx + 3}
+                initial={{ opacity: 0, y: 24 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true, margin: "-60px" }}
+                transition={{ duration: 0.6, delay: (idx + 3) * 0.1 }}
+                className="group bg-white border border-[#E9ECEF] hover:border-red-200 rounded-3xl p-6 flex flex-col gap-4 shadow-[var(--sh)] hover:shadow-[0_8px_30px_rgba(239,68,68,0.08)] transition-all duration-400"
+              >
+                <div className="w-11 h-11 rounded-2xl bg-red-50 border border-red-100 flex items-center justify-center group-hover:bg-red-100 transition-colors shrink-0">
+                  <Icon className="w-5 h-5 text-red-400" />
+                </div>
+                <div>
+                  <h3 className="text-[#1A1A1A] font-bold text-lg mb-2 leading-tight">{pain.title}</h3>
+                  <p className="text-[#4A4A4A] text-sm leading-relaxed">{pain.scenario}</p>
+                </div>
+                <div className="mt-auto pt-4 border-t border-[#E9ECEF] group-hover:border-red-100 transition-colors">
+                  <p className="text-red-500 text-xs font-bold font-mono">{pain.impact}</p>
+                </div>
+              </motion.div>
+            );
+          })}
+        </div>
+
+        {/* Transition */}
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, margin: "-60px" }}
+          transition={{ duration: 0.7, delay: 0.5 }}
+          className="mt-20 flex flex-col items-center gap-6 text-center"
+        >
+          <div className="relative flex items-center justify-center w-full">
+            <div className="w-px h-16 bg-gradient-to-b from-red-300 via-[#E9ECEF] to-[#0090FF]/60" />
             <motion.div
-              animate={{ y: [-40, 40, -40] }}
-              transition={{ repeat: Infinity, duration: 2.5, ease: "easeInOut" }}
-              className="w-2 h-2 md:w-3 md:h-3 rounded-full bg-[#0090FF] shadow-[0_0_15px_rgba(0,144,255,0.5)] z-10"
+              animate={{ y: [-8, 8, -8] }}
+              transition={{ repeat: Infinity, duration: 2, ease: "easeInOut" }}
+              className="absolute w-2.5 h-2.5 rounded-full bg-[#0090FF] shadow-[0_0_12px_rgba(0,144,255,0.6)]"
             />
-            <div className="absolute top-1/2 -translate-y-1/2 ml-24 md:ml-32 flex flex-col items-start gap-1 opacity-50">
-              <span className="text-[9px] md:text-[10px] uppercase tracking-[0.2em] text-[#888888] whitespace-nowrap">Continue</span>
-              <span className="text-[9px] md:text-[10px] uppercase tracking-[0.2em] text-[#0090FF] whitespace-nowrap">Rolando</span>
-            </div>
           </div>
 
-          {/* A Solução */}
-          <div className="space-y-6">
-            <h2 className="text-4xl md:text-6xl font-bold text-[#1A1A1A] leading-tight tracking-tight">
-              A venda como consequência de um <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#0090FF] to-[#00D1FF]">atendimento de excelência.</span>
-            </h2>
+          <p className="text-2xl md:text-3xl font-bold text-[#4A4A4A] max-w-2xl">
+            E se você nunca mais tivesse{' '}
+            <span className="text-[#1A1A1A]">nenhum desses problemas?</span>
+          </p>
 
-            <p className="text-lg md:text-xl text-[#4A4A4A] max-w-3xl mx-auto leading-relaxed">
-              <strong className="text-[#1A1A1A]">78% das vendas</strong> vão para quem responde primeiro. Com o método dos <strong className="text-[#0090FF]">7 Pilares da Persuasão</strong> e IA treinada para conduzir a negociação, seus leads viram agendamentos em <strong className="text-[#0090FF]">3 segundos</strong>.
+          <div className="space-y-3 max-w-3xl">
+            <h2 className="text-3xl md:text-5xl font-bold text-[#1A1A1A] tracking-tight">
+              A Intalky resolve cada uma delas.{' '}
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#0090FF] to-[#00D1FF]">Em 3 segundos, 24/7, sem depender de SDR.</span>
+            </h2>
+            <p className="text-lg text-[#4A4A4A] leading-relaxed">
+              <strong className="text-[#1A1A1A]">78% das vendas</strong> vão para quem responde primeiro. Com o método dos{' '}
+              <strong className="text-[#0090FF]">7 Pilares da Persuasão</strong> e IA treinada para conduzir a negociação, seus leads viram agendamentos confirmados — dia e noite.
             </p>
           </div>
         </motion.div>
+
       </div>
 
-      <div className="absolute bottom-6 left-1/2 -translate-x-1/2 z-20">
+      <div className="mt-16 flex justify-center">
         <ScrollIndicator text="Veja como funciona" />
       </div>
     </section>
