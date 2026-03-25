@@ -12,7 +12,7 @@ const values = [
   {
     icon: Lightbulb,
     title: "IA Persuasiva",
-    desc: "Agente treinado para conduzir negociações, fazer follow-up e gerenciar CRM como um SDR de alta performance."
+    desc: "Agente treinado para conduzir negociações, fazer acompanhamento e gerenciar o sistema de gestão como um atendente comercial de alta performance."
   },
   {
     icon: Rocket,

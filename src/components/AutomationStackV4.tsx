@@ -21,23 +21,23 @@ const clientLogos = [
 const automations = [
     {
         title: 'Tráfego & Funil',
-        desc: 'Meta Ads e Google Ads calibrados para o ICP da sua clínica + funil dos 7 Pilares.',
+        desc: 'Anúncios calibrados para o perfil ideal da sua clínica + processo dos 7 Pilares.',
         icon: Network,
-        features: ['ICP validado', 'Pixel de rastreamento', 'Funil de alta conversão'],
+        features: ['Perfil ideal validado', 'Rastreamento completo', 'Processo de alta conversão'],
         waMsg: 'Olá! Quero saber mais sobre Tráfego & Funil da Intalky.'
     },
     {
         title: 'Intalky AI',
-        desc: 'A única IA treinada com neurociência de vendas. Atende, qualifica e gerencia CRM 24/7.',
+        desc: 'A única IA treinada com neurociência de vendas. Atende, filtra e gerencia o sistema de gestão 24/7.',
         icon: Database,
-        features: ['Resposta em < 3s', 'Follow-up automático', 'Integração total CRM'],
+        features: ['Resposta em < 3s', 'Acompanhamento automático', 'Integração total com sistema'],
         waMsg: 'Olá! Quero saber mais sobre a Intalky AI para minha clínica.'
     },
     {
         title: 'Gestão & Treinamento',
         desc: 'Treinamento semanal com Danilo + consultoria de marketing + suporte comercial.',
         icon: Users,
-        features: ['Roleplay semanal', 'Consultoria de vendas', 'Suporte comercial'],
+        features: ['Simulação de atendimento semanal', 'Consultoria de vendas', 'Suporte comercial'],
         waMsg: 'Olá! Quero saber mais sobre Gestão & Treinamento da Intalky.'
     }
 ];

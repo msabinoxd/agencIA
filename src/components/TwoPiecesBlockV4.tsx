@@ -43,11 +43,11 @@ export function TwoPiecesBlockV4() {
           className="space-y-5 mb-12"
         >
           <p className="text-lg text-[#4A4A4A] leading-relaxed">
-            A Intalky AI atende, qualifica e agenda em 3 seg, 24/7. Sem humor ruim, sem férias, sem rescisão.
+            A Intalky AI atende, filtra e agenda em 3 seg, 24/7. Sem humor ruim, sem férias, sem rescisão.
           </p>
 
           <p className="text-[#4A4A4A] leading-relaxed font-semibold">
-            Um closer digital que nunca dorme. Clínicas parceiras registraram <strong className="text-[#1A1A1A]">+70% em agendamentos</strong> e queda expressiva no no-show.
+            Um vendedor digital que nunca dorme. Clínicas parceiras registraram <strong className="text-[#1A1A1A]">+70% em agendamentos</strong> e queda expressiva nas faltas.
           </p>
         </motion.div>
 
@@ -111,7 +111,7 @@ export function TwoPiecesBlockV4() {
             href="#/funil"
             className="inline-flex items-center gap-3 bg-white hover:bg-[#F0F9FF] text-[#0090FF] border-2 border-[#0090FF] px-8 py-4 rounded-xl font-bold text-sm uppercase tracking-widest transition-all hover:scale-[1.02] shadow-[0_4px_14px_rgba(0,144,255,0.15)]"
           >
-            Quero ver como funciona o ecossistema completo
+            Quero ver como funciona o sistema completo
             <ArrowRight className="w-5 h-5" />
           </a>
         </motion.div>

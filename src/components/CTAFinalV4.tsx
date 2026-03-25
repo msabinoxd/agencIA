@@ -11,9 +11,9 @@ const notForYou = [
 ];
 
 const forYou = [
-  "Você investe em tráfego e sabe que perde leads no atendimento",
+  "Você investe em anúncios e sabe que perde pacientes no atendimento",
   "Você quer previsibilidade de caixa, não depender da sorte da equipe",
-  "Você entende que tecnologia + processo + pessoas = escala real",
+  "Você entende que tecnologia + processo + pessoas = crescimento real",
   "Você está pronto para transformar sua clínica numa operação de alta performance",
 ];
 
@@ -54,7 +54,7 @@ export function CTAFinalV4() {
           transition={{ delay: 0.1 }}
           className="text-lg text-[#4A4A4A] mb-12 text-center max-w-3xl mx-auto leading-relaxed"
         >
-          Limitamos o número de clínicas que assessoramos ao mesmo tempo. Não por falta de demanda — por responsabilidade com o resultado.
+          Limitamos o número de clínicas que assessoramos ao mesmo tempo. Não por falta de demanda — por compromisso com o resultado.
         </motion.p>
 
         {/* 4 parágrafos de corpo */}
@@ -65,7 +65,7 @@ export function CTAFinalV4() {
           className="max-w-2xl mx-auto space-y-4 mb-14 text-center"
         >
           <p className="text-[#4A4A4A] leading-relaxed">
-            Implantamos IA, estruturamos funil, configuramos CRM, treinamos equipe e acompanhamos semana a semana. Só funciona com quem está pronto pra mudar o processo.
+            Implantamos IA, montamos o processo de vendas, configuramos o sistema de gestão, treinamos equipe e acompanhamos semana a semana. Só funciona com quem está pronto pra mudar.
           </p>
           <p className="text-[#4A4A4A] leading-relaxed italic">
             Se você chegou até aqui, é provável que você seja um deles.

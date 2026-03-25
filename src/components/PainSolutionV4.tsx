@@ -40,11 +40,11 @@ export function PainSolutionV4() {
           <div className="space-y-3 max-w-3xl">
             <h2 className="text-3xl md:text-5xl font-bold text-[#1A1A1A] tracking-tight">
               A Intalky resolve cada uma delas.{' '}
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#0090FF] to-[#00D1FF]">Em 3 segundos, 24/7, sem depender de SDR.</span>
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#0090FF] to-[#00D1FF]">Em 3 segundos, 24/7, sem depender de atendente.</span>
             </h2>
             <p className="text-lg text-[#4A4A4A] leading-relaxed">
               <strong className="text-[#1A1A1A]">78% das vendas</strong> vão para quem responde primeiro. Com o método dos{' '}
-              <strong className="text-[#0090FF]">7 Pilares da Persuasão</strong> e IA treinada para conduzir a negociação, seus leads viram agendamentos confirmados — dia e noite.
+              <strong className="text-[#0090FF]">7 Pilares da Persuasão</strong> e IA treinada para conduzir a negociação, seus pacientes interessados viram agendamentos confirmados — dia e noite.
             </p>
           </div>
         </motion.div>

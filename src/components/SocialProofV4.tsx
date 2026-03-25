@@ -1,4 +1,4 @@
-﻿import { motion } from 'motion/react';
+import { motion } from 'motion/react';
 import { Star, Quote } from 'lucide-react';
 import { ScrollIndicator } from './ScrollIndicator';
 
@@ -6,7 +6,7 @@ const testimonials = [
   {
     name: "Cotia Clínica",
     role: "Case de Consultoria — Danilo Oliveira",
-    content: "Em 12 meses, o faturamento mensal saltou de R$ 125.000 para R$ 481.000. Paramos de adivinhar e começamos a operar com dados, CRM e processos. O Danilo mudou nossa forma de vender.",
+    content: "Em 12 meses, o faturamento mensal saltou de R$ 125.000 para R$ 481.000. Paramos de adivinhar e começamos a operar com dados, sistema organizado e processos. O Danilo mudou nossa forma de vender.",
     results: "4x o Faturamento",
     image: "https://i.pravatar.cc/150?img=60"
   },
@@ -20,8 +20,8 @@ const testimonials = [
   {
     name: "Diretor Comercial",
     role: "Clínica de Saúde",
-    content: "O tráfego sempre funcionou, mas o atendimento era o gargalo. Com a IA qualificando em 3 segundos e o Danilo treinando nosso time toda semana, o CAC caiu e o fechamento explodiu.",
-    results: "-60% no CAC",
+    content: "O anúncio sempre funcionou, mas o atendimento era o gargalo. Com a IA filtrando em 3 segundos e o Danilo treinando nosso time toda semana, o custo por paciente caiu e o fechamento explodiu.",
+    results: "-60% no custo por paciente",
     image: "https://i.pravatar.cc/150?img=33"
   }
 ];

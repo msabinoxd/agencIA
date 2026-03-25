@@ -1,4 +1,4 @@
-﻿import { useState, useEffect } from 'react';
+import { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'motion/react';
 import { Bot, Sparkles, ArrowRight, ChevronDown } from 'lucide-react';
 import { CONFIG } from '../config';
@@ -14,27 +14,27 @@ const FAQV4s = [
   },
   {
     question: "Qual a diferença entre Intalky Essencial e Pro?",
-    answer: "O Intalky Essencial é focado no topo do funil: a IA atende, qualifica e agenda a consulta. Sua equipe assume para o fechamento. O Intalky Pro vai além: a IA gerencia o CRM completo, faz follow-up ativo com leads que não responderam, cuida do pós-venda, reativação de pacientes inativos e toda a jornada de valor do cliente. Zero lead esquecido."
+    answer: "O Intalky Essencial é focado no topo do processo: a IA atende, filtra e agenda a consulta. Sua equipe assume para o fechamento. O Intalky Pro vai além: a IA gerencia o sistema de gestão completo, faz acompanhamento ativo com pacientes que não responderam, cuida do pós-venda, reativação de pacientes inativos e toda a jornada de valor. Nenhum paciente esquecido."
   },
   {
     question: "Como fica a supervisão? Posso confiar 100% na IA?",
-    answer: "Você tem acesso a um painel completo para monitorar todas as conversas em tempo real. Além disso, nossa equipe supervisiona ativamente o CRM, fazemos treinamento semanal com Danilo Oliveira (roleplay, objeções, análise de métricas) e consultoria de marketing com Marcos. Suporte em horário comercial sempre disponível."
+    answer: "Você tem acesso a um painel completo para acompanhar todas as conversas em tempo real. Além disso, nossa equipe supervisiona ativamente o sistema de gestão, fazemos treinamento semanal com Danilo Oliveira (simulação de atendimento, objeções, análise de resultados) e consultoria de marketing com Marcos. Suporte em horário comercial sempre disponível."
   },
   {
     question: "Funciona com meu CRM atual?",
-    answer: "Sim! Integramos com os principais CRMs (RD Station, HubSpot, ActiveCampaign, Kommo, Pipedrive, entre outros). A IA atualiza o funil, adiciona tags e salva o histórico das conversas automaticamente, sem nenhum clique do seu time."
+    answer: "Sim! Integramos com os principais sistemas de gestão (RD Station, HubSpot, ActiveCampaign, Kommo, Pipedrive, entre outros). A IA atualiza o processo, adiciona tags e salva o histórico das conversas automaticamente, sem nenhum clique do seu time."
   },
   {
     question: "Quanto tempo leva para colocar no ar?",
     answer: "O setup, mapeamento de processos e treinamento da IA levam de 7 a 14 dias. Cuidamos de toda a parte técnica e entregamos a solução pronta, testada e integrada ao seu ecossistema."
   },
   {
-    question: "Como a IA reduz o no-show?",
-    answer: "A Intalky AI dispara uma sequência de confirmação 24h antes da consulta — mensagem de texto + áudio humanizado com a voz do assistente. Se o paciente não responder, a IA reengaja ativamente com uma nova mensagem personalizada. Se ainda não houver resposta, o sistema alerta sua equipe para ligação manual. Com esse fluxo, nossas clínicas parceiras registram redução média de 70% nos no-shows."
+    question: "Como a IA reduz as faltas dos pacientes?",
+    answer: "A Intalky AI dispara uma sequência de confirmação 24h antes da consulta — mensagem de texto + áudio humanizado com a voz do assistente. Se o paciente não responder, a IA reengaja ativamente com uma nova mensagem personalizada. Se ainda não houver resposta, o sistema alerta sua equipe para ligação manual. Com esse processo, nossas clínicas parceiras registram redução média de 70% nas faltas."
   },
   {
-    question: "A IA substitui minha equipe de SDR?",
-    answer: "Não substitui — complementa de forma estratégica. A IA cuida do volume 24/7: atende todos os leads, qualifica, agenda e faz follow-up. Seus SDRs humanos focam nos leads de maior valor e nos fechamentos complexos, onde o toque humano importa. E o melhor: quando um SDR sai (e eles saem), a metodologia dos 7 Pilares da Persuasão continua operando na IA. Zero ramp-up. Zero risco."
+    question: "A IA substitui minha equipe de atendimento?",
+    answer: "Não substitui — complementa de forma estratégica. A IA cuida do volume 24/7: atende todos os contatos, filtra, agenda e faz acompanhamento. Seus atendentes humanos focam nos pacientes de maior valor e nos fechamentos complexos, onde o toque humano importa. E o melhor: quando um atendente sai (e eles saem), a metodologia dos 7 Pilares da Persuasão continua operando na IA. Sem tempo de adaptação. Sem risco."
   },
   {
     question: "Qual o investimento?",

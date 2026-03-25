@@ -7,36 +7,36 @@ const features = [
   {
     icon: <Zap className="w-6 h-6 text-[#0090FF]" />,
     title: "1. Tráfego Pago Estratégico",
-    description: "Ads calibrados para o ICP da sua clínica. Cada real rastreado até o fechamento.",
-    metric: "ROI médio: 8:1",
+    description: "Anúncios calibrados para o perfil ideal da sua clínica. Cada real rastreado até o fechamento.",
+    metric: "Retorno médio: 8x",
     image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?q=80&w=800&auto=format&fit=crop"
   },
   {
     icon: <Bot className="w-6 h-6 text-[#0090FF]" />,
-    title: "2. Funil de Vendas",
-    description: "Funil desenhado com os 7 Pilares da Persuasão. Do clique ao agendamento confirmado.",
+    title: "2. Processo de Vendas",
+    description: "Processo desenhado com os 7 Pilares da Persuasão. Do clique ao agendamento confirmado.",
     metric: "Conversão: +3x",
     image: "https://images.unsplash.com/photo-1531482615713-2afd69097998?q=80&w=800&auto=format&fit=crop"
   },
   {
     icon: <MessageSquare className="w-6 h-6 text-[#0090FF]" />,
     title: "3. Intalky Essencial",
-    description: "Atende, qualifica e agenda em 3 segundos, 24/7. Confirmação automática e redução de no-show.",
+    description: "Atende, filtra e agenda em 3 segundos, 24/7. Confirmação automática e redução de faltas.",
     metric: "Resposta: < 3s",
     image: "https://images.unsplash.com/photo-1512428559087-560fa5ceab42?q=80&w=800&auto=format&fit=crop"
   },
   {
     icon: <ShieldCheck className="w-6 h-6 text-[#0090FF]" />,
     title: "4. Intalky Pro",
-    description: "Follow-up, pós-venda e reativação de inativos. CRM completo no automático.",
-    metric: "Follow-up: automático",
+    description: "Acompanhamento, pós-venda e reativação de pacientes inativos. Sistema de gestão completo no automático.",
+    metric: "Acompanhamento: automático",
     image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=800&auto=format&fit=crop"
   },
   {
     icon: <Users className="w-6 h-6 text-[#0090FF]" />,
     title: "5. Treinamento Semanal",
-    description: "Roleplay, objeções e análise de CRM semanais. Quando o SDR sair, o método fica na IA.",
-    metric: "SDRs 2x mais eficientes",
+    description: "Simulação de atendimento, objeções e análise de resultados semanais. Quando o atendente sair, o método fica na IA.",
+    metric: "Equipe 2x mais eficiente",
     image: "https://images.unsplash.com/photo-1552664730-d307ca884978?q=80&w=800&auto=format&fit=crop"
   },
   {
@@ -80,7 +80,7 @@ export function SolutionsV4() {
             transition={{ delay: 0.1 }}
             className="text-4xl md:text-5xl font-bold text-[#1A1A1A] mb-6 tracking-tight"
           >
-            Seis pilares que transformam leads <br />
+            Seis pilares que transformam contatos <br />
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#0090FF] to-[#00D1FF]">em faturamento previsível.</span>
           </motion.h2>
 
@@ -91,7 +91,7 @@ export function SolutionsV4() {
             transition={{ delay: 0.2 }}
             className="text-lg text-[#4A4A4A]"
           >
-            Da captação ao pós-venda, cada etapa do seu funil coberta por especialistas e IA.
+            Da captação ao pós-venda, cada etapa do seu processo coberta por especialistas e IA.
           </motion.p>
         </div>
 

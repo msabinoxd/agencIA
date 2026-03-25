@@ -1,4 +1,4 @@
-﻿import { motion } from 'motion/react';
+import { motion } from 'motion/react';
 import { fadeUp, stagger } from '../shared/animations';
 
 import marcosImg from '../assets/team/Marcos.png';
@@ -22,20 +22,20 @@ const team = [
   },
   {
     name: 'Letícia',
-    role: 'Atendimento / SDR',
-    description: 'SDR especialista em qualificação de leads · Treinada com os 7 Pilares da Persuasão · Atendimento de alta conversão.',
+    role: 'Atendimento Comercial',
+    description: 'Especialista em filtragem de pacientes · Treinada com os 7 Pilares da Persuasão · Atendimento de alta conversão.',
     image: leticiaImg,
   },
   {
     name: 'Rafaela',
-    role: 'Atendimento / SDR',
-    description: 'SDR e relacionamento comercial · Pós-venda e jornada de valor do cliente · Atendimento humanizado de alta performance.',
+    role: 'Atendimento Comercial',
+    description: 'Relacionamento comercial · Pós-venda e acompanhamento do paciente · Atendimento humanizado de alta performance.',
     image: rafaelaImg,
   },
   {
     name: 'Edileuza',
     role: 'Tráfego Pago',
-    description: 'Especialista em Meta Ads & Google Ads · CAC mínimo e ROI máximo para clínicas de saúde · Rastreamento e otimização de campanhas.',
+    description: 'Especialista em Meta Ads & Google Ads · Menor custo por paciente e maior retorno para clínicas de saúde · Rastreamento e otimização de campanhas.',
     image: edileuzaImg,
   },
 ];

@@ -39,7 +39,7 @@ export function HumanSupervisionV4() {
             transition={{ delay: 0.2 }}
             className="text-lg text-[#4A4A4A] leading-relaxed"
           >
-            Não basta automatizar. É preciso supervisão estratégica e treinamento contínuo para cada lead virar faturamento.
+            Não basta automatizar. É preciso supervisão estratégica e treinamento contínuo para cada paciente interessado virar faturamento.
           </motion.p>
         </div>
 
@@ -110,7 +110,7 @@ export function HumanSupervisionV4() {
               <div className="pt-2 pb-8">
                 <h3 className="text-[#1A1A1A] font-semibold text-xl md:text-2xl mb-3">Supervisão Ativa da Intalky</h3>
                 <p className="text-[#4A4A4A] leading-relaxed text-sm md:text-base">
-                  Nossa equipe monitora todas as interações da IA no CRM, ajustando fluxos em tempo real para maximizar a conversão.
+                  Nossa equipe monitora todas as interações da IA no sistema de gestão, ajustando fluxos em tempo real para maximizar os fechamentos.
                 </p>
               </div>
             </div>

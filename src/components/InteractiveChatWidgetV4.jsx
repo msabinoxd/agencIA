@@ -39,7 +39,7 @@ const FLOWS = [
         triggers: ['tempo', 'demora', 'quanto tempo', 'rapidez', 'quando', 'prazo de resultado'],
         responses: [
             'Boa pergunta! Depende muito da maturidade atual do seu processo comercial. Em geral, os primeiros resultados aparecem em 2 a 4 semanas após a implantação.',
-            'Para saber o prazo real do SEU caso, preciso entender onde você está hoje. Me conta: o maior problema é captação de leads, atendimento ou fechamento?',
+            'Para saber o prazo real do SEU caso, preciso entender onde você está hoje. Me conta: o maior problema é atrair pacientes, atendimento ou fechamento?',
         ],
     },
     {
@@ -61,7 +61,7 @@ const FLOWS = [
         id: 'lead',
         triggers: ['lead', 'cliente', 'venda', 'conversão', 'funil', 'tráfego', 'anúncio', 'perder'],
         responses: [
-            'Entendi! Esse é exatamente o tipo de problema que resolvemos — lead que chega mas não converte costuma ser sinal de gargalo no atendimento ou no processo de qualificação. 🎯',
+            'Entendi! Esse é exatamente o tipo de problema que resolvemos — paciente que chega mas não fecha costuma ser sinal de gargalo no atendimento ou no processo de filtragem. 🎯',
             'Para mapear onde está o seu gargalo específico, a melhor forma é uma sessão diagnóstico de 20 minutos. Posso te encaixar ainda essa semana. O que acha?',
         ],
     },
@@ -185,7 +185,7 @@ export default function InteractiveChatWidgetV4() {
                         </svg>
                         <div>
                             <p className="text-[10px] font-bold text-[#1A1A1A] leading-none">Resposta: 3s</p>
-                            <p className="text-[9px] text-[#9CA3AF] leading-none mt-0.5">CLOSER DIGITAL</p>
+                            <p className="text-[9px] text-[#9CA3AF] leading-none mt-0.5">VENDEDOR DIGITAL</p>
                         </div>
                     </div>
                 </div>
@@ -251,7 +251,7 @@ export default function InteractiveChatWidgetV4() {
                     onChange={e => setInputVal(e.target.value)}
                     onKeyDown={handleKeyDown}
                     disabled={isResponding}
-                    placeholder="Responda como o lead..."
+                    placeholder="Responda como o paciente..."
                     className="flex-1 text-xs text-[#4A4A4A] bg-[#F8F9FA] border border-[#E9ECEF] rounded-xl px-3 py-2 outline-none focus:border-[#0090FF] focus:bg-white transition-colors placeholder:text-[#C1C9D2] disabled:opacity-50"
                 />
                 <button
@@ -267,7 +267,7 @@ export default function InteractiveChatWidgetV4() {
 
             <div className="flex flex-wrap gap-1.5 px-1 pb-2 mt-1">
                 <p className="w-full text-[9px] text-[#9CA3AF] uppercase tracking-wider font-semibold mb-0.5">
-                    Simule um lead:
+                    Simule um paciente:
                 </p>
                 {CHIPS.map(chip => (
                     <button
