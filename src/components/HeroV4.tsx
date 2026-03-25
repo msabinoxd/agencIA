@@ -1,4 +1,4 @@
-﻿import { motion } from 'motion/react';
+import { motion } from 'motion/react';
 import { Bot, ArrowRight, Zap, MessageSquareCode } from 'lucide-react';
 import { ScrollIndicator } from './ScrollIndicator';
 import { stagger } from '../shared/animations';
@@ -33,7 +33,7 @@ export function HeroV4({ onOpenSimulator }: { onOpenSimulator?: () => void }) {
             initial="hidden"
             animate="visible"
           >
-            {["Toda", "semana,", "sua", "clínica", "perde", "pacientes", "que", "já", "demonstraram", "interesse.", "E", "você", "sabe", "disso."].map((word, i) => {
+            {["Toda", "semana", "você", "perde", "pacientes", "que", "já", "demonstraram", "interesse."].map((word, i) => {
               const isHighlight = word === 'perde' || word === 'pacientes';
               return (
                 <motion.span
@@ -51,21 +51,13 @@ export function HeroV4({ onOpenSimulator }: { onOpenSimulator?: () => void }) {
           </motion.h1>
 
           {/* Subheadline */}
-          <p className="text-base md:text-lg text-[#4A4A4A] leading-relaxed max-w-lg">
-            Não é problema de tráfego. Não é problema de marketing. É que o dinheiro que você investe para trazer o lead evapora no momento em que ele precisava de um processo comercial — e encontrou um <span className="text-[#1A1A1A] font-bold">vácuo.</span>
+          <p className="text-base md:text-lg text-[#4A4A4A] leading-relaxed max-w-lg font-medium">
+            Até quando você vai ficar trocando de agência achando que o problema é tráfego?
           </p>
 
-          {/* 3 parágrafos de apoio */}
-          <div className="space-y-2 max-w-lg">
-            <p className="text-sm text-[#4A4A4A] leading-relaxed">
-              Você investe em anúncios. Os leads chegam. Alguns agendam. Outros somem sem explicação. E aqueles que aparecem na avaliação... nem sempre saem com o tratamento fechado.
-            </p>
-            <p className="text-sm text-[#4A4A4A] leading-relaxed font-semibold">
-              Enquanto isso, o dinheiro do tráfego continua sendo debitado todo mês. Sem piedade.
-            </p>
-            <p className="text-sm text-[#4A4A4A] leading-relaxed">
-              O problema não está onde você procura. Está no que acontece <span className="text-[#1A1A1A] font-bold">depois que o lead clica.</span>
-            </p>
+          {/* Vídeo VSL Placeholder */}
+          <div className="w-full max-w-lg aspect-video bg-[#E9ECEF] rounded-2xl border-2 border-dashed border-[#C1C9D2] flex items-center justify-center text-[#888888] font-bold tracking-widest uppercase">
+            [VÍDEO VSL AQUI]
           </div>
 
           {/* CTAs */}
