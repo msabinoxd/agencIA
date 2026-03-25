@@ -1,12 +1,13 @@
-import { motion } from 'motion/react';
+﻿import { motion } from 'motion/react';
 import { Bot, ArrowRight, Zap, MessageSquareCode } from 'lucide-react';
 import { ScrollIndicator } from './ScrollIndicator';
 import { stagger } from '../shared/animations';
-import InteractiveChatWidgetV4 from './InteractiveChatWidgetV4';
+import InteractiveChatWidget from './InteractiveChatWidget';
 
 export function HeroV4({ onOpenSimulator }: { onOpenSimulator?: () => void }) {
   return (
     <section className="relative pt-24 pb-16 md:pt-28 md:pb-20 overflow-hidden bg-[#F8F9FA]">
+      {/* Background Gradients */}
       <div className="absolute top-1/4 left-1/4 w-72 h-72 bg-[#0090FF]/10 rounded-full blur-[100px] pointer-events-none" />
       <div className="absolute bottom-1/4 right-1/4 w-72 h-72 bg-[#00D1FF]/8 rounded-full blur-[100px] pointer-events-none" />
 
@@ -22,7 +23,7 @@ export function HeroV4({ onOpenSimulator }: { onOpenSimulator?: () => void }) {
           {/* Badge */}
           <div className="inline-flex items-start gap-2 px-3 py-1.5 rounded-full bg-white border border-[#E9ECEF] shadow-[var(--sh)] max-w-full">
             <span className="flex h-2 w-2 rounded-full bg-[#0090FF] animate-pulse shrink-0 mt-[3px]"></span>
-            <span className="text-[9px] sm:text-[11px] font-black text-[#4A4A4A] uppercase tracking-wider sm:tracking-widest leading-tight">Para Negócios que Vendem Todos os Dias</span>
+            <span className="text-[9px] sm:text-[11px] font-black text-[#4A4A4A] uppercase tracking-wider sm:tracking-widest leading-tight">Para Clínicas Odontológicas & Estéticas</span>
           </div>
 
           {/* Headline */}
@@ -32,8 +33,8 @@ export function HeroV4({ onOpenSimulator }: { onOpenSimulator?: () => void }) {
             initial="hidden"
             animate="visible"
           >
-            {["Toda", "semana,", "seu", "negócio", "perde", "clientes", "que", "já", "demonstraram", "interesse.", "E", "você", "sabe", "disso."].map((word, i) => {
-              const isHighlight = word === 'perde' || word === 'clientes';
+            {["Toda", "semana,", "sua", "clínica", "perde", "pacientes", "que", "já", "demonstraram", "interesse.", "E", "você", "sabe", "disso."].map((word, i) => {
+              const isHighlight = word === 'perde' || word === 'pacientes';
               return (
                 <motion.span
                   key={i}
@@ -57,7 +58,7 @@ export function HeroV4({ onOpenSimulator }: { onOpenSimulator?: () => void }) {
           {/* 3 parágrafos de apoio */}
           <div className="space-y-2 max-w-lg">
             <p className="text-sm text-[#4A4A4A] leading-relaxed">
-              Você investe em anúncios. Os leads chegam. Alguns convertem. Outros somem sem explicação. E aqueles que chegam a uma reunião... nem sempre saem com a proposta fechada.
+              Você investe em anúncios. Os leads chegam. Alguns agendam. Outros somem sem explicação. E aqueles que aparecem na avaliação... nem sempre saem com o tratamento fechado.
             </p>
             <p className="text-sm text-[#4A4A4A] leading-relaxed font-semibold">
               Enquanto isso, o dinheiro do tráfego continua sendo debitado todo mês. Sem piedade.
@@ -107,16 +108,16 @@ export function HeroV4({ onOpenSimulator }: { onOpenSimulator?: () => void }) {
           </div>
         </motion.div>
 
-        {/* Right: Chat Widget */}
+        {/* Right: Chat Mockup */}
         <motion.div
           initial={{ opacity: 0, scale: 0.92 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 0.7, delay: 0.2 }}
           className="relative lg:px-6"
         >
-          <InteractiveChatWidgetV4 />
+          <InteractiveChatWidget />
 
-          {/* Floating Badges */}
+          {/* Floating Badges — apenas lg+ */}
           <motion.div
             animate={{ y: [0, -10, 0] }}
             transition={{ repeat: Infinity, duration: 4, ease: "easeInOut" }}

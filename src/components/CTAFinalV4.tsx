@@ -1,24 +1,26 @@
-import { motion } from 'motion/react';
+﻿import { motion } from 'motion/react';
 import { ArrowRight, X, Check, CheckCircle2 } from 'lucide-react';
+import { waURL, CONFIG } from '../config';
 import { fadeUp, stagger, scaleIn } from '../shared/animations';
 
 const notForYou = [
   "Você quer só \"mais um robô de WhatsApp barato\"",
-  "Seu negócio recebe menos de 30 leads por mês",
+  "Sua clínica recebe menos de 30 leads por mês",
   "Você não está disposto a estruturar processos e treinar equipe",
-  "Você quer resultado sem envolver o time comercial interno",
+  "Você quer resultado sem envolver o comercial interno da clínica",
 ];
 
 const forYou = [
   "Você investe em tráfego e sabe que perde leads no atendimento",
-  "Você quer previsibilidade de receita, não depender da sorte da equipe",
+  "Você quer previsibilidade de caixa, não depender da sorte da equipe",
   "Você entende que tecnologia + processo + pessoas = escala real",
-  "Você está pronto para transformar seu negócio numa operação de alta performance",
+  "Você está pronto para transformar sua clínica numa operação de alta performance",
 ];
 
 export function CTAFinalV4() {
   return (
     <section className="py-16 md:py-32 relative overflow-hidden bg-[#F8F9FA] border-t border-[#E9ECEF]">
+      {/* Background Glows */}
       <motion.div
         animate={{ scale: [1, 1.2, 1], opacity: [0.2, 0.4, 0.2] }}
         transition={{ duration: 8, repeat: Infinity, ease: "easeInOut" }}
@@ -32,6 +34,7 @@ export function CTAFinalV4() {
 
       <div className="max-w-5xl mx-auto px-6 relative z-10">
 
+        {/* Headline */}
         <motion.h2
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -43,6 +46,7 @@ export function CTAFinalV4() {
           E isso é proposital.
         </motion.h2>
 
+        {/* Subtítulo */}
         <motion.p
           initial={{ opacity: 0, y: 10 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -50,9 +54,10 @@ export function CTAFinalV4() {
           transition={{ delay: 0.1 }}
           className="text-lg text-[#4A4A4A] mb-12 text-center max-w-3xl mx-auto leading-relaxed"
         >
-          Implementar um ecossistema comercial completo leva tempo, atenção e presença real da nossa equipe. Por isso, limitamos o número de negócios que assessoramos ao mesmo tempo.
+          Implementar um ecossistema comercial completo leva tempo, atenção e presença real da nossa equipe. Por isso, limitamos o número de clínicas que assessoramos ao mesmo tempo.
         </motion.p>
 
+        {/* 4 parágrafos de corpo */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -63,10 +68,10 @@ export function CTAFinalV4() {
             Não por falta de demanda. Por responsabilidade com o resultado.
           </p>
           <p className="text-[#4A4A4A] leading-relaxed">
-            Quando a Intalky Group entra num negócio, implantamos a IA, estruturamos o funil, configuramos o CRM, treinamos a equipe e acompanhamos a operação semana a semana. Isso só funciona quando o negócio tem estrutura para absorver — e o dono tem disposição para mudar o processo, não só adicionar uma ferramenta.
+            Quando a Intalky Group entra numa clínica, implantamos a IA, estruturamos o funil, configuramos o CRM, treinamos a equipe e acompanhamos a operação semana a semana. Isso só funciona quando a clínica tem estrutura para absorver — e o dono tem disposição para mudar o processo, não só adicionar uma ferramenta.
           </p>
           <p className="text-[#4A4A4A] leading-relaxed">
-            Empresas que querem <em>"mais um robô de WhatsApp"</em> não são o nosso perfil. Empresários que entenderam que o gargalo é o processo comercial — e que estão prontos para construir algo previsível — são exatamente quem buscamos.
+            Clínicas que querem <em>"mais um robô de WhatsApp"</em> não são o nosso perfil. Empresários que entenderam que o gargalo é o processo comercial — e que estão prontos para construir algo previsível — são exatamente quem buscamos.
           </p>
           <p className="text-[#4A4A4A] leading-relaxed italic">
             Se você chegou até aqui, é provável que você seja um deles.
@@ -81,7 +86,11 @@ export function CTAFinalV4() {
           viewport={{ once: true, margin: "-50px" }}
           className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-14"
         >
-          <motion.div variants={fadeUp} className="bg-white border border-red-100 rounded-3xl p-6">
+          {/* Not for you */}
+          <motion.div
+            variants={fadeUp}
+            className="bg-white border border-red-100 rounded-3xl p-6"
+          >
             <h3 className="text-sm font-bold text-red-500 mb-4 flex items-center gap-2 uppercase tracking-wider">
               <X className="w-4 h-4" />
               Provavelmente não é para você se:
@@ -96,7 +105,11 @@ export function CTAFinalV4() {
             </ul>
           </motion.div>
 
-          <motion.div variants={fadeUp} className="bg-white border border-[#0090FF]/20 rounded-3xl p-6">
+          {/* For you */}
+          <motion.div
+            variants={fadeUp}
+            className="bg-white border border-[#0090FF]/20 rounded-3xl p-6"
+          >
             <h3 className="text-sm font-bold text-[#0090FF] mb-4 flex items-center gap-2 uppercase tracking-wider">
               <Check className="w-4 h-4" />
               É para você se:
@@ -112,6 +125,7 @@ export function CTAFinalV4() {
           </motion.div>
         </motion.div>
 
+        {/* Headline acima do CTA */}
         <motion.p
           initial={{ opacity: 0, y: 10 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -120,9 +134,10 @@ export function CTAFinalV4() {
         >
           <span className="text-[#1A1A1A]">Esta pode ser a decisão mais rentável</span>
           <br />
-          <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#0090FF] to-[#00D1FF]">que seu negócio toma este ano.</span>
+          <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#0090FF] to-[#00D1FF]">que sua clínica toma este ano.</span>
         </motion.p>
 
+        {/* Subtítulo */}
         <motion.div
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
@@ -130,13 +145,14 @@ export function CTAFinalV4() {
           className="text-center mb-6 max-w-lg mx-auto space-y-2"
         >
           <p className="text-sm text-[#4A4A4A] leading-relaxed">
-            Em 20 minutos de conversa, nossa equipe mapeia os gargalos comerciais do seu negócio e mostra — com números reais — quanto você está deixando na mesa todo mês.
+            Em 20 minutos de conversa, nossa equipe mapeia os gargalos comerciais da sua clínica e mostra — com números reais — quanto você está deixando na mesa todo mês.
           </p>
           <p className="text-sm text-[#888888] italic leading-relaxed">
             Sem pitch de vendas. Sem pressão. Se não fizer sentido para os dois lados, encerramos a conversa sem compromisso.
           </p>
         </motion.div>
 
+        {/* Badge */}
         <motion.div
           initial={{ opacity: 0, y: 10 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -149,6 +165,7 @@ export function CTAFinalV4() {
           </div>
         </motion.div>
 
+        {/* CTA Button */}
         <motion.div
           variants={scaleIn}
           initial="hidden"

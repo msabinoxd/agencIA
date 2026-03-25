@@ -1,24 +1,24 @@
-import { motion } from 'motion/react';
+﻿import { motion } from 'motion/react';
 import { CalendarX, UserMinus, Clock, Bot, MoonStar } from 'lucide-react';
 import { ScrollIndicator } from './ScrollIndicator';
 
 const pains = [
   {
     icon: CalendarX,
-    title: "Lead chega. Proposta não fecha.",
-    scenario: "Você investiu em tráfego, o lead demonstrou interesse, marcou uma conversa. No dia marcado: sumiu. Sem aviso.",
-    impact: "3 oportunidades perdidas/dia × ticket médio = dezenas de milhares/mês evaporados"
+    title: "Lead agenda. Cadeira vazia.",
+    scenario: "Você investiu em tráfego, o lead agendou a avaliação. No dia marcado: cadeira vazia. Sem aviso.",
+    impact: "3 no-shows/dia × R$800 = R$52.800/mês perdido"
   },
   {
     icon: UserMinus,
-    title: "Você treina. Ele pede demissão.",
-    scenario: "3 meses de treinamento com o método do Danilo. Ele aprendeu tudo. Na semana seguinte: pediu demissão.",
+    title: "Você treina. Ela pede demissão.",
+    scenario: "3 meses de treinamento com o método do Danilo. Ela aprendeu tudo. Na semana seguinte: pediu demissão.",
     impact: "1 SDR que sai = R$12.000 em custo + 90 dias de ramp-up do próximo"
   },
   {
     icon: Clock,
     title: "Lead quente. Resposta fria.",
-    scenario: "O anúncio funcionou. O lead clicou. Mas sua equipe estava ocupada — ou o comercial estava fechado.",
+    scenario: "O anúncio funcionou. O lead clicou. Mas sua equipe estava ocupada — ou a clínica estava fechada.",
     impact: "78% das vendas vão para quem responde primeiro"
   },
   {
@@ -29,9 +29,9 @@ const pains = [
   },
   {
     icon: MoonStar,
-    title: "18h: o comercial fechou. 20h: o lead chegou.",
+    title: "18h: a clínica fechou. 20h: o lead chegou.",
     scenario: "O anúncio rodou à noite. O lead entrou em contato. Ninguém respondeu. Você ligou no dia seguinte.",
-    impact: "\"Já resolvi com outra empresa.\" — frase que mais dói."
+    impact: "\"Já resolvi com outra clínica.\" — frase que mais dói."
   }
 ];
 
@@ -42,6 +42,7 @@ export function PainSolutionV4() {
 
       <div className="max-w-7xl mx-auto px-6 relative z-10">
 
+        {/* Header V2 */}
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -56,15 +57,16 @@ export function PainSolutionV4() {
           <h2 className="text-3xl md:text-5xl font-bold text-[#1A1A1A] tracking-tight mb-4">
             Cinco situações que custam{' '}
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-red-400 to-red-600">R$50.000 ou mais por mês</span>{' '}
-            para a maioria dos negócios. Qual delas você reconhece?
+            para a maioria das clínicas. Qual delas você reconhece?
           </h2>
 
+          {/* 3 intro paragraphs */}
           <div className="space-y-4 text-left bg-white border border-[#E9ECEF] rounded-2xl p-6 shadow-[var(--sh)] mb-0">
             <p className="text-[#4A4A4A] leading-relaxed">
-              Não é exagero. São contas simples que a maioria dos donos de negócio <strong className="text-[#1A1A1A]">nunca parou para fazer.</strong>
+              Não é exagero. São contas simples que a maioria dos donos de clínica <strong className="text-[#1A1A1A]">nunca parou para fazer.</strong>
             </p>
             <p className="text-[#4A4A4A] leading-relaxed">
-              O lead que não recebeu resposta rápida e foi para o concorrente. O cliente que demonstrou interesse, não apareceu e ninguém fez follow-up. O SDR que você treinou por três meses e pediu demissão na semana seguinte. O bot que "atende" mas só manda tabela de preços quando o lead quer entender o valor real da solução.
+              O lead que não recebeu resposta rápida e foi para o concorrente. O paciente que agendou, não apareceu e ninguém fez follow-up. A SDR que você treinou por três meses e pediu demissão na semana seguinte. O bot que "atende" mas só manda tabela de preços quando o lead pede um sorriso diferente.
             </p>
             <p className="text-[#4A4A4A] leading-relaxed italic">
               Gestores que pensam como empresários não aceitam viver no escuro. Eles querem saber exatamente onde estão sangrando — para poder estancar.
@@ -72,7 +74,7 @@ export function PainSolutionV4() {
           </div>
         </motion.div>
 
-        {/* Pain Cards Grid */}
+        {/* Pain Cards Grid: 3 top + 2 bottom centered */}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5 mb-5">
           {pains.slice(0, 3).map((pain, idx) => {
             const Icon = pain.icon;
@@ -156,7 +158,7 @@ export function PainSolutionV4() {
             </h2>
             <p className="text-lg text-[#4A4A4A] leading-relaxed">
               <strong className="text-[#1A1A1A]">78% das vendas</strong> vão para quem responde primeiro. Com o método dos{' '}
-              <strong className="text-[#0090FF]">7 Pilares da Persuasão</strong> e IA treinada para conduzir a negociação, seus leads viram clientes — dia e noite.
+              <strong className="text-[#0090FF]">7 Pilares da Persuasão</strong> e IA treinada para conduzir a negociação, seus leads viram agendamentos confirmados — dia e noite.
             </p>
           </div>
         </motion.div>

@@ -1,20 +1,27 @@
-import { motion } from 'motion/react';
+﻿import { motion } from 'motion/react';
 import { Network, Database, Zap, Users, ArrowRight, CheckCircle2 } from 'lucide-react';
 import { waURL } from '../config';
 
-const segments = [
-  { label: 'E-commerce' },
-  { label: 'Educação' },
-  { label: 'Saúde' },
-  { label: 'Imóveis' },
-  { label: 'SaaS' },
-  { label: 'RD Station' },
+import logoOdontoCompany from '../assets/logos/odontocompany.svg';
+import logoSorridents from '../assets/logos/sorridents.png';
+import logoOdoSpecial from '../assets/logos/odospecial.svg';
+import logoBFacial from '../assets/logos/bfacial.svg';
+import logoCotia from '../assets/logos/cotia.svg';
+import logoRDStation from '../assets/logos/rdstation.svg';
+
+const clientLogos = [
+  { src: logoOdontoCompany, alt: 'OdontoCompany' },
+  { src: logoSorridents,    alt: 'Sorridents' },
+  { src: logoOdoSpecial,    alt: 'Odonto Special' },
+  { src: logoBFacial,       alt: 'B Facial Clinic' },
+  { src: logoCotia,         alt: 'Cotia Clínica' },
+  { src: logoRDStation,     alt: 'RD Station' },
 ];
 
 const automations = [
     {
         title: 'Tráfego & Funil',
-        desc: 'Meta Ads e Google Ads calibrados para o ICP do seu negócio + funil desenhado com os 7 Pilares da Persuasão de Danilo Oliveira.',
+        desc: 'Meta Ads e Google Ads calibrados para o ICP da sua clínica + funil desenhado com os 7 Pilares da Persuasão de Danilo Oliveira.',
         icon: Network,
         features: ['ICP validado', 'Pixel de rastreamento', 'Funil de alta conversão'],
         waMsg: 'Olá! Quero saber mais sobre Tráfego & Funil da Intalky.'
@@ -24,7 +31,7 @@ const automations = [
         desc: 'A única IA do mercado treinada com neurociência de vendas. Atende, qualifica, faz follow-up e gerencia o CRM 24/7.',
         icon: Database,
         features: ['Resposta em < 3s', 'Follow-up automático', 'Integração total CRM'],
-        waMsg: 'Olá! Quero saber mais sobre a Intalky AI para meu negócio.'
+        waMsg: 'Olá! Quero saber mais sobre a Intalky AI para minha clínica.'
     },
     {
         title: 'Gestão & Treinamento',
@@ -38,6 +45,7 @@ const automations = [
 export function AutomationStackV4() {
     return (
         <section id="automacao" className="py-32 bg-[#F8F9FA] relative overflow-hidden">
+            {/* Background Grid */}
             <div className="absolute inset-0 bg-[linear-gradient(to_right,#E9ECEF_1px,transparent_1px),linear-gradient(to_bottom,#E9ECEF_1px,transparent_1px)] bg-[size:40px_40px] [mask-image:radial-gradient(ellipse_60%_50%_at_50%_0%,#000_70%,transparent_100%)]" />
 
             <div className="max-w-7xl mx-auto px-6 relative z-10">
@@ -85,6 +93,7 @@ export function AutomationStackV4() {
                                 transition={{ delay: idx * 0.1 }}
                                 className="group relative p-8 rounded-[32px] bg-white border border-[#E9ECEF] hover:border-[#0090FF]/30 hover:shadow-[0_8px_30px_rgba(0,144,255,0.12)] transition-all duration-500 overflow-hidden shadow-[var(--sh)]"
                             >
+                                {/* Hover Glow */}
                                 <div className="absolute inset-0 bg-gradient-to-br from-[#0090FF]/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 rounded-[32px]" />
 
                                 <div className="relative z-10">
@@ -120,20 +129,20 @@ export function AutomationStackV4() {
                     })}
                 </div>
 
-                {/* Segmentos atendidos */}
+                {/* Client Logos */}
                 <motion.div
                     initial={{ opacity: 0 }}
                     whileInView={{ opacity: 1 }}
                     viewport={{ once: true }}
-                    className="mt-20 flex flex-wrap justify-center items-center gap-4"
+                    className="mt-20 flex flex-wrap justify-center items-center gap-10"
                 >
-                    {segments.map(seg => (
-                        <span
-                            key={seg.label}
-                            className="px-4 py-2 rounded-full bg-white border border-[#E9ECEF] text-sm font-semibold text-[#888888] hover:text-[#0090FF] hover:border-[#0090FF]/30 transition-all duration-300 shadow-[var(--sh)]"
-                        >
-                            {seg.label}
-                        </span>
+                    {clientLogos.map(logo => (
+                        <img
+                            key={logo.alt}
+                            src={logo.src}
+                            alt={logo.alt}
+                            className="h-8 w-auto object-contain grayscale opacity-50 hover:opacity-80 hover:grayscale-0 transition-all duration-300"
+                        />
                     ))}
                 </motion.div>
             </div>

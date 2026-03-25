@@ -1,9 +1,10 @@
-import { motion } from 'motion/react';
+﻿import { motion } from 'motion/react';
 import { ArrowRight, Zap } from 'lucide-react';
 
 export function TwoPiecesBlockV4() {
   return (
     <section className="relative py-16 md:py-24 overflow-hidden bg-white border-t border-b border-[#E9ECEF]">
+      {/* Background glow */}
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-[#0090FF]/4 rounded-full blur-[120px] pointer-events-none" />
 
       <div className="max-w-3xl mx-auto px-6 relative z-10">
@@ -33,7 +34,7 @@ export function TwoPiecesBlockV4() {
           Só metade.
         </motion.h2>
 
-        {/* PARTE 1 */}
+        {/* PARTE 1 — O que a IA faz */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -46,7 +47,7 @@ export function TwoPiecesBlockV4() {
           </p>
 
           <p className="text-[#4A4A4A] leading-relaxed text-lg">
-            Ela atende em menos de 3 segundos. A qualquer hora. Sem humor ruim, sem dia difícil, sem pedir aumento. Ela lê a mensagem do lead, identifica a dor por trás da pergunta, ajusta o tom de voz e conduz a conversa com a mesma fluidez de um consultor experiente. Manda áudio quando a situação pede. Contorna objeção de preço sem gaguejar. Agenda a reunião e confirma a presença no dia anterior.
+            Ela atende em menos de 3 segundos. A qualquer hora. Sem humor ruim, sem dia difícil, sem pedir aumento. Ela lê a mensagem do lead, identifica a dor por trás da pergunta, ajusta o tom de voz e conduz a conversa com a mesma fluidez de um consultor experiente. Manda áudio quando a situação pede. Contorna objeção de preço sem gaguejar. Agenda a avaliação e confirma a presença no dia anterior.
           </p>
 
           <p className="text-[#4A4A4A] leading-relaxed">
@@ -54,8 +55,8 @@ export function TwoPiecesBlockV4() {
           </p>
 
           <p className="text-[#4A4A4A] leading-relaxed">
-            E funciona. Negócios que implantaram a Intalky AI registraram aumento de até{' '}
-            <strong className="text-[#1A1A1A]">70% na taxa de conversão</strong>{' '}
+            E funciona. Clínicas que implantaram a Intalky AI registraram aumento de até{' '}
+            <strong className="text-[#1A1A1A]">70% na taxa de agendamentos</strong>{' '}
             e queda expressiva no no-show. Os números são reais — você vai ver os cases mais abaixo.
           </p>
         </motion.div>
@@ -74,7 +75,7 @@ export function TwoPiecesBlockV4() {
           </div>
         </motion.div>
 
-        {/* PARTE 2 */}
+        {/* PARTE 2 — A virada narrativa */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -87,7 +88,7 @@ export function TwoPiecesBlockV4() {
           </p>
 
           <p className="text-[#4A4A4A] leading-relaxed text-lg">
-            Quando esse lead — qualificado pela IA, aquecido durante dias de conversa, convicto de que sua empresa é a certa — finalmente chega à reunião de fechamento, o jogo muda completamente.
+            Quando esse paciente — qualificado pela IA, aquecido durante dias de conversa, convicto de que sua clínica é a certa — finalmente senta na cadeira de avaliação, o jogo muda completamente.
           </p>
 
           <p className="text-[#4A4A4A] leading-relaxed font-semibold">
@@ -95,11 +96,11 @@ export function TwoPiecesBlockV4() {
           </p>
 
           <p className="text-[#4A4A4A] leading-relaxed">
-            E se o seu time não souber criar conexão nos primeiros dois minutos, o lead fecha emocionalmente antes de ouvir qualquer proposta. Se quem conduz a reunião não tiver um CRM que mostre o histórico da conversa, vai começar do zero — sem saber que o lead tem urgência de prazo, que já pesquisou três concorrentes antes de chegar até você e que a objeção real é o risco, não o preço.
+            E se a sua recepcionista não souber criar conexão nos primeiros dois minutos, o paciente fecha emocionalmente antes de ouvir qualquer proposta. Se o seu avaliador não tiver um CRM que mostre o histórico da conversa, ele vai começar do zero — sem saber que o paciente tem medo de agulha, que tem uma formatura em três meses e que já pesquisou três clínicas antes de escolher a sua.
           </p>
 
           <p className="text-[#4A4A4A] leading-relaxed">
-            E se, na hora de apresentar a proposta, ninguém tiver ancorado o valor antes de falar o número... o lead ouve o investimento e pensa uma única coisa:{' '}
+            E se, na hora de apresentar o plano de tratamento, ninguém tiver ancorado o valor antes de falar o número... o paciente ouve R$4.800 e pensa uma única coisa:{' '}
             <em>"vou pesquisar mais."</em>
           </p>
 
@@ -118,11 +119,11 @@ export function TwoPiecesBlockV4() {
         >
           <p className="text-[#4A4A4A] leading-relaxed italic text-center">
             É por isso que a Intalky Group não vende software. Nós construímos a máquina de vendas inteira — da primeira mensagem no WhatsApp até o{' '}
-            <strong className="text-[#1A1A1A] not-italic">"sim" no fechamento.</strong>
+            <strong className="text-[#1A1A1A] not-italic">"sim" na cadeira.</strong>
           </p>
         </motion.div>
 
-        {/* CTA */}
+        {/* CTA outline */}
         <motion.div
           initial={{ opacity: 0, scale: 0.95 }}
           whileInView={{ opacity: 1, scale: 1 }}
