@@ -1,4 +1,4 @@
-﻿import { motion } from 'motion/react';
+import { motion } from 'motion/react';
 import { Eye, UserCog, ShieldAlert, Activity } from 'lucide-react';
 import { ScrollIndicator } from './ScrollIndicator';
 
@@ -39,7 +39,7 @@ export function HumanSupervisionV4() {
             transition={{ delay: 0.2 }}
             className="text-lg text-[#4A4A4A] leading-relaxed"
           >
-            Não basta automatizar. É preciso supervisão estratégica, treinamento constante da equipe e ajustes finos para que cada lead vire faturamento. É isso que nos separa do mercado.
+            Não basta automatizar. É preciso supervisão estratégica e treinamento contínuo para cada lead virar faturamento.
           </motion.p>
         </div>
 
@@ -110,7 +110,7 @@ export function HumanSupervisionV4() {
               <div className="pt-2 pb-8">
                 <h3 className="text-[#1A1A1A] font-semibold text-xl md:text-2xl mb-3">Supervisão Ativa da Intalky</h3>
                 <p className="text-[#4A4A4A] leading-relaxed text-sm md:text-base">
-                  Nossa equipe monitora todas as interações da IA no CRM, ajustando fluxos, corrigindo desvios e garantindo que a qualificação esteja alinhada com a estratégia da sua clínica.
+                  Nossa equipe monitora todas as interações da IA no CRM, ajustando fluxos em tempo real para maximizar a conversão.
                 </p>
               </div>
             </div>
@@ -126,7 +126,7 @@ export function HumanSupervisionV4() {
               <div className="pt-2">
                 <h3 className="text-[#1A1A1A] font-semibold text-xl md:text-2xl mb-3">Treinamento Semanal + Consultoria</h3>
                 <p className="text-[#4A4A4A] leading-relaxed text-sm md:text-base">
-                  Sessões semanais com Danilo Oliveira para roleplay, gestão de objeções e análise de CRM. Consultoria de marketing com Marcos e suporte em horário comercial. Você nunca está sozinho.
+                  Mentorias semanais de vendas e consultoria de marketing ativa. Você nunca joga sozinho.
                 </p>
               </div>
             </div>

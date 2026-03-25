@@ -1,39 +1,8 @@
-﻿import { motion } from 'motion/react';
+import { motion } from 'motion/react';
 import { CalendarX, UserMinus, Clock, Bot, MoonStar } from 'lucide-react';
 import { ScrollIndicator } from './ScrollIndicator';
 
-const pains = [
-  {
-    icon: CalendarX,
-    title: "Lead agenda. Cadeira vazia.",
-    scenario: "Você investiu em tráfego, o lead agendou a avaliação. No dia marcado: cadeira vazia. Sem aviso.",
-    impact: "3 no-shows/dia × R$800 = R$52.800/mês perdido"
-  },
-  {
-    icon: UserMinus,
-    title: "Você treina. Ela pede demissão.",
-    scenario: "3 meses de treinamento com o método do Danilo. Ela aprendeu tudo. Na semana seguinte: pediu demissão.",
-    impact: "1 SDR que sai = R$12.000 em custo + 90 dias de ramp-up do próximo"
-  },
-  {
-    icon: Clock,
-    title: "Lead quente. Resposta fria.",
-    scenario: "O anúncio funcionou. O lead clicou. Mas sua equipe estava ocupada — ou a clínica estava fechada.",
-    impact: "78% das vendas vão para quem responde primeiro"
-  },
-  {
-    icon: Bot,
-    title: "Bot que responde FAQ. Lead que abandona.",
-    scenario: "Você tem um \"robô\". Mas ele só manda tabela de preços. O lead perguntou algo diferente e sumiu.",
-    impact: "Leads não convertidos por bot genérico: 60-85% do total"
-  },
-  {
-    icon: MoonStar,
-    title: "18h: a clínica fechou. 20h: o lead chegou.",
-    scenario: "O anúncio rodou à noite. O lead entrou em contato. Ninguém respondeu. Você ligou no dia seguinte.",
-    impact: "\"Já resolvi com outra clínica.\" — frase que mais dói."
-  }
-];
+const pains = [];
 
 export function PainSolutionV4() {
   return (
@@ -60,74 +29,18 @@ export function PainSolutionV4() {
             para a maioria das clínicas. Qual delas você reconhece?
           </h2>
 
-          {/* 3 intro paragraphs */}
+          {/* Intro text encurtado (Max 2 linhas) */}
           <div className="space-y-4 text-left bg-white border border-[#E9ECEF] rounded-2xl p-6 shadow-[var(--sh)] mb-0">
-            <p className="text-[#4A4A4A] leading-relaxed">
-              Não é exagero. São contas simples que a maioria dos donos de clínica <strong className="text-[#1A1A1A]">nunca parou para fazer.</strong>
-            </p>
-            <p className="text-[#4A4A4A] leading-relaxed">
-              O lead que não recebeu resposta rápida e foi para o concorrente. O paciente que agendou, não apareceu e ninguém fez follow-up. A SDR que você treinou por três meses e pediu demissão na semana seguinte. O bot que "atende" mas só manda tabela de preços quando o lead pede um sorriso diferente.
+            <p className="text-[#4A4A4A] leading-relaxed font-medium">
+              São contas simples que a maioria dos donos de clínica <strong className="text-[#1A1A1A]">nunca parou para fazer.</strong>
             </p>
             <p className="text-[#4A4A4A] leading-relaxed italic">
-              Gestores que pensam como empresários não aceitam viver no escuro. Eles querem saber exatamente onde estão sangrando — para poder estancar.
+              Gestores que pensam como empresários não aceitam viver no escuro. Eles estancam o sangramento.
             </p>
           </div>
         </motion.div>
 
-        {/* Pain Cards Grid: 3 top + 2 bottom centered */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5 mb-5">
-          {pains.slice(0, 3).map((pain, idx) => {
-            const Icon = pain.icon;
-            return (
-              <motion.div
-                key={idx}
-                initial={{ opacity: 0, y: 24 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true, margin: "-60px" }}
-                transition={{ duration: 0.6, delay: idx * 0.1 }}
-                className="group bg-white border border-[#E9ECEF] hover:border-red-200 rounded-3xl p-6 flex flex-col gap-4 shadow-[var(--sh)] hover:shadow-[0_8px_30px_rgba(239,68,68,0.08)] transition-all duration-400"
-              >
-                <div className="w-11 h-11 rounded-2xl bg-red-50 border border-red-100 flex items-center justify-center group-hover:bg-red-100 transition-colors shrink-0">
-                  <Icon className="w-5 h-5 text-red-400" />
-                </div>
-                <div>
-                  <h3 className="text-[#1A1A1A] font-bold text-lg mb-2 leading-tight">{pain.title}</h3>
-                  <p className="text-[#4A4A4A] text-sm leading-relaxed">{pain.scenario}</p>
-                </div>
-                <div className="mt-auto pt-4 border-t border-[#E9ECEF] group-hover:border-red-100 transition-colors">
-                  <p className="text-red-500 text-xs font-bold font-mono">{pain.impact}</p>
-                </div>
-              </motion.div>
-            );
-          })}
-        </div>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 gap-5 max-w-2xl mx-auto lg:max-w-none lg:grid-cols-2 lg:px-[16.67%]">
-          {pains.slice(3).map((pain, idx) => {
-            const Icon = pain.icon;
-            return (
-              <motion.div
-                key={idx + 3}
-                initial={{ opacity: 0, y: 24 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true, margin: "-60px" }}
-                transition={{ duration: 0.6, delay: (idx + 3) * 0.1 }}
-                className="group bg-white border border-[#E9ECEF] hover:border-red-200 rounded-3xl p-6 flex flex-col gap-4 shadow-[var(--sh)] hover:shadow-[0_8px_30px_rgba(239,68,68,0.08)] transition-all duration-400"
-              >
-                <div className="w-11 h-11 rounded-2xl bg-red-50 border border-red-100 flex items-center justify-center group-hover:bg-red-100 transition-colors shrink-0">
-                  <Icon className="w-5 h-5 text-red-400" />
-                </div>
-                <div>
-                  <h3 className="text-[#1A1A1A] font-bold text-lg mb-2 leading-tight">{pain.title}</h3>
-                  <p className="text-[#4A4A4A] text-sm leading-relaxed">{pain.scenario}</p>
-                </div>
-                <div className="mt-auto pt-4 border-t border-[#E9ECEF] group-hover:border-red-100 transition-colors">
-                  <p className="text-red-500 text-xs font-bold font-mono">{pain.impact}</p>
-                </div>
-              </motion.div>
-            );
-          })}
-        </div>
 
         {/* Transition */}
         <motion.div
