@@ -1,6 +1,13 @@
 import { useState } from 'react';
 import { motion } from 'motion/react';
 import { BarChart3, UserCircle, Users, CheckCircle, ChevronLeft, ChevronRight } from 'lucide-react';
+import { Swiper, SwiperSlide } from 'swiper/react';
+import { Navigation, Pagination, EffectCreative } from 'swiper/modules';
+
+// Import Swiper styles
+import 'swiper/css';
+import 'swiper/css/navigation';
+import 'swiper/css/pagination';
 
 const pillars = [
   {
@@ -33,259 +40,165 @@ const pillars = [
   },
 ];
 
-// Position index relative to active: 0 = active, 1 = next, 2 = after-next, -1 = prev
-function getRelativePos(cardIndex: number, activeIndex: number, total: number) {
-  let rel = (cardIndex - activeIndex + total) % total;
-  if (rel > total / 2) rel -= total; // wrap: -2 -1 0 1 2
-  return rel;
-}
-
-// Styles per relative position (mirrors .swiper-slide-active, .swiper-slide-next etc.)
-function getSlideStyle(rel: number): React.CSSProperties {
-  // Overlap negative margin is applied globally; per-position only z/scale/opacity change
-  if (rel === 0) {
-    // .swiper-slide-active — front card
-    return { zIndex: 10, transform: 'scale(1)', opacity: 1, filter: 'none' };
-  } else if (rel === 1) {
-    // .swiper-slide-next
-    return { zIndex: 7, transform: 'scale(0.95)', opacity: 0.85, filter: 'brightness(0.96)' };
-  } else if (rel === 2) {
-    // two after active
-    return { zIndex: 4, transform: 'scale(0.90)', opacity: 0.65, filter: 'brightness(0.88)' };
-  } else if (rel === -1) {
-    // .swiper-slide-prev
-    return { zIndex: 6, transform: 'scale(0.93)', opacity: 0.55, filter: 'brightness(0.82)' };
-  }
-  // far behind
-  return { zIndex: 2, transform: 'scale(0.86)', opacity: 0.40, filter: 'brightness(0.75)' };
-}
-
 export function FourPillarsV4() {
-  const [active, setActive] = useState(0);
   const [hoveredIdx, setHoveredIdx] = useState<number | null>(null);
-  const total = pillars.length;
 
-  const prev = () => setActive((a) => (a - 1 + total) % total);
-  const next = () => setActive((a) => (a + 1) % total);
-
-  const CARD_W = 260; // card width px
-  const OVERLAP = -110; // negative margin — cards overlap by 110px
+  const CARD_W = 280;
+  const OVERLAP = -140; // margin-right negativo agressivo para o efeito de cartas de baralho
 
   return (
-    <section style={{ padding: '56px 0 48px', background: '#fff', borderBottom: '1px solid #E9ECEF' }}>
-      {/* CSS: reproduzindo lógica do N-Carousel swiper */}
+    <section className="py-16 bg-white border-b border-[#E9ECEF] overflow-hidden">
       <style>{`
-        .fp-swiper-wrapper {
+        /* Container principal */
+        .stacked-swiper {
+          overflow: visible !important; /* ← CRUCIAL para o efeito stacked */
+          width: 100%;
+          max-width: 800px;
+          margin: 0 auto;
+          padding: 20px 0 60px !important;
+        }
+
+        .stacked-swiper .swiper-wrapper {
+          overflow: visible !important;
+        }
+
+        .stacked-swiper .swiper-slide {
+          width: ${CARD_W}px !important;
+          margin-right: ${OVERLAP}px !important; /* ← Sobreposição */
+          transition: transform 0.5s cubic-bezier(0.4, 0, 0.2, 1), opacity 0.5s, z-index 0.1s !important;
+          cursor: pointer;
+          position: relative;
+        }
+
+        /* Lógica de Z-Index e Scale baseada nas classes do Swiper */
+        
+        /* Card Ativo (Topo) */
+        .stacked-swiper .swiper-slide-active {
+          z-index: 10 !important;
+          transform: scale(1) !important;
+          opacity: 1 !important;
+        }
+
+        /* Próximo Card (Atrás do ativo) */
+        .stacked-swiper .swiper-slide-next {
+          z-index: 5 !important;
+          transform: scale(0.92) !important;
+          opacity: 0.8 !important;
+        }
+
+        /* Cards seguintes */
+        .stacked-swiper .swiper-slide-next ~ .swiper-slide {
+          z-index: 1 !important;
+          transform: scale(0.85) !important;
+          opacity: 0.5 !important;
+        }
+
+        /* Card Anterior (.prev) */
+        .stacked-swiper .swiper-slide-prev {
+          z-index: 4 !important;
+          transform: scale(0.9) translateX(-20px) !important;
+          opacity: 0.6 !important;
+        }
+
+        /* Efeito de HOVER (Elevação) */
+        .stacked-swiper .swiper-slide:hover {
+          transform: translateY(-15px) !important;
+          z-index: 20 !important;
+          opacity: 1 !important;
+        }
+
+        /* Custom Navigation */
+        .nav-btn {
+          width: 44px;
+          height: 44px;
+          background: #0090FF;
+          border-radius: 50%;
+          border: none;
+          color: white;
           display: flex;
           align-items: center;
-          overflow: visible;  /* ← key: allows cards to show outside container */
-        }
-        .fp-slide {
-          flex-shrink: 0;
-          width: ${CARD_W}px;
-          margin-right: ${OVERLAP}px; /* ← negative margin = sobreposição */
-          transition:
-            transform 0.5s cubic-bezier(0.4,0,0.2,1),
-            opacity 0.5s cubic-bezier(0.4,0,0.2,1),
-            filter 0.5s cubic-bezier(0.4,0,0.2,1),
-            z-index 0s;
-          position: relative;
+          justify-content: center;
           cursor: pointer;
+          box-shadow: 0 4px 15px rgba(0, 144, 255, 0.3);
+          transition: all 0.2s;
+          position: absolute;
+          top: 50%;
+          margin-top: -50px;
+          z-index: 30;
         }
-        /* Hover: translateY negativo para interatividade */
-        .fp-slide:hover {
-          transform: scale(1) translateY(-10px) !important;
-          opacity: 1 !important;
-          filter: none !important;
-          z-index: 20 !important;
-        }
+        .nav-btn:hover { background: #007BD9; transform: scale(1.1); }
+        .nav-btn.swiper-button-disabled { background: #E9ECEF; color: #ADB5BD; box-shadow: none; cursor: default; }
+        
+        .prev-pill { left: -10px; }
+        .next-pill { right: -10px; }
+
         @media (max-width: 767px) {
-          /* Mobile: desativa sobreposição */
-          .fp-swiper-wrapper {
-            flex-direction: column;
+          .stacked-swiper .swiper-slide {
+            margin-right: -40px !important; /* Reduz sobreposição no mobile */
           }
-          .fp-slide {
-            width: 100%;
-            margin-right: 0;
-            margin-bottom: 12px;
-          }
-          .fp-slide:hover {
-            transform: none !important;
-          }
+          .prev-pill { left: 0; }
+          .next-pill { right: 0; }
         }
       `}</style>
 
-      <div style={{ maxWidth: '1000px', margin: '0 auto', padding: '0 24px' }}>
-
+      <div className="max-w-5xl mx-auto px-6 relative">
         {/* Header */}
-        <motion.div
-          initial={{ opacity: 0, y: 12 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          style={{ textAlign: 'center', marginBottom: '40px' }}
-        >
-          <p style={{ fontSize: '12px', fontWeight: 700, color: '#0090FF', letterSpacing: '0.14em', textTransform: 'uppercase', margin: '0 0 8px' }}>
-            Como funciona
-          </p>
-          <h2 style={{ fontSize: 'clamp(22px, 4vw, 36px)', fontWeight: 800, color: '#1A1A1A', margin: 0 }}>
-            Os 4 Pilares do Sistema Intalky
-          </h2>
-        </motion.div>
+        <div className="text-center mb-12">
+          <p className="text-[#0090FF] font-bold text-xs uppercase tracking-widest mb-2">Engrenagens do Sucesso</p>
+          <h2 className="text-3xl md:text-4xl font-extrabold text-[#1A1A1A]">Os 4 Pilares do Sistema Intalky</h2>
+        </div>
 
-        {/* Carousel area */}
-        <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', gap: '24px' }}>
+        <div className="relative pt-4">
+          <button className="nav-btn prev-pill"><ChevronLeft size={20} /></button>
+          <button className="nav-btn next-pill"><ChevronRight size={20} /></button>
 
-          {/* Prev Button */}
-          <button
-            onClick={prev}
-            aria-label="Anterior"
-            style={{
-              width: '40px', height: '40px', borderRadius: '50%',
-              background: '#0090FF', border: 'none', cursor: 'pointer',
-              display: 'flex', alignItems: 'center', justifyContent: 'center',
-              boxShadow: '0 4px 14px rgba(0,144,255,0.30)',
-              flexShrink: 0,
-              transition: 'transform 0.2s',
+          <Swiper
+            modules={[Navigation, Pagination, EffectCreative]}
+            navigation={{
+              prevEl: '.prev-pill',
+              nextEl: '.next-pill',
             }}
-            onMouseEnter={e => (e.currentTarget.style.transform = 'scale(1.1)')}
-            onMouseLeave={e => (e.currentTarget.style.transform = 'scale(1)')}
+            pagination={{ clickable: true }}
+            slidesPerView={'auto'}
+            centeredSlides={false}
+            grabCursor={true}
+            className="stacked-swiper"
+            onSlideChange={() => console.log('slide change')}
           >
-            <ChevronLeft style={{ width: '20px', height: '20px', color: '#fff' }} />
-          </button>
-
-          {/* Swiper wrapper — overflow: visible to show stacked cards */}
-          <div
-            style={{
-              overflow: 'visible',
-              width: `${CARD_W + (total - 1) * Math.abs(OVERLAP) / 2}px`,
-              maxWidth: '100%',
-            }}
-          >
-            <div className="fp-swiper-wrapper">
-              {/* Re-order so active card renders last (on top in DOM) */}
-              {Array.from({ length: total }, (_, i) => {
-                const cardIdx = (active + i) % total; // render from active outward
-                const p = pillars[cardIdx];
-                const rel = getRelativePos(cardIdx, active, total);
-                const posStyle = getSlideStyle(rel);
-                const Icon = p.icon;
-                const isHov = hoveredIdx === cardIdx;
-
-                return (
-                  <div
-                    key={p.title}
-                    className="fp-slide"
-                    style={{ ...posStyle }}
-                    onClick={() => setActive(cardIdx)}
-                    onMouseEnter={() => setHoveredIdx(cardIdx)}
-                    onMouseLeave={() => setHoveredIdx(null)}
+            {pillars.map((p, i) => (
+              <SwiperSlide key={i}>
+                <div 
+                  className="bg-white rounded-2xl border-2 border-[#E9ECEF] p-8 h-full flex flex-col gap-5 transition-all duration-300"
+                  style={{
+                    boxShadow: '0 10px 30px rgba(0,0,0,0.05)',
+                    borderColor: hoveredIdx === i ? p.color : '#E9ECEF'
+                  }}
+                  onMouseEnter={() => setHoveredIdx(i)}
+                  onMouseLeave={() => setHoveredIdx(null)}
+                >
+                  <div 
+                    className="w-14 h-14 rounded-xl flex items-center justify-center"
+                    style={{ background: p.lightBg }}
                   >
-                    {/* Card face */}
-                    <div style={{
-                      background: '#fff',
-                      border: `1.5px solid ${isHov ? p.color : '#E9ECEF'}`,
-                      borderRadius: '20px',
-                      padding: '28px 24px 24px',
-                      boxShadow: rel === 0
-                        ? '0 12px 32px rgba(0,0,0,0.12)'
-                        : '0 4px 12px rgba(0,0,0,0.07)',
-                      display: 'flex',
-                      flexDirection: 'column',
-                      gap: '14px',
-                      transition: 'border-color 0.3s, box-shadow 0.3s',
-                      position: 'relative',
-                      overflow: 'hidden',
-                    }}>
-                      {/* Top color bar */}
-                      <div style={{
-                        position: 'absolute',
-                        top: 0, left: 0, right: 0,
-                        height: '3px',
-                        background: p.color,
-                        borderRadius: '20px 20px 0 0',
-                      }} />
-
-                      {/* Slide number badge */}
-                      <span style={{
-                        position: 'absolute',
-                        top: '14px', right: '16px',
-                        fontSize: '11px', fontWeight: 700,
-                        color: p.color,
-                        background: p.lightBg,
-                        borderRadius: '999px',
-                        padding: '2px 10px',
-                        letterSpacing: '0.08em',
-                      }}>
-                        {String(pillars.indexOf(p) + 1).padStart(2, '0')}
-                      </span>
-
-                      {/* Icon */}
-                      <div style={{
-                        width: '52px', height: '52px', borderRadius: '14px',
-                        background: p.lightBg,
-                        display: 'flex', alignItems: 'center', justifyContent: 'center',
-                        marginTop: '8px',
-                        transition: 'background 0.3s',
-                      }}>
-                        <Icon style={{ width: '26px', height: '26px', color: p.color }} />
-                      </div>
-
-                      {/* Title */}
-                      <p style={{ fontSize: '15px', fontWeight: 800, color: '#1A1A1A', margin: 0 }}>
-                        {p.title}
-                      </p>
-
-                      {/* Desc */}
-                      <p style={{ fontSize: '13px', color: '#666', lineHeight: 1.55, margin: 0 }}>
-                        {p.desc}
-                      </p>
-                    </div>
+                    <p.icon size={28} style={{ color: p.color }} />
                   </div>
-                );
-              })}
-            </div>
-          </div>
+                  
+                  <div>
+                    <h3 className="text-lg font-bold text-[#1A1A1A] mb-2">{p.title}</h3>
+                    <p className="text-sm text-[#666] leading-relaxed">{p.desc}</p>
+                  </div>
 
-          {/* Next Button */}
-          <button
-            onClick={next}
-            aria-label="Próximo"
-            style={{
-              width: '40px', height: '40px', borderRadius: '50%',
-              background: '#0090FF', border: 'none', cursor: 'pointer',
-              display: 'flex', alignItems: 'center', justifyContent: 'center',
-              boxShadow: '0 4px 14px rgba(0,144,255,0.30)',
-              flexShrink: 0,
-              transition: 'transform 0.2s',
-            }}
-            onMouseEnter={e => (e.currentTarget.style.transform = 'scale(1.1)')}
-            onMouseLeave={e => (e.currentTarget.style.transform = 'scale(1)')}
-          >
-            <ChevronRight style={{ width: '20px', height: '20px', color: '#fff' }} />
-          </button>
+                  <div 
+                    className="mt-auto pt-4"
+                    style={{ borderTop: '1px solid #F1F3F5' }}
+                  >
+                    <span className="text-[10px] font-black uppercase tracking-tighter text-[#ADB5BD]">Pilar {(i + 1).toString().padStart(2, '0')}</span>
+                  </div>
+                </div>
+              </SwiperSlide>
+            ))}
+          </Swiper>
         </div>
-
-        {/* Dots */}
-        <div style={{ display: 'flex', justifyContent: 'center', gap: '8px', marginTop: '28px' }}>
-          {pillars.map((_, i) => (
-            <button
-              key={i}
-              onClick={() => setActive(i)}
-              aria-label={`Pilar ${i + 1}`}
-              style={{
-                width: i === active ? '24px' : '8px',
-                height: '8px',
-                borderRadius: '999px',
-                background: i === active ? '#0090FF' : '#D1D5DB',
-                border: 'none',
-                cursor: 'pointer',
-                padding: 0,
-                transition: 'width 0.4s, background 0.3s',
-              }}
-            />
-          ))}
-        </div>
-
       </div>
     </section>
   );
