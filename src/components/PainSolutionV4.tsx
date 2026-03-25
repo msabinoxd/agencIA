@@ -11,34 +11,7 @@ export function PainSolutionV4() {
 
       <div className="max-w-7xl mx-auto px-6 relative z-10">
 
-        {/* Header V2 */}
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, margin: "-80px" }}
-          transition={{ duration: 0.7 }}
-          className="text-center max-w-3xl mx-auto mb-10"
-        >
-          <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-red-50 border border-red-200/60 text-red-500 text-xs font-semibold uppercase tracking-wider mb-6">
-            <span className="w-1.5 h-1.5 rounded-full bg-red-500 animate-pulse" />
-            Diagnóstico da sua operação
-          </div>
-          <h2 className="text-3xl md:text-5xl font-bold text-[#1A1A1A] tracking-tight mb-4">
-            Cinco situações que custam{' '}
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-red-400 to-red-600">R$50.000 ou mais por mês</span>{' '}
-            para a maioria das clínicas. Qual delas você reconhece?
-          </h2>
 
-          {/* Intro text encurtado (Max 2 linhas) */}
-          <div className="space-y-4 text-left bg-white border border-[#E9ECEF] rounded-2xl p-6 shadow-[var(--sh)] mb-0">
-            <p className="text-[#4A4A4A] leading-relaxed font-medium">
-              São contas simples que a maioria dos donos de clínica <strong className="text-[#1A1A1A]">nunca parou para fazer.</strong>
-            </p>
-            <p className="text-[#4A4A4A] leading-relaxed italic">
-              Gestores que pensam como empresários não aceitam viver no escuro. Eles estancam o sangramento.
-            </p>
-          </div>
-        </motion.div>
 
 
 
