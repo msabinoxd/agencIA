@@ -1,7 +1,7 @@
 import { useState, lazy, Suspense, useEffect } from 'react';
 import { Header } from '../components/Header';
 import { HeroV4 } from '../components/HeroV4';
-import { WhatsAppFloat } from '../components/WhatsAppFloat';
+import { WhatsAppFloatV4 } from '../components/WhatsAppFloatV4';
 import { CookieBanner } from '../components/CookieBanner';
 import { FooterV4 } from '../components/FooterV4';
 import { AnimatePresence } from 'motion/react';
@@ -77,7 +77,7 @@ export function HomeV4() {
       </main>
 
       <FooterV4 />
-      <WhatsAppFloat />
+      <WhatsAppFloatV4 />
       <CookieBanner />
 
       <AnimatePresence>
