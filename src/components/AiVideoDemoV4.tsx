@@ -1,10 +1,10 @@
-﻿import { useState, useEffect } from 'react';
+import { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'motion/react';
 import {
   Database, Target, Calendar, Sparkles,
   MessageSquare, Bot, CheckCircle2, Circle, Loader2, Smartphone,
 } from 'lucide-react';
-import ConfirmationChatWidget from './ConfirmationChatWidget';
+import ConfirmationChatWidgetV4 from './ConfirmationChatWidgetV4';
 import { ScrollIndicator } from './ScrollIndicator';
 
 const workflowCards = [
@@ -292,7 +292,7 @@ export function AiVideoDemoV4() {
                       transition={{ duration: 0.3 }}
                       className="h-full"
                     >
-                      <ConfirmationChatWidget />
+                      <ConfirmationChatWidgetV4 />
                     </motion.div>
                   )}
                 </AnimatePresence>
