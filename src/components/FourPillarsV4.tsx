@@ -1,215 +1,167 @@
-import { useRef, useState, useEffect } from 'react';
+import { useState } from 'react';
 import { motion } from 'motion/react';
-import { BarChart3, UserCircle, Users, CheckCircle, ChevronLeft, ChevronRight } from 'lucide-react';
+import { BarChart3, UserCircle, Users, CheckCircle } from 'lucide-react';
 
 const pillars = [
   {
     icon: BarChart3,
     title: 'Tráfego Pago',
     desc: 'Anúncios que chegam na pessoa certa, na hora certa.',
+    color: '#0090FF',
+    bg: '#EBF5FF',
   },
   {
     icon: UserCircle,
     title: 'Especialista Estratégico',
     desc: 'Processo desenhado com os 7 Pilares da Persuasão.',
+    color: '#7C3AED',
+    bg: '#F3EEFF',
   },
   {
     icon: Users,
     title: 'Comercial',
     desc: 'Contratação · Integração · Treinamento da equipe.',
+    color: '#059669',
+    bg: '#ECFDF5',
   },
   {
     icon: CheckCircle,
     title: 'Acompanhamento',
     desc: 'Consultoria semanal e suporte contínuo.',
+    color: '#D97706',
+    bg: '#FFFBEB',
   },
 ];
 
+// How much each card peeks out from behind (px)
+const PEEK = 28;
+
 export function FourPillarsV4() {
-  const trackRef = useRef<HTMLDivElement>(null);
-  const [canPrev, setCanPrev] = useState(false);
-  const [canNext, setCanNext] = useState(false);
-
-  const updateArrows = () => {
-    const el = trackRef.current;
-    if (!el) return;
-    const scrollable = el.scrollWidth > el.clientWidth + 4;
-    setCanPrev(el.scrollLeft > 4);
-    setCanNext(scrollable && el.scrollLeft < el.scrollWidth - el.clientWidth - 4);
-  };
-
-  useEffect(() => {
-    updateArrows();
-    const el = trackRef.current;
-    if (!el) return;
-    el.addEventListener('scroll', updateArrows, { passive: true });
-    window.addEventListener('resize', updateArrows);
-    return () => {
-      el.removeEventListener('scroll', updateArrows);
-      window.removeEventListener('resize', updateArrows);
-    };
-  }, []);
-
-  const scroll = (dir: 'prev' | 'next') => {
-    const el = trackRef.current;
-    if (!el) return;
-    const slideW = el.firstElementChild ? (el.firstElementChild as HTMLElement).offsetWidth + 12 : 280;
-    el.scrollBy({ left: dir === 'next' ? slideW : -slideW, behavior: 'smooth' });
-  };
+  const [hovered, setHovered] = useState(false);
 
   return (
-    <section style={{ padding: '48px 0', background: '#fff', borderBottom: '1px solid #E9ECEF' }}>
-      <div style={{ maxWidth: '1000px', margin: '0 auto', padding: '0 24px', position: 'relative' }}>
+    <section style={{ padding: '56px 0', background: '#fff', borderBottom: '1px solid #E9ECEF' }}>
+      <div style={{ maxWidth: '1100px', margin: '0 auto', padding: '0 24px' }}>
 
-        {/* Prev Arrow */}
-        {canPrev && (
-          <button
-            onClick={() => scroll('prev')}
-            aria-label="Anterior"
-            style={{
-              position: 'absolute',
-              left: '-4px',
-              top: '50%',
-              transform: 'translateY(-50%)',
-              zIndex: 20,
-              width: '36px',
-              height: '36px',
-              borderRadius: '50%',
-              background: '#0090FF',
-              border: 'none',
-              display: 'flex',
-              alignItems: 'center',
-              justifyContent: 'center',
-              cursor: 'pointer',
-              boxShadow: '0 4px 14px rgba(0,144,255,0.35)',
-            }}
-          >
-            <ChevronLeft style={{ width: '18px', height: '18px', color: '#fff' }} />
-          </button>
-        )}
+        {/* Title */}
+        <motion.div
+          initial={{ opacity: 0, y: 12 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          style={{ textAlign: 'center', marginBottom: '48px' }}
+        >
+          <p style={{ fontSize: '13px', fontWeight: 700, color: '#0090FF', letterSpacing: '0.12em', textTransform: 'uppercase', marginBottom: '8px' }}>
+            Como funciona
+          </p>
+          <h2 style={{ fontSize: 'clamp(24px, 4vw, 38px)', fontWeight: 800, color: '#1A1A1A', margin: 0 }}>
+            4 Pilares do Sistema Intalky
+          </h2>
+        </motion.div>
 
-        {/* Scrollable Track */}
+        {/* Stacked Card Deck */}
         <div
-          ref={trackRef}
           style={{
-            display: 'flex',
-            flexDirection: 'row',
-            flexWrap: 'nowrap',
-            gap: '12px',
-            overflowX: 'auto',
-            overflowY: 'visible',
-            scrollSnapType: 'x mandatory',
-            scrollbarWidth: 'none',
-            msOverflowStyle: 'none',
-            padding: '8px 2px 12px 2px', /* top padding so hover shadow isn't clipped */
+            position: 'relative',
+            /* Total height = card height + peeking of other cards */
+            height: '260px',
+            maxWidth: '420px',
+            margin: '0 auto',
+            cursor: 'pointer',
           }}
+          onMouseEnter={() => setHovered(true)}
+          onMouseLeave={() => setHovered(false)}
         >
           {pillars.map((p, i) => {
             const Icon = p.icon;
+            const total = pillars.length;
+            const isTop = i === total - 1;
+
+            // In stacked state: each card peeks from behind by PEEK * i
+            // When hovered: fan out horizontally or vertically
+            const stackedTop = (total - 1 - i) * PEEK;
+
+            // Fan spread: top card goes to index 0 position, bottom goes to index 3
+            // We spread vertically downward so you see all 4
+            const spreadTop = i * 72;
+
             return (
               <motion.div
                 key={p.title}
-                initial={{ opacity: 0, y: 16 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ delay: i * 0.08 }}
-                style={{
-                  flexShrink: 0,
-                  flexGrow: 0,
-                  width: 'calc(25% - 9px)',
-                  minWidth: '200px',
-                  scrollSnapAlign: 'start',
-                  display: 'flex',
-                  flexDirection: 'column',
-                  alignItems: 'center',
-                  textAlign: 'center',
-                  gap: '12px',
-                  padding: '20px',
-                  borderRadius: '16px',
-                  background: '#F8F9FA',
-                  border: '1px solid #E9ECEF',
-                  cursor: 'pointer',
-                  transition: 'border-color 0.3s, background 0.3s, box-shadow 0.3s',
-                  boxSizing: 'border-box',
+                initial={false}
+                animate={{
+                  top: hovered ? spreadTop : stackedTop,
+                  scale: hovered ? 1 : 1 - (total - 1 - i) * 0.04,
+                  zIndex: hovered ? total - i : i + 1,
+                  boxShadow: hovered
+                    ? '0 8px 28px rgba(0,0,0,0.10)'
+                    : isTop
+                    ? '0 8px 28px rgba(0,0,0,0.12)'
+                    : '0 2px 8px rgba(0,0,0,0.06)',
+                  opacity: hovered ? 1 : i === 0 ? 0.55 : i === 1 ? 0.75 : i === 2 ? 0.9 : 1,
                 }}
-                whileHover={{
-                  boxShadow: '0 4px 20px rgba(0,144,255,0.12)',
-                  borderColor: 'rgba(0,144,255,0.3)',
+                transition={{ type: 'spring', stiffness: 280, damping: 26, delay: hovered ? (total - 1 - i) * 0.04 : i * 0.03 }}
+                style={{
+                  position: 'absolute',
+                  left: 0,
+                  right: 0,
+                  borderRadius: '20px',
                   background: '#fff',
+                  border: `1.5px solid ${p.bg}`,
+                  padding: '24px 24px',
+                  display: 'flex',
+                  flexDirection: 'row',
+                  alignItems: 'center',
+                  gap: '18px',
                 }}
               >
-                {/* Icon box */}
-                <motion.div
-                  whileHover={{ scale: 1.1, background: '#0090FF' }}
-                  style={{
-                    width: '48px',
-                    height: '48px',
-                    borderRadius: '12px',
-                    background: 'rgba(0,144,255,0.1)',
-                    display: 'flex',
-                    alignItems: 'center',
-                    justifyContent: 'center',
-                    transition: 'background 0.3s, transform 0.3s',
-                    flexShrink: 0,
-                  }}
-                >
-                  <Icon style={{ width: '24px', height: '24px', color: '#0090FF' }} />
-                </motion.div>
-
-                <h3 style={{
-                  fontSize: '14px',
-                  fontWeight: 700,
-                  color: '#1A1A1A',
-                  lineHeight: 1.3,
-                  margin: 0,
+                {/* Icon */}
+                <div style={{
+                  width: '52px',
+                  height: '52px',
+                  borderRadius: '14px',
+                  background: p.bg,
+                  display: 'flex',
+                  alignItems: 'center',
+                  justifyContent: 'center',
+                  flexShrink: 0,
                 }}>
-                  {p.title}
-                </h3>
+                  <Icon style={{ width: '26px', height: '26px', color: p.color }} />
+                </div>
 
-                <p style={{
-                  fontSize: '12px',
-                  color: '#888888',
-                  lineHeight: 1.5,
-                  margin: 0,
-                }}>
-                  {p.desc}
-                </p>
+                {/* Text */}
+                <div style={{ flex: 1 }}>
+                  <p style={{ fontSize: '13px', fontWeight: 800, color: '#1A1A1A', margin: '0 0 4px 0', letterSpacing: '0.01em' }}>
+                    {p.title}
+                  </p>
+                  <p style={{ fontSize: '13px', color: '#666', margin: 0, lineHeight: 1.5 }}>
+                    {p.desc}
+                  </p>
+                </div>
+
+                {/* Color accent bar */}
+                <div style={{
+                  position: 'absolute',
+                  left: 0,
+                  top: '18px',
+                  bottom: '18px',
+                  width: '3px',
+                  borderRadius: '0 3px 3px 0',
+                  background: p.color,
+                }} />
               </motion.div>
             );
           })}
         </div>
 
-        {/* Next Arrow */}
-        {canNext && (
-          <button
-            onClick={() => scroll('next')}
-            aria-label="Próximo"
-            style={{
-              position: 'absolute',
-              right: '-4px',
-              top: '50%',
-              transform: 'translateY(-50%)',
-              zIndex: 20,
-              width: '36px',
-              height: '36px',
-              borderRadius: '50%',
-              background: '#0090FF',
-              border: 'none',
-              display: 'flex',
-              alignItems: 'center',
-              justifyContent: 'center',
-              cursor: 'pointer',
-              boxShadow: '0 4px 14px rgba(0,144,255,0.35)',
-            }}
-          >
-            <ChevronRight style={{ width: '18px', height: '18px', color: '#fff' }} />
-          </button>
-        )}
+        {/* Hint text */}
+        <motion.p
+          animate={{ opacity: hovered ? 0 : 1 }}
+          transition={{ duration: 0.2 }}
+          style={{ textAlign: 'center', fontSize: '12px', color: '#aaa', marginTop: '16px' }}
+        >
+          Passe o mouse para ver todos os pilares ↑
+        </motion.p>
 
-        {/* Hide scrollbar webkit */}
-        <style>{`
-          div[data-pillars-track]::-webkit-scrollbar { display: none; }
-        `}</style>
       </div>
     </section>
   );
