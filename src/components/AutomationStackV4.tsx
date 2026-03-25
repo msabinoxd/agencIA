@@ -1,4 +1,4 @@
-﻿import { motion } from 'motion/react';
+import { motion } from 'motion/react';
 import { Network, Database, Zap, Users, ArrowRight, CheckCircle2 } from 'lucide-react';
 import { waURL } from '../config';
 
@@ -21,21 +21,21 @@ const clientLogos = [
 const automations = [
     {
         title: 'Tráfego & Funil',
-        desc: 'Meta Ads e Google Ads calibrados para o ICP da sua clínica + funil desenhado com os 7 Pilares da Persuasão de Danilo Oliveira.',
+        desc: 'Meta Ads e Google Ads calibrados para o ICP da sua clínica + funil dos 7 Pilares.',
         icon: Network,
         features: ['ICP validado', 'Pixel de rastreamento', 'Funil de alta conversão'],
         waMsg: 'Olá! Quero saber mais sobre Tráfego & Funil da Intalky.'
     },
     {
         title: 'Intalky AI',
-        desc: 'A única IA do mercado treinada com neurociência de vendas. Atende, qualifica, faz follow-up e gerencia o CRM 24/7.',
+        desc: 'A única IA treinada com neurociência de vendas. Atende, qualifica e gerencia CRM 24/7.',
         icon: Database,
         features: ['Resposta em < 3s', 'Follow-up automático', 'Integração total CRM'],
         waMsg: 'Olá! Quero saber mais sobre a Intalky AI para minha clínica.'
     },
     {
         title: 'Gestão & Treinamento',
-        desc: 'Treinamento semanal da equipe com Danilo Oliveira + consultoria de marketing com Marcos + suporte em horário comercial.',
+        desc: 'Treinamento semanal com Danilo + consultoria de marketing + suporte comercial.',
         icon: Users,
         features: ['Roleplay semanal', 'Consultoria de vendas', 'Suporte comercial'],
         waMsg: 'Olá! Quero saber mais sobre Gestão & Treinamento da Intalky.'

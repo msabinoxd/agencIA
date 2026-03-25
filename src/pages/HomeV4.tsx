@@ -2,6 +2,7 @@ import { useState, lazy, Suspense, useEffect } from 'react';
 import { Header } from '../components/Header';
 import { HeroV4 } from '../components/HeroV4';
 import { WhatsAppFloatV4 } from '../components/WhatsAppFloatV4';
+import { FourPillarsV4 } from '../components/FourPillarsV4';
 import { CookieBanner } from '../components/CookieBanner';
 import { FooterV4 } from '../components/FooterV4';
 import { AnimatePresence } from 'motion/react';
@@ -36,6 +37,9 @@ export function HomeV4() {
       <main>
         {/* 1. ATENÇÃO — Dor universal */}
         <HeroV4 onOpenSimulator={() => setShowSimulator(true)} />
+
+        {/* 1.5 PILARES — 4 botões após o Hero */}
+        <FourPillarsV4 />
 
         <Suspense fallback={<div className="min-h-[60vh] bg-[#F8F9FA]" />}>
           {/* 2. DOR — Custo quantificado */}

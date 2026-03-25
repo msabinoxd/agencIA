@@ -1,4 +1,4 @@
-﻿import { motion } from 'motion/react';
+import { motion } from 'motion/react';
 import { ArrowRight, X, Check, CheckCircle2 } from 'lucide-react';
 import { waURL, CONFIG } from '../config';
 import { fadeUp, stagger, scaleIn } from '../shared/animations';
@@ -54,7 +54,7 @@ export function CTAFinalV4() {
           transition={{ delay: 0.1 }}
           className="text-lg text-[#4A4A4A] mb-12 text-center max-w-3xl mx-auto leading-relaxed"
         >
-          Implementar um ecossistema comercial completo leva tempo, atenção e presença real da nossa equipe. Por isso, limitamos o número de clínicas que assessoramos ao mesmo tempo.
+          Limitamos o número de clínicas que assessoramos ao mesmo tempo. Não por falta de demanda — por responsabilidade com o resultado.
         </motion.p>
 
         {/* 4 parágrafos de corpo */}
@@ -64,14 +64,8 @@ export function CTAFinalV4() {
           viewport={{ once: true }}
           className="max-w-2xl mx-auto space-y-4 mb-14 text-center"
         >
-          <p className="text-[#4A4A4A] leading-relaxed font-semibold">
-            Não por falta de demanda. Por responsabilidade com o resultado.
-          </p>
           <p className="text-[#4A4A4A] leading-relaxed">
-            Quando a Intalky Group entra numa clínica, implantamos a IA, estruturamos o funil, configuramos o CRM, treinamos a equipe e acompanhamos a operação semana a semana. Isso só funciona quando a clínica tem estrutura para absorver — e o dono tem disposição para mudar o processo, não só adicionar uma ferramenta.
-          </p>
-          <p className="text-[#4A4A4A] leading-relaxed">
-            Clínicas que querem <em>"mais um robô de WhatsApp"</em> não são o nosso perfil. Empresários que entenderam que o gargalo é o processo comercial — e que estão prontos para construir algo previsível — são exatamente quem buscamos.
+            Implantamos IA, estruturamos funil, configuramos CRM, treinamos equipe e acompanhamos semana a semana. Só funciona com quem está pronto pra mudar o processo.
           </p>
           <p className="text-[#4A4A4A] leading-relaxed italic">
             Se você chegou até aqui, é provável que você seja um deles.

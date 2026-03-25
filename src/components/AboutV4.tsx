@@ -1,4 +1,4 @@
-﻿import { motion } from 'motion/react';
+import { motion } from 'motion/react';
 import { Target, Lightbulb, Rocket, CheckCircle2 } from 'lucide-react';
 import { fadeUp, stagger } from '../shared/animations';
 import { CONFIG } from '../config';
@@ -7,17 +7,17 @@ const values = [
   {
     icon: Target,
     title: "Método Validado",
-    desc: "7 Pilares da Persuasão testados em OdontoCompany, Sorridents e Cotia Clínica. Não é teoria — são R$50M+ em resultados reais."
+    desc: "Testados em OdontoCompany, Sorridents e Cotia Clínica. R$50M+ em resultados reais."
   },
   {
     icon: Lightbulb,
     title: "IA Persuasiva",
-    desc: "A Intalky AI não é chatbot. É um agente treinado para conduzir negociações, fazer follow-up e gerenciar CRM como um SDR de alta performance."
+    desc: "Agente treinado para conduzir negociações, fazer follow-up e gerenciar CRM como um SDR de alta performance."
   },
   {
     icon: Rocket,
     title: "Equipe Completa",
-    desc: "Tráfego, funil, IA, treinamento semanal, consultoria e suporte. Um time de especialistas trabalhando pelo seu resultado toda semana."
+    desc: "Tráfego, funil, IA, treinamento, consultoria e suporte. Tudo junto, toda semana."
   }
 ];
 
@@ -45,7 +45,7 @@ export function AboutV4() {
                 Muito mais que automação. Um <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#0090FF] to-[#00D1FF]">método de R$ 50 milhões.</span>
               </motion.h2>
               <motion.p variants={fadeUp} className="text-lg text-[#4A4A4A] leading-relaxed">
-                Somos a junção de duas expertises raras: <strong className="text-[#1A1A1A]">Danilo Oliveira</strong>, criador do método dos 7 Pilares da Persuasão com R$50M+ em vendas no nicho de saúde, e <strong className="text-[#1A1A1A]">Marcos</strong>, Full Stack Marketer formado pela Digital Marketer com 10+ anos em marketing de performance. A venda como consequência inevitável.
+                <strong className="text-[#1A1A1A]">Danilo Oliveira</strong> (R$50M+ em vendas no nicho de saúde) + <strong className="text-[#1A1A1A]">Marcos</strong> (Full Stack Marketer, 10+ anos em performance). A venda como consequência inevitável.
               </motion.p>
             </div>
 

@@ -1,4 +1,4 @@
-﻿import { motion, useScroll, useTransform } from 'motion/react';
+import { motion, useScroll, useTransform } from 'motion/react';
 import { Bot, MessageSquare, Users, Zap, BarChart3, ShieldCheck } from 'lucide-react';
 import { ScrollIndicator } from './ScrollIndicator';
 import { useRef } from 'react';
@@ -7,42 +7,42 @@ const features = [
   {
     icon: <Zap className="w-6 h-6 text-[#0090FF]" />,
     title: "1. Tráfego Pago Estratégico",
-    description: "Ads que chegam na pessoa certa, na hora certa. Menos leads ruins, mais agenda cheia. Cada real investido é rastreado até o fechamento — sem achismo, só dado.",
+    description: "Ads calibrados para o ICP da sua clínica. Cada real rastreado até o fechamento.",
     metric: "ROI médio: 8:1",
     image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?q=80&w=800&auto=format&fit=crop"
   },
   {
     icon: <Bot className="w-6 h-6 text-[#0090FF]" />,
     title: "2. Funil de Vendas",
-    description: "Funil desenhado com os 7 Pilares da Persuasão de Danilo Oliveira. Do clique no anúncio ao agendamento confirmado — cada etapa otimizada para converter.",
+    description: "Funil desenhado com os 7 Pilares da Persuasão. Do clique ao agendamento confirmado.",
     metric: "Conversão: +3x",
     image: "https://images.unsplash.com/photo-1531482615713-2afd69097998?q=80&w=800&auto=format&fit=crop"
   },
   {
     icon: <MessageSquare className="w-6 h-6 text-[#0090FF]" />,
     title: "3. Intalky Essencial",
-    description: "A IA atende, qualifica e agenda consultas em menos de 3 segundos, 24 horas por dia. Inclui confirmação automática e redução ativa de no-show.",
+    description: "Atende, qualifica e agenda em 3 segundos, 24/7. Confirmação automática e redução de no-show.",
     metric: "Resposta: < 3s",
     image: "https://images.unsplash.com/photo-1512428559087-560fa5ceab42?q=80&w=800&auto=format&fit=crop"
   },
   {
     icon: <ShieldCheck className="w-6 h-6 text-[#0090FF]" />,
     title: "4. Intalky Pro",
-    description: "O SDR digital que nunca pede demissão — follow-up, pós-venda e reativação de pacientes inativos. A IA gerencia o CRM completo. Churn zero. LTV máximo.",
+    description: "Follow-up, pós-venda e reativação de inativos. CRM completo no automático.",
     metric: "Follow-up: automático",
     image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=800&auto=format&fit=crop"
   },
   {
     icon: <Users className="w-6 h-6 text-[#0090FF]" />,
     title: "5. Treinamento Semanal",
-    description: "Sessões semanais com Danilo Oliveira para treinar sua equipe comercial: roleplay, gestão de objeções, análise de CRM e métricas. Porque quando o SDR humano aprender e sair, a metodologia fica na IA.",
+    description: "Roleplay, objeções e análise de CRM semanais. Quando o SDR sair, o método fica na IA.",
     metric: "SDRs 2x mais eficientes",
     image: "https://images.unsplash.com/photo-1552664730-d307ca884978?q=80&w=800&auto=format&fit=crop"
   },
   {
     icon: <BarChart3 className="w-6 h-6 text-[#0090FF]" />,
     title: "6. Consultoria & Suporte",
-    description: "Consultoria semanal de vendas e marketing com o time Intalky, alinhamento estratégico de crescimento e suporte em horário comercial. Você nunca está sozinho.",
+    description: "Consultoria semanal e suporte em horário comercial. Você nunca joga sozinho.",
     metric: "Suporte: horário comercial",
     image: "https://images.unsplash.com/photo-1506784983877-45594efa4cbe?q=80&w=800&auto=format&fit=crop"
   }

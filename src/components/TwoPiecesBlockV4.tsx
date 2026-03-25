@@ -1,4 +1,4 @@
-﻿import { motion } from 'motion/react';
+import { motion } from 'motion/react';
 import { ArrowRight, Zap } from 'lucide-react';
 
 export function TwoPiecesBlockV4() {
@@ -43,21 +43,11 @@ export function TwoPiecesBlockV4() {
           className="space-y-5 mb-12"
         >
           <p className="text-lg text-[#4A4A4A] leading-relaxed">
-            Vamos começar pelo que a Intalky AI faz de verdade.
+            A Intalky AI atende, qualifica e agenda em 3 seg, 24/7. Sem humor ruim, sem férias, sem rescisão.
           </p>
 
-          <p className="text-[#4A4A4A] leading-relaxed text-lg">
-            Ela atende em menos de 3 segundos. A qualquer hora. Sem humor ruim, sem dia difícil, sem pedir aumento. Ela lê a mensagem do lead, identifica a dor por trás da pergunta, ajusta o tom de voz e conduz a conversa com a mesma fluidez de um consultor experiente. Manda áudio quando a situação pede. Contorna objeção de preço sem gaguejar. Agenda a avaliação e confirma a presença no dia anterior.
-          </p>
-
-          <p className="text-[#4A4A4A] leading-relaxed">
-            É um closer digital que trabalha 24 horas por dia, 7 dias por semana. Sem folga. Sem rescisão.
-          </p>
-
-          <p className="text-[#4A4A4A] leading-relaxed">
-            E funciona. Clínicas que implantaram a Intalky AI registraram aumento de até{' '}
-            <strong className="text-[#1A1A1A]">70% na taxa de agendamentos</strong>{' '}
-            e queda expressiva no no-show. Os números são reais — você vai ver os cases mais abaixo.
+          <p className="text-[#4A4A4A] leading-relaxed font-semibold">
+            Um closer digital que nunca dorme. Clínicas parceiras registraram <strong className="text-[#1A1A1A]">+70% em agendamentos</strong> e queda expressiva no no-show.
           </p>
         </motion.div>
 
@@ -84,28 +74,15 @@ export function TwoPiecesBlockV4() {
           className="space-y-5 mb-12"
         >
           <p className="text-lg text-[#1A1A1A] font-bold leading-relaxed">
-            Mas aqui está o que nenhum vendedor de software vai te contar.
-          </p>
-
-          <p className="text-[#4A4A4A] leading-relaxed text-lg">
-            Quando esse paciente — qualificado pela IA, aquecido durante dias de conversa, convicto de que sua clínica é a certa — finalmente senta na cadeira de avaliação, o jogo muda completamente.
-          </p>
-
-          <p className="text-[#4A4A4A] leading-relaxed font-semibold">
-            Porque agora quem vende é o ser humano.
+            Mas nenhum vendedor de software vai te contar isso.
           </p>
 
           <p className="text-[#4A4A4A] leading-relaxed">
-            E se a sua recepcionista não souber criar conexão nos primeiros dois minutos, o paciente fecha emocionalmente antes de ouvir qualquer proposta. Se o seu avaliador não tiver um CRM que mostre o histórico da conversa, ele vai começar do zero — sem saber que o paciente tem medo de agulha, que tem uma formatura em três meses e que já pesquisou três clínicas antes de escolher a sua.
-          </p>
-
-          <p className="text-[#4A4A4A] leading-relaxed">
-            E se, na hora de apresentar o plano de tratamento, ninguém tiver ancorado o valor antes de falar o número... o paciente ouve R$4.800 e pensa uma única coisa:{' '}
-            <em>"vou pesquisar mais."</em>
+            Quando o paciente senta na cadeira, quem vende é o ser humano. Se a recepção não criar conexão nos primeiros 2 min, a venda morre antes de começar.
           </p>
 
           <p className="text-xl text-[#1A1A1A] font-bold leading-snug">
-            A IA fez a parte dela com perfeição. O processo humano destruiu a venda em três minutos.
+            A IA fez a parte dela. O processo humano destruiu a venda em três minutos.
           </p>
         </motion.div>
 
