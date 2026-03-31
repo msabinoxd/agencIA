@@ -6,7 +6,7 @@ const pains = [];
 
 export function PainSolutionV4() {
   return (
-    <section className="relative py-16 md:py-24 overflow-hidden bg-[#F8F9FA]">
+    <section className="relative py-12 md:py-16 overflow-hidden bg-[#F8F9FA]">
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[700px] h-[700px] bg-red-500/3 rounded-full blur-[120px] pointer-events-none" />
 
       <div className="max-w-7xl mx-auto px-6 relative z-10">
@@ -21,7 +21,7 @@ export function PainSolutionV4() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: "-60px" }}
           transition={{ duration: 0.7, delay: 0.5 }}
-          className="mt-20 flex flex-col items-center gap-6 text-center"
+          className="mt-12 flex flex-col items-center gap-6 text-center"
         >
           <div className="relative flex items-center justify-center w-full">
             <div className="w-px h-16 bg-gradient-to-b from-red-300 via-[#E9ECEF] to-[#0090FF]/60" />
@@ -51,7 +51,7 @@ export function PainSolutionV4() {
 
       </div>
 
-      <div className="mt-16 flex justify-center">
+      <div className="mt-10 flex justify-center">
         <ScrollIndicator text="Veja como funciona" />
       </div>
     </section>

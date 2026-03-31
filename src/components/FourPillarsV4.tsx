@@ -48,12 +48,12 @@ export function FourPillarsV4() {
   const [hoveredIdx, setHoveredIdx] = useState<number | null>(null);
 
   return (
-    <section className="py-24 bg-[#F8F9FA] overflow-hidden relative border-b border-[#E9ECEF]">
+    <section className="py-16 md:py-20 bg-[#F8F9FA] overflow-hidden relative border-b border-[#E9ECEF]">
       <style>{`
         .stacked-swiper {
           overflow: visible !important;
-          width: 100%;
-          max-width: 1000px;
+          width: 100% !important;
+          max-width: 780px !important;
           margin: 0 auto;
           padding: 60px 0 120px !important;
         }
@@ -61,20 +61,25 @@ export function FourPillarsV4() {
         .stacked-swiper .swiper-wrapper {
           overflow: visible !important;
           display: flex;
-          justify-content: center;
         }
 
         .stacked-swiper .swiper-slide {
           width: 300px !important;
           margin-right: -140px !important;
-          transition: z-index 0.3s !important;
+          transition: all 0.3s !important;
+        }
+
+        .stacked-swiper .swiper-slide:last-child {
+          margin-right: 0 !important;
         }
 
         @media (max-width: 1024px) {
+          .stacked-swiper { max-width: 680px !important; }
           .stacked-swiper .swiper-slide { width: 260px !important; margin-right: -120px !important; }
         }
 
         @media (max-width: 767px) {
+          .stacked-swiper { max-width: 400px !important; }
           .stacked-swiper .swiper-slide {
             width: 220px !important;
             margin-right: -160px !important;
@@ -94,7 +99,7 @@ export function FourPillarsV4() {
           <Swiper
             modules={[EffectCreative]}
             slidesPerView={'auto'}
-            centeredSlides={true}
+            centeredSlides={false}
             grabCursor={true}
             className="stacked-swiper"
           >
@@ -138,7 +143,7 @@ export function FourPillarsV4() {
         </div>
 
         {/* Bottom Question */}
-        <div className="mt-12 text-center max-w-3xl mx-auto border-t border-[#E9ECEF] pt-12">
+        <div className="mt-8 text-center max-w-3xl mx-auto border-t border-[#E9ECEF] pt-8">
           <h3 className="text-2xl md:text-3xl font-black text-[#1A1A1A] mb-6 italic">
             "Eu nunca tive uma IA atendendo meus pacientes, é para mim?"
           </h3>

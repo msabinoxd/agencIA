@@ -8,7 +8,7 @@ import InteractiveChatWidget from './InteractiveChatWidget';
 export function HeroV4({ onOpenSimulator }: { onOpenSimulator?: () => void }) {
   const [isPlaying, setIsPlaying] = useState(false);
   return (
-    <section className="relative pt-24 pb-16 md:pt-28 md:pb-20 overflow-hidden bg-[#F8F9FA]">
+    <section className="relative pt-16 pb-12 md:pt-20 md:pb-16 overflow-hidden bg-[#F8F9FA]">
       {/* Background Gradients */}
       <div className="absolute top-1/4 left-1/4 w-72 h-72 bg-[#0090FF]/10 rounded-full blur-[100px] pointer-events-none" />
       <div className="absolute bottom-1/4 right-1/4 w-72 h-72 bg-[#00D1FF]/8 rounded-full blur-[100px] pointer-events-none" />
@@ -186,7 +186,7 @@ export function HeroV4({ onOpenSimulator }: { onOpenSimulator?: () => void }) {
       </div>
 
       {/* Scroll Indicator */}
-      <div className="mt-14 flex justify-center">
+      <div className="mt-8 flex justify-center">
         <ScrollIndicator text="Descubra onde estão os buracos" />
       </div>
     </section>

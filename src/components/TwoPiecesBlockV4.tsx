@@ -3,7 +3,7 @@ import { ArrowRight, Zap } from 'lucide-react';
 
 export function TwoPiecesBlockV4() {
   return (
-    <section className="relative py-16 md:py-24 overflow-hidden bg-white border-t border-b border-[#E9ECEF]">
+    <section className="relative py-12 md:py-16 overflow-hidden bg-white border-t border-b border-[#E9ECEF]">
       {/* Background glow */}
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-[#0090FF]/4 rounded-full blur-[120px] pointer-events-none" />
 
@@ -27,7 +27,7 @@ export function TwoPiecesBlockV4() {
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          className="text-3xl md:text-5xl font-bold text-[#1A1A1A] tracking-tight leading-tight text-center mb-16"
+          className="text-3xl md:text-5xl font-bold text-[#1A1A1A] tracking-tight leading-tight text-center mb-10"
         >
           A IA resolve{' '}
           <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#0090FF] to-[#00D1FF]">metade do problema.</span>{' '}
@@ -57,7 +57,7 @@ export function TwoPiecesBlockV4() {
           whileInView={{ opacity: 1, scaleX: 1 }}
           viewport={{ once: true }}
           transition={{ duration: 0.7 }}
-          className="relative flex items-center justify-center my-12"
+          className="relative flex items-center justify-center my-8"
         >
           <div className="w-full border-t border-[#E9ECEF]" />
           <div className="absolute bg-white px-4 text-[#888888] text-xs font-bold uppercase tracking-widest">

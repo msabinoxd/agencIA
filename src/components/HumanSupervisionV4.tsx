@@ -4,13 +4,13 @@ import { ScrollIndicator } from './ScrollIndicator';
 
 export function HumanSupervisionV4() {
   return (
-    <section className="py-24 bg-white relative overflow-hidden">
+    <section className="py-16 md:py-20 bg-white relative overflow-hidden">
       <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[600px] h-[400px] bg-[#0090FF]/5 rounded-full blur-[120px] pointer-events-none" />
 
       <div className="max-w-6xl mx-auto px-6 relative z-10">
 
         {/* Header Section */}
-        <div className="text-center max-w-3xl mx-auto mb-16 md:mb-24">
+        <div className="text-center max-w-3xl mx-auto mb-10 md:mb-14">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -134,7 +134,7 @@ export function HumanSupervisionV4() {
 
         </div>
 
-        <div className="mt-24 flex justify-center">
+        <div className="mt-12 flex justify-center">
           <ScrollIndicator text="Veja os resultados" />
         </div>
       </div>

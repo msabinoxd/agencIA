@@ -66,7 +66,7 @@ export function AiVideoDemoV4() {
   }, [activeTab]);
 
   return (
-    <section className="py-24 bg-white relative overflow-hidden">
+    <section className="py-16 md:py-20 bg-white relative overflow-hidden">
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-[#0090FF]/5 rounded-full blur-[120px] pointer-events-none" />
 
       <div className="max-w-7xl mx-auto px-6 relative z-10">
@@ -302,7 +302,7 @@ export function AiVideoDemoV4() {
 
         </div>
 
-        <div className="mt-24 flex justify-center">
+        <div className="mt-12 flex justify-center">
           <ScrollIndicator text="Veja o passo a passo" />
         </div>
       </div>

@@ -19,7 +19,7 @@ const forYou = [
 
 export function CTAFinalV4() {
   return (
-    <section className="py-16 md:py-32 relative overflow-hidden bg-[#F8F9FA] border-t border-[#E9ECEF]">
+    <section className="py-16 md:py-24 relative overflow-hidden bg-[#F8F9FA] border-t border-[#E9ECEF]">
       {/* Background Glows */}
       <motion.div
         animate={{ scale: [1, 1.2, 1], opacity: [0.2, 0.4, 0.2] }}
@@ -52,7 +52,7 @@ export function CTAFinalV4() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ delay: 0.1 }}
-          className="text-lg text-[#4A4A4A] mb-12 text-center max-w-3xl mx-auto leading-relaxed"
+          className="text-lg text-[#4A4A4A] mb-8 text-center max-w-3xl mx-auto leading-relaxed"
         >
           Limitamos o número de clínicas que assessoramos ao mesmo tempo. Não por falta de demanda — por compromisso com o resultado.
         </motion.p>
@@ -62,7 +62,7 @@ export function CTAFinalV4() {
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          className="max-w-2xl mx-auto space-y-4 mb-14 text-center"
+          className="max-w-2xl mx-auto space-y-4 mb-10 text-center"
         >
           <p className="text-[#4A4A4A] leading-relaxed">
             Implantamos IA, montamos o processo de vendas, configuramos o sistema de gestão, treinamos equipe e acompanhamos semana a semana. Só funciona com quem está pronto pra mudar.
@@ -78,7 +78,7 @@ export function CTAFinalV4() {
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true, margin: "-50px" }}
-          className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-14"
+          className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-10"
         >
           {/* Not for you */}
           <motion.div

@@ -44,12 +44,12 @@ const automations = [
 
 export function AutomationStackV4() {
     return (
-        <section id="automacao" className="py-32 bg-[#F8F9FA] relative overflow-hidden">
+        <section id="automacao" className="py-16 md:py-24 bg-[#F8F9FA] relative overflow-hidden">
             {/* Background Grid */}
             <div className="absolute inset-0 bg-[linear-gradient(to_right,#E9ECEF_1px,transparent_1px),linear-gradient(to_bottom,#E9ECEF_1px,transparent_1px)] bg-[size:40px_40px] [mask-image:radial-gradient(ellipse_60%_50%_at_50%_0%,#000_70%,transparent_100%)]" />
 
             <div className="max-w-7xl mx-auto px-6 relative z-10">
-                <div className="text-center max-w-3xl mx-auto mb-20">
+                <div className="text-center max-w-3xl mx-auto mb-12">
                     <motion.div
                         initial={{ opacity: 0, y: 20 }}
                         whileInView={{ opacity: 1, y: 0 }}
@@ -134,7 +134,7 @@ export function AutomationStackV4() {
                     initial={{ opacity: 0 }}
                     whileInView={{ opacity: 1 }}
                     viewport={{ once: true }}
-                    className="mt-20 flex flex-wrap justify-center items-center gap-10"
+                    className="mt-12 flex flex-wrap justify-center items-center gap-10"
                 >
                     {clientLogos.map(logo => (
                         <img

@@ -58,11 +58,11 @@ export function SolutionsV4() {
   const pathHeight = useTransform(scrollYProgress, [0, 1], ["0%", "100%"]);
 
   return (
-    <section id="solucoes" className="py-24 bg-[#F8F9FA] relative overflow-hidden" ref={containerRef}>
+    <section id="solucoes" className="py-16 md:py-20 bg-[#F8F9FA] relative overflow-hidden" ref={containerRef}>
       <div className="absolute -right-40 top-1/2 w-96 h-96 bg-[#0090FF]/5 rounded-full blur-[120px] pointer-events-none" />
 
       <div className="max-w-6xl mx-auto px-6 relative z-10">
-        <div className="text-center max-w-3xl mx-auto mb-20">
+        <div className="text-center max-w-3xl mx-auto mb-12">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -104,7 +104,7 @@ export function SolutionsV4() {
             />
           </div>
 
-          <div className="space-y-16 md:space-y-32">
+          <div className="space-y-12 md:space-y-20">
             {features.map((feature, index) => {
               const isEven = index % 2 === 0;
 

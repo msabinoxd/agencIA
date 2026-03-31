@@ -56,13 +56,13 @@ export function FAQV4() {
   }, [activeIndex]);
 
   return (
-    <section id="FAQV4" className="py-24 bg-[#F8F9FA] relative border-t border-[#E9ECEF] overflow-hidden">
+    <section id="FAQV4" className="py-16 md:py-20 bg-[#F8F9FA] relative border-t border-[#E9ECEF] overflow-hidden">
       {/* Background Glow */}
       <div className="absolute top-1/2 right-0 w-[600px] h-[600px] bg-[#0090FF]/5 rounded-full blur-[120px] pointer-events-none translate-x-1/2 -translate-y-1/2" />
 
       <div className="max-w-7xl mx-auto px-6 relative z-10">
 
-        <div className="mb-16 text-center lg:text-left">
+        <div className="mb-10 text-center lg:text-left">
           <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-[#0090FF]/10 border border-[#0090FF]/20 text-[#0090FF] text-xs font-semibold uppercase tracking-wider mb-6">
             <Sparkles className="w-3.5 h-3.5" />
             Base de Conhecimento
