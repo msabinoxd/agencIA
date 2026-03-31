@@ -35,7 +35,7 @@ const workflowCards = [
   {
     id: 'calendar', icon: Calendar, title: 'Agendamentos',
     badge: 'Agenda Inteligente',
-    description: 'Confirmação de consultas e marcação direto na agenda da clínica. Zero no-show.',
+    description: 'Confirmação de consultas e marcação direto na agenda da clínica. Zero faltas.',
     textColor: 'text-[#1A1A1A]', iconHover: 'group-hover:text-[#0090FF]',
     bgGlow: 'bg-[#0090FF]/20', gradient: 'from-[#0090FF]/5 to-transparent',
     borderHover: 'hover:border-[#0090FF]/30', glow: 'hover:shadow-[0_8px_24px_rgba(0,144,255,0.15)]'
@@ -87,7 +87,7 @@ export function AiVideoDemoV4() {
               </div>
               <h2 className="text-3xl md:text-5xl font-bold text-[#1A1A1A] mb-6 tracking-tight leading-tight">
                 Da captação à confirmação de consulta.{' '}
-                <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#0090FF] to-[#00D1FF]">Sem no-show. Sem depender de SDR.</span>
+                <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#0090FF] to-[#00D1FF]">Sem faltas. Sem depender de SDR.</span>
               </h2>
               <p className="text-lg text-[#4A4A4A] leading-relaxed">
                 Veja como a Intalky AI qualifica o lead, agenda a consulta e ainda confirma a presença — <strong className="text-[#1A1A1A]">tudo automaticamente</strong>.
@@ -102,7 +102,7 @@ export function AiVideoDemoV4() {
                 <div>
                   <h3 className="text-xl font-semibold text-[#1A1A1A] mb-2 group-hover:text-[#0090FF] transition-colors duration-300">Confirmação Inteligente</h3>
                   <p className="text-[#4A4A4A] text-sm leading-relaxed">
-                    A IA envia áudios de confirmação, detecta não-respostas e reengaja proativamente. Redução de no-show de até 70%.
+                    A IA envia áudios de confirmação, detecta não-respostas e reengaja proativamente. Redução de faltas de até 70%.
                   </p>
                 </div>
               </div>

@@ -46,7 +46,6 @@ export function FAQV4() {
   const [activeIndex, setActiveIndex] = useState<number | null>(0);
   const [isTyping, setIsTyping] = useState(false);
 
-  // Simula o tempo de digitação da IA quando troca de pergunta
   useEffect(() => {
     if (activeIndex !== null) {
       setIsTyping(true);
@@ -56,82 +55,63 @@ export function FAQV4() {
   }, [activeIndex]);
 
   return (
-    <section id="FAQV4" className="py-16 md:py-20 bg-[#F8F9FA] relative border-t border-[#E9ECEF] overflow-hidden">
+    <section id="FAQV4" className="py-24 md:py-32 bg-[#F8F9FA] relative border-t border-[#E9ECEF] overflow-hidden">
       {/* Background Glow */}
       <div className="absolute top-1/2 right-0 w-[600px] h-[600px] bg-[#0090FF]/5 rounded-full blur-[120px] pointer-events-none translate-x-1/2 -translate-y-1/2" />
 
       <div className="max-w-7xl mx-auto px-6 relative z-10">
 
-        <div className="mb-10 text-center lg:text-left">
-          <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-[#0090FF]/10 border border-[#0090FF]/20 text-[#0090FF] text-xs font-semibold uppercase tracking-wider mb-6">
+        <div className="mb-20 text-center lg:text-left">
+          <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white border border-[#E9ECEF] text-[#0090FF] text-[10px] font-black uppercase tracking-widest shadow-sm mb-8">
             <Sparkles className="w-3.5 h-3.5" />
-            Base de Conhecimento
+            Suporte Estratégico
           </div>
-          <h2 className="text-3xl md:text-5xl font-bold text-[#1A1A1A] tracking-tight">
+          <h2 className="text-4xl md:text-6xl font-black text-[#1A1A1A] tracking-tighter leading-tight">
             Perguntas <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#0090FF] to-[#00D1FF]">Frequentes</span>
           </h2>
         </div>
 
-        <div className="grid lg:grid-cols-12 gap-8 lg:gap-12 items-start">
+        <div className="grid lg:grid-cols-12 gap-12 lg:gap-16 items-start">
 
-          {/* Left: Questions List (Prompts) */}
-          <div className="lg:col-span-5 flex flex-col gap-3">
+          {/* Left: Questions List */}
+          <div className="lg:col-span-5 flex flex-col gap-4">
             {FAQV4s.map((FAQV4, idx) => {
               const isActive = activeIndex === idx;
               return (
-                <div key={idx} className="flex flex-col gap-2">
+                <div key={idx} className="flex flex-col gap-3">
                   <button
                     onClick={() => setActiveIndex(isActive ? null : idx)}
-                    className={`w-full text-left px-5 py-4 rounded-2xl transition-all duration-300 flex items-center justify-between group ${
+                    className={`w-full text-left px-6 py-5 rounded-[24px] transition-all duration-500 flex items-center justify-between group ${
                       isActive
-                        ? 'bg-[#0090FF]/5 border border-[#0090FF]/20 shadow-[0_0_20px_rgba(0,144,255,0.08)]'
-                        : 'bg-white border border-[#E9ECEF] hover:bg-[#F8F9FA] hover:border-[#0090FF]/20'
+                        ? 'bg-[#1A1A1A] border-[#1A1A1A] shadow-2xl'
+                        : 'bg-white border border-[#E9ECEF] hover:border-[#0090FF]'
                     }`}
                   >
-                    <span className={`text-sm md:text-base font-medium transition-colors duration-300 pr-4 ${
-                      isActive ? 'text-[#0090FF]' : 'text-[#4A4A4A] group-hover:text-[#1A1A1A]'
+                    <span className={`text-sm md:text-base font-bold transition-colors duration-500 pr-5 ${
+                      isActive ? 'text-white' : 'text-[#4A4A4A] group-hover:text-[#1A1A1A]'
                     }`}>
                       {FAQV4.question}
                     </span>
-                    {/* Desktop Arrow */}
-                    <ArrowRight className={`hidden lg:block w-4 h-4 shrink-0 transition-transform duration-300 ${
-                      isActive ? 'text-[#0090FF] translate-x-1' : 'text-[#888888] group-hover:text-[#4A4A4A]'
+                    <ArrowRight className={`hidden md:block w-5 h-5 shrink-0 transition-all duration-500 ${
+                      isActive ? 'text-[#0090FF] translate-x-1' : 'text-[#888888] opacity-0 group-hover:opacity-100 group-hover:translate-x-1'
                     }`} />
-                    {/* Mobile Chevron */}
-                    <ChevronDown className={`lg:hidden w-4 h-4 shrink-0 transition-transform duration-300 ${
-                      isActive ? 'text-[#0090FF] rotate-180' : 'text-[#888888] group-hover:text-[#4A4A4A]'
+                    <ChevronDown className={`md:hidden w-5 h-5 shrink-0 transition-transform duration-500 ${
+                      isActive ? 'text-white rotate-180' : 'text-[#888888]'
                     }`} />
                   </button>
 
-                  {/* Mobile Accordion Content */}
-                  <AnimatePresence initial={false}>
+                  <AnimatePresence>
                     {isActive && (
                       <motion.div
                         initial={{ height: 0, opacity: 0 }}
                         animate={{ height: 'auto', opacity: 1 }}
                         exit={{ height: 0, opacity: 0 }}
-                        transition={{ duration: 0.3 }}
                         className="lg:hidden overflow-hidden"
                       >
-                        <div className="pt-2 pb-2">
-                          <div className="bg-white border border-[#E9ECEF] p-4 rounded-2xl rounded-tl-sm flex gap-3 items-start shadow-[var(--sh)]">
-                            <div className="w-7 h-7 rounded-full bg-[#0090FF]/10 flex items-center justify-center shrink-0 mt-0.5">
-                              <Bot className="w-4 h-4 text-[#0090FF]" />
-                            </div>
-                            <div className="flex-1 text-[#4A4A4A] text-sm leading-relaxed min-h-[28px] flex items-center">
-                              {isTyping ? (
-                                <div className="flex items-center gap-1.5 h-full">
-                                  <motion.div animate={{ y: [0, -4, 0] }} transition={{ repeat: Infinity, duration: 0.6, delay: 0 }} className="w-1.5 h-1.5 bg-[#0090FF] rounded-full" />
-                                  <motion.div animate={{ y: [0, -4, 0] }} transition={{ repeat: Infinity, duration: 0.6, delay: 0.2 }} className="w-1.5 h-1.5 bg-[#0090FF] rounded-full" />
-                                  <motion.div animate={{ y: [0, -4, 0] }} transition={{ repeat: Infinity, duration: 0.6, delay: 0.4 }} className="w-1.5 h-1.5 bg-[#0090FF] rounded-full" />
-                                </div>
-                              ) : (
-                                <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: 0.3 }}>
-                                  {FAQV4.answer}
-                                </motion.div>
-                              )}
-                            </div>
-                          </div>
+                        <div className="p-6 bg-white rounded-[24px] border border-[#E9ECEF] shadow-lg">
+                          <p className="text-[#4A4A4A] leading-relaxed text-base font-medium italic">
+                            {FAQV4.answer}
+                          </p>
                         </div>
                       </motion.div>
                     )}
@@ -141,68 +121,56 @@ export function FAQV4() {
             })}
           </div>
 
-          {/* Right: Answer Display (AI Chat Interface - Desktop Only) */}
+          {/* Right: Answer Display (SaaS Cockpit style) */}
           <div className="hidden lg:flex lg:col-span-7 lg:sticky lg:top-24">
-            <div className="bg-white rounded-3xl border border-[#E9ECEF] shadow-[0_8px_40px_rgba(0,0,0,0.08)] overflow-hidden flex flex-col min-h-[450px] w-full">
-
-              {/* Chat Header */}
-              <div className="px-6 py-4 border-b border-[#E9ECEF] bg-[#F8F9FA] flex items-center gap-4">
-                <div className="w-10 h-10 rounded-full bg-gradient-to-br from-[#0090FF] to-[#00D1FF] flex items-center justify-center shadow-[0_0_15px_rgba(0,144,255,0.3)]">
-                  <Bot className="w-5 h-5 text-white" />
+            <div className="glass-card rounded-[40px] shadow-[var(--sh-deep)] overflow-hidden flex flex-col min-h-[500px] w-full border-white">
+              <div className="px-8 py-6 border-b border-[#E9ECEF]/50 bg-white/50 flex items-center gap-5">
+                <div className="w-12 h-12 rounded-2xl bg-[#0090FF] flex items-center justify-center shadow-lg animate-pulse">
+                  <Bot className="w-6 h-6 text-white" />
                 </div>
                 <div>
-                  <h3 className="text-[#1A1A1A] font-medium text-sm">{CONFIG.brand.name} AI</h3>
-                  <p className="text-[#0090FF] text-xs flex items-center gap-1.5">
-                    <span className="w-1.5 h-1.5 rounded-full bg-[#0090FF] animate-pulse"></span>
-                    Respondendo em tempo real
+                  <h3 className="text-[#1A1A1A] font-black text-lg tracking-tight">Closer Digital AI</h3>
+                  <p className="text-[#0090FF] text-[10px] font-black uppercase tracking-widest flex items-center gap-2">
+                    <span className="w-2 h-2 rounded-full bg-[#0090FF]"></span>
+                    Análise em tempo real
                   </p>
                 </div>
               </div>
 
-              {/* Chat Body */}
-              <div className="flex-1 p-6 flex flex-col gap-6 bg-[#F8F9FA]">
-
+              <div className="flex-1 p-10 flex flex-col gap-10 bg-gradient-to-br from-[#F8F9FA] to-white">
                 {activeIndex !== null ? (
                   <>
-                    {/* User Question Bubble */}
-                    <AnimatePresence mode="wait">
-                      <motion.div
-                        key={`q-${activeIndex}`}
-                        initial={{ opacity: 0, x: 20, scale: 0.95 }}
-                        animate={{ opacity: 1, x: 0, scale: 1 }}
-                        exit={{ opacity: 0, x: -20, scale: 0.95 }}
-                        transition={{ duration: 0.3 }}
-                        className="self-end max-w-[85%]"
-                      >
-                        <div className="bg-gradient-to-r from-[#0090FF] to-[#00D1FF] text-white text-sm md:text-base p-4 rounded-2xl rounded-tr-sm shadow-sm">
-                          {FAQV4s[activeIndex].question}
-                        </div>
-                      </motion.div>
-                    </AnimatePresence>
+                    <motion.div
+                      key={`q-${activeIndex}`}
+                      initial={{ opacity: 0, x: 20 }}
+                      animate={{ opacity: 1, x: 0 }}
+                      className="self-end max-w-[85%]"
+                    >
+                      <div className="bg-[#1A1A1A] text-white text-base p-5 rounded-[24px] rounded-tr-none shadow-xl font-medium">
+                        {FAQV4s[activeIndex].question}
+                      </div>
+                    </motion.div>
 
-                    {/* AI Answer Bubble / Typing Indicator */}
                     <AnimatePresence mode="wait">
                       {isTyping ? (
                         <motion.div
                           key="typing"
-                          initial={{ opacity: 0, y: 10 }}
-                          animate={{ opacity: 1, y: 0 }}
-                          exit={{ opacity: 0, scale: 0.9 }}
-                          className="self-start bg-white border border-[#E9ECEF] p-4 rounded-2xl rounded-tl-sm flex items-center gap-1.5 shadow-sm"
+                          initial={{ opacity: 0 }}
+                          animate={{ opacity: 1 }}
+                          className="self-start glass-card p-4 rounded-2xl rounded-tl-none flex items-center gap-2"
                         >
-                          <motion.div animate={{ y: [0, -4, 0] }} transition={{ repeat: Infinity, duration: 0.6, delay: 0 }} className="w-2 h-2 bg-[#0090FF] rounded-full" />
-                          <motion.div animate={{ y: [0, -4, 0] }} transition={{ repeat: Infinity, duration: 0.6, delay: 0.2 }} className="w-2 h-2 bg-[#0090FF] rounded-full" />
-                          <motion.div animate={{ y: [0, -4, 0] }} transition={{ repeat: Infinity, duration: 0.6, delay: 0.4 }} className="w-2 h-2 bg-[#0090FF] rounded-full" />
+                          <motion.div animate={{ opacity: [0.3, 1, 0.3] }} transition={{ repeat: Infinity, duration: 1 }} className="w-2 h-2 bg-[#0090FF] rounded-full" />
+                          <motion.div animate={{ opacity: [0.3, 1, 0.3] }} transition={{ repeat: Infinity, duration: 1, delay: 0.2 }} className="w-2 h-2 bg-[#0090FF] rounded-full" />
+                          <motion.div animate={{ opacity: [0.3, 1, 0.3] }} transition={{ repeat: Infinity, duration: 1, delay: 0.4 }} className="w-2 h-2 bg-[#0090FF] rounded-full" />
                         </motion.div>
                       ) : (
                         <motion.div
                           key={`a-${activeIndex}`}
-                          initial={{ opacity: 0, y: 10, scale: 0.95 }}
-                          animate={{ opacity: 1, y: 0, scale: 1 }}
-                          transition={{ duration: 0.4 }}
-                          className="self-start max-w-[95%]"
+                          initial={{ opacity: 0, y: 10 }}
+                          animate={{ opacity: 1, y: 0 }}
+                          className="self-start max-w-[90%]"
                         >
-                          <div className="bg-white border border-[#E9ECEF] text-[#4A4A4A] text-sm md:text-base leading-relaxed p-5 rounded-3xl rounded-tl-sm shadow-[var(--sh)]">
+                          <div className="text-[#4A4A4A] text-lg leading-relaxed font-bold italic border-l-4 border-[#0090FF] pl-8">
                             {FAQV4s[activeIndex].answer}
                           </div>
                         </motion.div>
@@ -210,11 +178,11 @@ export function FAQV4() {
                     </AnimatePresence>
                   </>
                 ) : (
-                  <div className="flex-1 flex items-center justify-center text-[#888888] text-sm">
-                    Selecione uma pergunta ao lado para ver a resposta.
+                  <div className="flex-1 flex flex-col items-center justify-center text-[#888888] gap-4">
+                    <Bot className="w-12 h-12 opacity-20" />
+                    <p className="font-black text-xs uppercase tracking-widest">Aguardando interação...</p>
                   </div>
                 )}
-
               </div>
             </div>
           </div>

@@ -117,7 +117,7 @@ export default function ConfirmationChatWidgetV4() {
       await new Promise(r => setTimeout(r, 500))
       setMessages(prev => [...prev, {
         type: 'system',
-        text: '🔔 [Sistema] No-show evitado. Taxa de comparecimento: 94%.',
+        text: '🔔 [Sistema] Falta evitada. Taxa de comparecimento: 94%.',
         variant: 'success'
       }])
     }

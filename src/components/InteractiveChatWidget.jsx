@@ -226,7 +226,7 @@ export default function InteractiveChatWidget() {
                                             <span className="text-[#22C55E]">✅</span>
                                             <span className="font-medium">Consulta agendada · Áudio de confirmação enviado</span>
                                         </div>
-                                        <p className="text-[#6B7280] text-[10px] mt-1">No-show: 0% · Amanhã às 14h</p>
+                                        <p className="text-[#6B7280] text-[10px] mt-1">Faltas: 0% · Amanhã às 14h</p>
                                     </div>
                                 ) : msg.type === 'ai' ? (
                                     // Bolha da IA — CLASSE ORIGINAL
