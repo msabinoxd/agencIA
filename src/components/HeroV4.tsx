@@ -71,12 +71,12 @@ export function HeroV4({ onOpenSimulator }: { onOpenSimulator?: () => void }) {
                 />
                 <div className="absolute inset-0 bg-black/40 group-hover:bg-black/30 transition-colors duration-300" />
                 
-                {/* Botão de Play */}
-                <div className="relative z-10 w-16 h-16 sm:w-20 sm:h-20 bg-gradient-to-r from-[#0090FF] to-[#00D1FF] rounded-full flex items-center justify-center shadow-[0_4px_14px_rgba(0,144,255,0.4)] group-hover:scale-110 transition-transform duration-300">
-                  <Play className="w-8 h-8 sm:w-10 sm:h-10 text-white fill-white ml-1" />
+                {/* Botão de Play Menor */}
+                <div className="relative z-10 w-12 h-12 sm:w-14 sm:h-14 bg-gradient-to-r from-[#0090FF] to-[#00D1FF] rounded-full flex items-center justify-center shadow-[0_4px_14px_rgba(0,144,255,0.4)] group-hover:scale-110 transition-transform duration-300">
+                  <Play className="w-5 h-5 sm:w-6 sm:h-6 text-white fill-white ml-1" />
                 </div>
-                {/* Mensagem de clique (opcional) */}
-                <span className="relative z-10 text-white font-bold mt-4 tracking-widest text-xs uppercase bg-black/50 px-3 py-1.5 rounded-full backdrop-blur-sm">
+                {/* Mensagem de clique Menor */}
+                <span className="relative z-10 text-white font-bold mt-3 tracking-widest text-[9px] sm:text-[10px] uppercase bg-black/50 px-2.5 py-1 rounded-full backdrop-blur-sm">
                   Clique para assistir
                 </span>
               </div>
