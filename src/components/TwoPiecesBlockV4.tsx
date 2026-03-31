@@ -1,5 +1,7 @@
 import { motion } from 'motion/react';
 import { ArrowRight, Zap } from 'lucide-react';
+import aiDashboardImg from '../assets/mockups/ai_dashboard.png';
+import humanTrustImg from '../assets/mockups/human_trust.png';
 
 export function TwoPiecesBlockV4() {
   return (
@@ -7,7 +9,7 @@ export function TwoPiecesBlockV4() {
       {/* Background glow */}
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-[#0090FF]/4 rounded-full blur-[120px] pointer-events-none" />
 
-      <div className="max-w-3xl mx-auto px-6 relative z-10">
+      <div className="max-w-6xl mx-auto px-6 relative z-10">
 
         {/* Badge */}
         <motion.div
@@ -35,21 +37,37 @@ export function TwoPiecesBlockV4() {
         </motion.h2>
 
         {/* PARTE 1 — O que a IA faz */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.6 }}
-          className="space-y-5 mb-12"
-        >
-          <p className="text-lg text-[#4A4A4A] leading-relaxed">
-            A Intalky AI atende, filtra e agenda em 3 seg, 24/7. Sem humor ruim, sem férias, sem rescisão.
-          </p>
+        <div className="grid lg:grid-cols-2 gap-12 items-center mb-16">
+          <motion.div
+            initial={{ opacity: 0, x: -30 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true, margin: "-100px" }}
+            transition={{ duration: 0.6 }}
+            className="space-y-5"
+          >
+            <p className="text-xl text-[#4A4A4A] leading-relaxed">
+              A Intalky AI atende, filtra e agenda em 3 seg, 24/7. Sem humor ruim, sem férias, sem rescisão.
+            </p>
 
-          <p className="text-[#4A4A4A] leading-relaxed font-semibold">
-            Um vendedor digital que nunca dorme. Clínicas parceiras registraram <strong className="text-[#1A1A1A]">+70% em agendamentos</strong> e queda expressiva nas faltas.
-          </p>
-        </motion.div>
+            <p className="text-lg text-[#4A4A4A] leading-relaxed font-semibold">
+              Um vendedor digital que nunca dorme. Clínicas parceiras registraram <strong className="text-[#1A1A1A]">+70% em agendamentos</strong> e queda expressiva nas faltas.
+            </p>
+          </motion.div>
+
+          <motion.div
+            initial={{ opacity: 0, x: 30 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true, margin: "-100px" }}
+            className="relative group"
+          >
+            <div className="absolute -inset-4 bg-[#0090FF]/10 rounded-[32px] blur-xl opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+            <img
+              src={aiDashboardImg}
+              alt="Agendamento Inteligente"
+              className="relative rounded-2xl border border-[#E9ECEF] shadow-xl w-full h-auto"
+            />
+          </motion.div>
+        </div>
 
         {/* Divisor visual */}
         <motion.div
@@ -66,25 +84,41 @@ export function TwoPiecesBlockV4() {
         </motion.div>
 
         {/* PARTE 2 — A virada narrativa */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.6 }}
-          className="space-y-5 mb-12"
-        >
-          <p className="text-lg text-[#1A1A1A] font-bold leading-relaxed">
-            Mas nenhum vendedor de software vai te contar isso.
-          </p>
+        <div className="grid lg:grid-cols-2 gap-12 items-center mb-16">
+          <motion.div
+            initial={{ opacity: 0, x: -30 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true, margin: "-100px" }}
+            className="relative group order-2 lg:order-1"
+          >
+            <div className="absolute -inset-4 bg-[#00D1FF]/10 rounded-[32px] blur-xl opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+            <img
+              src={humanTrustImg}
+              alt="Confiança e Conexão Humana"
+              className="relative rounded-2xl border border-[#E9ECEF] shadow-xl w-full h-auto"
+            />
+          </motion.div>
 
-          <p className="text-[#4A4A4A] leading-relaxed">
-            Quando o paciente senta na cadeira, quem vende é o ser humano. Se a recepção não criar conexão nos primeiros 2 min, a venda morre antes de começar.
-          </p>
+          <motion.div
+            initial={{ opacity: 0, x: 30 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true, margin: "-100px" }}
+            transition={{ duration: 0.6 }}
+            className="space-y-5 order-1 lg:order-2"
+          >
+            <p className="text-xl text-[#1A1A1A] font-bold leading-relaxed">
+              Mas nenhum vendedor de software vai te contar isso.
+            </p>
 
-          <p className="text-xl text-[#1A1A1A] font-bold leading-snug">
-            A IA fez a parte dela. O processo humano destruiu a venda em três minutos.
-          </p>
-        </motion.div>
+            <p className="text-lg text-[#4A4A4A] leading-relaxed">
+              Quando o paciente senta na cadeira, quem vende é o ser humano. Se a recepção não criar conexão nos primeiros 2 min, a venda morre antes de começar.
+            </p>
+
+            <p className="text-2xl text-[#1A1A1A] font-black tracking-tight leading-tight">
+              A IA fez a parte dela. O processo humano destruiu a venda em três minutos.
+            </p>
+          </motion.div>
+        </div>
 
         {/* Parágrafo de fechamento */}
         <motion.div

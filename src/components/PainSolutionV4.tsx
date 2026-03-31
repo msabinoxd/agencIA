@@ -2,6 +2,8 @@ import { motion } from 'motion/react';
 import { CalendarX, UserMinus, Clock, Bot, MoonStar } from 'lucide-react';
 import { ScrollIndicator } from './ScrollIndicator';
 
+import clinicalSuccessImg from '../assets/mockups/clinical_success.png';
+
 const pains = [];
 
 export function PainSolutionV4() {
@@ -15,39 +17,54 @@ export function PainSolutionV4() {
 
 
 
-        {/* Transition */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, margin: "-60px" }}
-          transition={{ duration: 0.7, delay: 0.5 }}
-          className="mt-12 flex flex-col items-center gap-6 text-center"
-        >
-          <div className="relative flex items-center justify-center w-full">
-            <div className="w-px h-16 bg-gradient-to-b from-red-300 via-[#E9ECEF] to-[#0090FF]/60" />
-            <motion.div
-              animate={{ y: [-8, 8, -8] }}
-              transition={{ repeat: Infinity, duration: 2, ease: "easeInOut" }}
-              className="absolute w-2.5 h-2.5 rounded-full bg-[#0090FF] shadow-[0_0_12px_rgba(0,144,255,0.6)]"
-            />
-          </div>
+        <div className="grid lg:grid-cols-2 gap-12 items-center">
+          {/* Imagem à Esquerda */}
+          <motion.div
+            initial={{ opacity: 0, x: -30, scale: 0.95 }}
+            whileInView={{ opacity: 1, x: 0, scale: 1 }}
+            viewport={{ once: true, margin: "-100px" }}
+            transition={{ duration: 0.8, delay: 0.2 }}
+            className="relative group order-2 lg:order-1"
+          >
+            <div className="absolute -inset-4 bg-gradient-to-r from-[#0090FF]/20 to-[#00D1FF]/20 rounded-[40px] blur-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-700" />
+            <div className="relative rounded-[32px] overflow-hidden border border-[#E9ECEF] shadow-2xl bg-white">
+              <img
+                src={clinicalSuccessImg}
+                alt="Sucesso Clínico Intalky"
+                className="w-full h-auto object-cover transform transition-transform duration-700 group-hover:scale-105"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-[#1A1A1A]/20 via-transparent to-transparent opacity-60" />
+            </div>
+          </motion.div>
 
-          <p className="text-2xl md:text-3xl font-bold text-[#4A4A4A] max-w-2xl">
-            E se você nunca mais tivesse{' '}
-            <span className="text-[#1A1A1A]">nenhum desses problemas?</span>
-          </p>
+          {/* Texto à Direita */}
+          <motion.div
+            initial={{ opacity: 0, x: 30 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true, margin: "-100px" }}
+            transition={{ duration: 0.7 }}
+            className="flex flex-col gap-6 order-1 lg:order-2"
+          >
+            <div className="flex items-center gap-4">
+              <div className="w-px h-12 bg-gradient-to-b from-red-300 via-[#E9ECEF] to-[#0090FF]/60" />
+              <p className="text-xl md:text-2xl font-bold text-[#4A4A4A]">
+                E se você nunca mais tivesse{' '}
+                <span className="text-[#1A1A1A]">nenhum desses problemas?</span>
+              </p>
+            </div>
 
-          <div className="space-y-3 max-w-3xl">
-            <h2 className="text-3xl md:text-5xl font-bold text-[#1A1A1A] tracking-tight">
-              A Intalky resolve cada uma delas.{' '}
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#0090FF] to-[#00D1FF]">Em 3 segundos, 24/7, sem depender de atendente.</span>
-            </h2>
-            <p className="text-lg text-[#4A4A4A] leading-relaxed">
-              <strong className="text-[#1A1A1A]">78% das vendas</strong> vão para quem responde primeiro. Com o método dos{' '}
-              <strong className="text-[#0090FF]">7 Pilares da Persuasão</strong> e IA treinada para conduzir a negociação, seus pacientes interessados viram agendamentos confirmados — dia e noite.
-            </p>
-          </div>
-        </motion.div>
+            <div className="space-y-4">
+              <h2 className="text-3xl md:text-5xl font-black text-[#1A1A1A] tracking-tight leading-[1.1]">
+                A Intalky resolve cada uma delas.{' '}
+                <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#0090FF] to-[#00D1FF]">Em 3 segundos, 24/7.</span>
+              </h2>
+              <p className="text-lg text-[#4A4A4A] leading-relaxed">
+                <strong className="text-[#1A1A1A]">78% das vendas</strong> vão para quem responde primeiro. Com o método dos{' '}
+                <strong className="text-[#0090FF]">7 Pilares da Persuasão</strong> e IA treinada, seus pacientes interessados viram agendamentos confirmados — dia e noite.
+              </p>
+            </div>
+          </motion.div>
+        </div>
 
       </div>
 

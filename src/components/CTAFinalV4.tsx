@@ -1,5 +1,6 @@
 import { motion } from 'motion/react';
 import { ArrowRight, X, Check, CheckCircle2 } from 'lucide-react';
+import strategicGrowthImg from '../assets/mockups/strategic_growth.png';
 import { waURL, CONFIG } from '../config';
 import { fadeUp, stagger, scaleIn } from '../shared/animations';
 
@@ -32,45 +33,61 @@ export function CTAFinalV4() {
         className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-[#00D1FF]/8 rounded-full blur-[100px] pointer-events-none"
       />
 
-      <div className="max-w-5xl mx-auto px-6 relative z-10">
+      <div className="max-w-6xl mx-auto px-6 relative z-10">
+        <div className="grid lg:grid-cols-2 gap-12 items-center mb-16">
+          {/* Imagem à Esquerda */}
+          <motion.div
+            initial={{ opacity: 0, x: -30, scale: 0.95 }}
+            whileInView={{ opacity: 1, x: 0, scale: 1 }}
+            viewport={{ once: true, margin: "-100px" }}
+            className="relative group"
+          >
+            <div className="absolute -inset-4 bg-[#0090FF]/10 rounded-[32px] blur-xl opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+            <img
+              src={strategicGrowthImg}
+              alt="Crescimento Estratégico"
+              className="relative rounded-2xl border border-[#E9ECEF] shadow-xl w-full h-auto"
+            />
+          </motion.div>
 
-        {/* Headline */}
-        <motion.h2
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          className="text-4xl md:text-5xl lg:text-6xl font-bold text-[#1A1A1A] mb-5 tracking-tight leading-[1.1] text-center"
-        >
-          Não trabalhamos com{' '}
-          <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#0090FF] to-[#00D1FF]">todo mundo.</span>{' '}
-          E isso é proposital.
-        </motion.h2>
+          {/* Texto à Direita */}
+          <div className="text-center lg:text-left">
+            <motion.h2
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              className="text-3xl md:text-5xl font-bold text-[#1A1A1A] mb-5 tracking-tight leading-[1.1]"
+            >
+              Não trabalhamos com{' '}
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#0090FF] to-[#00D1FF]">todo mundo.</span>{' '}
+              E isso é proposital.
+            </motion.h2>
 
-        {/* Subtítulo */}
-        <motion.p
-          initial={{ opacity: 0, y: 10 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ delay: 0.1 }}
-          className="text-lg text-[#4A4A4A] mb-8 text-center max-w-3xl mx-auto leading-relaxed"
-        >
-          Limitamos o número de clínicas que assessoramos ao mesmo tempo. Não por falta de demanda — por compromisso com o resultado.
-        </motion.p>
+            <motion.p
+              initial={{ opacity: 0, y: 10 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ delay: 0.1 }}
+              className="text-lg text-[#4A4A4A] mb-8 leading-relaxed"
+            >
+              Limitamos o número de clínicas que assessoramos ao mesmo tempo. Não por falta de demanda — por compromisso com o resultado.
+            </motion.p>
 
-        {/* 4 parágrafos de corpo */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          className="max-w-2xl mx-auto space-y-4 mb-10 text-center"
-        >
-          <p className="text-[#4A4A4A] leading-relaxed">
-            Implantamos IA, montamos o processo de vendas, configuramos o sistema de gestão, treinamos equipe e acompanhamos semana a semana. Só funciona com quem está pronto pra mudar.
-          </p>
-          <p className="text-[#4A4A4A] leading-relaxed italic">
-            Se você chegou até aqui, é provável que você seja um deles.
-          </p>
-        </motion.div>
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              className="space-y-4 mb-10"
+            >
+              <p className="text-[#4A4A4A] leading-relaxed">
+                Implantamos IA, montamos o processo de vendas, configuramos o sistema de gestão, treinamos equipe e acompanhamos semana a semana.
+              </p>
+              <p className="text-[#4A4A4A] leading-relaxed italic font-semibold">
+                Se você chegou até aqui, é provável que você esteja pronto.
+              </p>
+            </motion.div>
+          </div>
+        </div>
 
         {/* Filter lists */}
         <motion.div
