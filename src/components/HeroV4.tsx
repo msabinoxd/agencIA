@@ -1,10 +1,12 @@
 import { motion } from 'motion/react';
-import { Bot, ArrowRight, Zap, MessageSquareCode } from 'lucide-react';
+import { Bot, ArrowRight, Zap, MessageSquareCode, Play } from 'lucide-react';
+import { useState } from 'react';
 import { ScrollIndicator } from './ScrollIndicator';
 import { stagger } from '../shared/animations';
 import InteractiveChatWidget from './InteractiveChatWidget';
 
 export function HeroV4({ onOpenSimulator }: { onOpenSimulator?: () => void }) {
+  const [isPlaying, setIsPlaying] = useState(false);
   return (
     <section className="relative pt-24 pb-16 md:pt-28 md:pb-20 overflow-hidden bg-[#F8F9FA]">
       {/* Background Gradients */}
@@ -55,9 +57,52 @@ export function HeroV4({ onOpenSimulator }: { onOpenSimulator?: () => void }) {
             Até quando você vai ficar trocando de agência achando que o problema é tráfego?
           </p>
 
-          {/* Vídeo VSL Placeholder */}
-          <div className="w-full max-w-lg aspect-video bg-[#E9ECEF] rounded-2xl border-2 border-dashed border-[#C1C9D2] flex items-center justify-center text-[#888888] font-bold tracking-widest uppercase">
-            [VÍDEO VSL AQUI]
+          {/* Vídeo VSL Customizado */}
+          <div className="w-full max-w-lg aspect-video bg-[#E9ECEF] rounded-2xl border border-[#E9ECEF] shadow-[0_8px_32px_rgba(0,144,255,0.15)] flex items-center justify-center relative overflow-hidden group">
+            {!isPlaying ? (
+              <div 
+                className="absolute inset-0 w-full h-full cursor-pointer flex flex-col items-center justify-center"
+                onClick={() => setIsPlaying(true)}
+              >
+                <img 
+                  src="https://img.youtube.com/vi/exPRy-IeD7s/maxresdefault.jpg" 
+                  alt="Video Thumbnail" 
+                  className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+                />
+                <div className="absolute inset-0 bg-black/40 group-hover:bg-black/30 transition-colors duration-300" />
+                
+                {/* Botão de Play */}
+                <div className="relative z-10 w-16 h-16 sm:w-20 sm:h-20 bg-gradient-to-r from-[#0090FF] to-[#00D1FF] rounded-full flex items-center justify-center shadow-[0_4px_14px_rgba(0,144,255,0.4)] group-hover:scale-110 transition-transform duration-300">
+                  <Play className="w-8 h-8 sm:w-10 sm:h-10 text-white fill-white ml-1" />
+                </div>
+                {/* Mensagem de clique (opcional) */}
+                <span className="relative z-10 text-white font-bold mt-4 tracking-widest text-xs uppercase bg-black/50 px-3 py-1.5 rounded-full backdrop-blur-sm">
+                  Clique para assistir
+                </span>
+              </div>
+            ) : (
+              <div className="absolute inset-0 w-full h-full">
+                {/* 
+                  Parâmetros adicionados:
+                  autoplay=1: inicia automaticamente após o clique do usuário
+                  controls=1: permite pausar e escolher o progresso do vídeo
+                  rel=0: restringe vídeos sugeridos no final aos do mesmo canal
+                  modestbranding=1: tira logo grande do YouTube
+                  iv_load_policy=3: desativa anotações/cards
+                */}
+                <iframe
+                  className="w-full h-full"
+                  src="https://www.youtube-nocookie.com/embed/exPRy-IeD7s?autoplay=1&controls=1&rel=0&modestbranding=1&iv_load_policy=3&disablekb=1"
+                  title="VSL"
+                  frameBorder="0"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                  allowFullScreen
+                ></iframe>
+                
+                {/* Overlays protetores para impedir cliques em links do Youtube quando o vídeo está pausado */}
+                <div className="absolute top-0 left-0 w-full h-[60px] bg-transparent z-10" title="" />
+              </div>
+            )}
           </div>
 
           {/* CTAs */}
