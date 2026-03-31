@@ -1,0 +1,31 @@
+import tailwindcss from '@tailwindcss/vite';
+import react from '@vitejs/plugin-react';
+import path from 'path';
+import {defineConfig} from 'vite';
+
+export default defineConfig(() => {
+  return {
+    base: '/agencIA/',
+    plugins: [react(), tailwindcss()],
+    resolve: {
+      alias: {
+        '@': path.resolve(__dirname, '.'),
+      },
+    },
+    build: {
+      target: 'esnext',
+      rollupOptions: {
+        output: {
+          manualChunks: {
+            'vendor-react': ['react', 'react-dom'],
+            'vendor-motion': ['motion/react'],
+            'vendor-lucide': ['lucide-react'],
+          },
+        },
+      },
+    },
+    server: {
+      hmr: process.env.DISABLE_HMR !== 'true',
+    },
+  };
+});

@@ -1,0 +1,109 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "DM Sans", ui-sans-serif, system-ui, sans-serif;
+  --font-display: "Plus Jakarta Sans", ui-sans-serif, system-ui, sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, monospace;
+
+  --color-primary-50: #f0f9ff;
+  --color-primary-100: #e0f2fe;
+  --color-primary-200: #bae6fd;
+  --color-primary-300: #7dd3fc;
+  --color-primary-400: #38bdf8;
+  --color-primary-500: #0ea5e9;
+  --color-primary-600: #0284c7;
+  --color-primary-700: #0369a1;
+  --color-primary-800: #075985;
+  --color-primary-900: #0c4a6e;
+
+  /* Builderall Elite Design Tokens */
+  --color-accent-blue: #0090FF;
+  --color-accent-cyan: #00D1FF;
+  --color-bg-gradient: linear-gradient(135deg, #F8F9FA 0%, #FFFFFF 100%);
+  --color-surface: #FFFFFF;
+  --color-text-title: #1A1A1A;
+  --color-text-body: #4A4A4A;
+  --color-text-support: #888888;
+  --color-border: #E9ECEF;
+  --color-hover-bg: #F1F3F5;
+  --gradient-elite: linear-gradient(90deg, #0090FF 0%, #00D1FF 100%);
+  --sh: 0px 4px 20px rgba(0, 0, 0, 0.05);
+  --sh-deep: 0px 10px 40px rgba(0, 0, 0, 0.08);
+  --bezier: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+@utility glass-card {
+  @apply bg-white/70 backdrop-blur-[10px] border border-white/40 shadow-[var(--sh)];
+}
+
+@utility floating {
+  animation: floating 3s ease-in-out infinite;
+}
+
+@keyframes floating {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-10px); }
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: #F8F9FA;
+  color: #1A1A1A;
+  @apply antialiased;
+}
+
+h1,
+h2,
+h3 {
+  font-family: var(--font-display);
+}
+
+@keyframes waPulse {
+  0% {
+    box-shadow: 0 0 0 0 rgba(0, 144, 255, 0.5);
+  }
+
+  70% {
+    box-shadow: 0 0 0 15px rgba(0, 144, 255, 0);
+  }
+
+  100% {
+    box-shadow: 0 0 0 0 rgba(0, 144, 255, 0);
+  }
+}
+
+@keyframes ctaPulse {
+  0% {
+    box-shadow: 0 0 0 0 rgba(0, 144, 255, 0.4);
+  }
+
+  70% {
+    box-shadow: 0 0 0 25px rgba(0, 144, 255, 0);
+  }
+
+  100% {
+    box-shadow: 0 0 0 0 rgba(0, 144, 255, 0);
+  }
+}
+
+@keyframes shimmer {
+  100% {
+    transform: translateX(100%);
+  }
+}
+
+@keyframes bounce {
+
+  0%,
+  60%,
+  100% {
+    transform: translateY(0);
+  }
+
+  30% {
+    transform: translateY(-4px);
+  }
+}

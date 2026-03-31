@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630">
+  <defs>
+    <linearGradient id="grad" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#0090FF"/>
+      <stop offset="100%" stop-color="#00D1FF"/>
+    </linearGradient>
+  </defs>
+  <!-- Fundo -->
+  <rect width="1200" height="630" fill="#F8F9FA"/>
+  <!-- Barra gradiente lateral esquerda -->
+  <rect width="12" height="630" fill="url(#grad)"/>
+  <!-- Glow de fundo -->
+  <ellipse cx="900" cy="315" rx="400" ry="300" fill="#0090FF" opacity="0.04"/>
+  <!-- Badge "IN" -->
+  <rect x="80" y="72" width="80" height="80" rx="20" fill="url(#grad)"/>
+  <text x="120" y="125" text-anchor="middle" font-family="Arial, sans-serif" font-weight="900" font-size="32" fill="white">IN</text>
+  <!-- Nome -->
+  <text x="176" y="120" font-family="Arial, sans-serif" font-weight="900" font-size="36" fill="#1A1A1A">Intalky</text>
+  <text x="176" y="148" font-family="Arial, sans-serif" font-weight="400" font-size="18" fill="#888888">Assessoria comercial e automação com IA</text>
+  <!-- Divisor -->
+  <rect x="80" y="188" width="1040" height="1" fill="#E9ECEF"/>
+  <!-- Headline linha 1 -->
+  <text x="80" y="290" font-family="Arial, sans-serif" font-weight="900" font-size="72" fill="#1A1A1A">Agenda Cheia.</text>
+  <!-- Headline linha 2 — gradiente simulado com azul sólido -->
+  <text x="80" y="378" font-family="Arial, sans-serif" font-weight="900" font-size="72" fill="#0090FF">Zero No-Show.</text>
+  <!-- Headline linha 3 -->
+  <text x="80" y="454" font-family="Arial, sans-serif" font-weight="900" font-size="40" fill="#4A4A4A">IA que Nunca Pede Demissão.</text>
+  <!-- Subheadline -->
+  <text x="80" y="516" font-family="Arial, sans-serif" font-weight="400" font-size="26" fill="#888888">Para Clínicas Odontológicas &amp; Estéticas</text>
+  <!-- Stats -->
+  <rect x="80" y="548" width="200" height="2" fill="#E9ECEF"/>
+  <text x="80" y="590" font-family="Arial, sans-serif" font-weight="900" font-size="22" fill="#0090FF">R$50M+ em vendas  ·  4x crescimento  ·  -70% no-show</text>
+  <!-- Barra gradiente base -->
+  <rect y="610" width="1200" height="20" fill="url(#grad)"/>
+</svg>
