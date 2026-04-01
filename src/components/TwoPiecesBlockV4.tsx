@@ -53,7 +53,7 @@ export function TwoPiecesBlockV4() {
                 A Intalky AI atende, filtra e agenda em 3 seg, 24/7. Sem humor ruim, sem férias, sem rescisão.
               </p>
               <p className="text-lg text-[#0090FF] leading-relaxed font-bold bg-[#0090FF]/5 p-4 rounded-2xl border border-[#0090FF]/10">
-                Um vendedor digital que nunca dorme. Clínicas parceiras registraram <strong className="text-[#1A1A1A]">+70% em agendamentos</strong> e queda expressiva nas faltas.
+                Um vendedor digital que nunca dorme. Negócios parceiros registraram <strong className="text-[#1A1A1A]">+70% em agendamentos</strong> e queda expressiva nas faltas.
               </p>
             </div>
           </motion.div>
@@ -125,7 +125,7 @@ export function TwoPiecesBlockV4() {
                 Nenhum vendedor de software vai te contar isso.
               </p>
               <p className="text-lg text-[#4A4A4A] leading-relaxed font-medium">
-                Quando o paciente senta na cadeira, quem vende é o ser humano. Se a recepção não criar conexão nos primeiros 2 min, a venda morre antes de começar.
+                Quando o cliente senta para fechar, quem vende é o ser humano. Se o atendimento não criar conexão nos primeiros 2 min, a venda morre antes de começar.
               </p>
               <div className="border-l-4 border-red-500 pl-6 py-2">
                 <p className="text-2xl md:text-3xl text-[#1A1A1A] font-black tracking-tighter leading-tight">
@@ -145,7 +145,7 @@ export function TwoPiecesBlockV4() {
         >
           <p className="text-xl md:text-2xl text-[#4A4A4A] leading-relaxed font-medium">
             É por isso que a <strong className="text-[#0090FF]">Intalky Group</strong> não vende software. Nós construímos a máquina de vendas inteira — da primeira mensagem no WhatsApp até o{' '}
-            <strong className="text-[#1A1A1A] border-b-2 border-[#0090FF]">"sim" na cadeira.</strong>
+            <strong className="text-[#1A1A1A] border-b-2 border-[#0090FF]">"sim" no fechamento.</strong>
           </p>
         </motion.div>
 

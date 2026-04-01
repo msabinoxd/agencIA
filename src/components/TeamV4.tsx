@@ -17,25 +17,25 @@ const team = [
   {
     name: 'Danilo',
     role: 'Expert em Vendas & Persuasão',
-    description: 'Criador dos 7 Pilares da Persuasão · R$50M+ em vendas no nicho de saúde · Mentor de equipes de alta performance · OdontoCompany · Sorridents.',
+    description: 'Criador dos 7 Pilares da Persuasão · R$80M+ em vendas no setor comercial · Mentor de equipes de alta performance · Especialista em Negócios Locais.',
     image: daniloImg,
   },
   {
     name: 'Letícia',
     role: 'Atendimento Comercial',
-    description: 'Especialista em filtragem de pacientes · Treinada com os 7 Pilares da Persuasão · Atendimento de alta conversão.',
+    description: 'Especialista em filtragem de clientes · Treinada com os 7 Pilares da Persuasão · Atendimento de alta conversão.',
     image: leticiaImg,
   },
   {
     name: 'Rafaela',
     role: 'Atendimento Comercial',
-    description: 'Relacionamento comercial · Pós-venda e acompanhamento do paciente · Atendimento humanizado de alta performance.',
+    description: 'Relacionamento comercial · Pós-venda e acompanhamento do cliente · Atendimento humanizado de alta performance.',
     image: rafaelaImg,
   },
   {
     name: 'Edileuza',
     role: 'Tráfego Pago',
-    description: 'Especialista em Meta Ads & Google Ads · Menor custo por paciente e maior retorno para clínicas de saúde · Rastreamento e otimização de campanhas.',
+    description: 'Especialista em Meta Ads & Google Ads · Menor custo por cliente e maior retorno para negócios locais · Rastreamento e otimização de campanhas.',
     image: edileuzaImg,
   },
 ];

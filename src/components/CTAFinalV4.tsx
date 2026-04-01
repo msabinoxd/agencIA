@@ -5,16 +5,16 @@ import { scaleIn } from '../shared/animations';
 
 const notForYou = [
   "Você quer só \"mais um robô de WhatsApp barato\"",
-  "Sua clínica recebe menos de 30 leads por mês",
+  "Seu negócio recebe menos de 30 leads por mês",
   "Você não está disposto a estruturar processos e treinar equipe",
-  "Você quer resultado sem envolver o comercial interno da clínica",
+  "Você quer resultado sem envolver o comercial interno",
 ];
 
 const forYou = [
-  "Você investe em anúncios e sabe que perde pacientes no atendimento",
+  "Você investe em anúncios e sabe que perde clientes no atendimento",
   "Você quer previsibilidade de caixa, não depender da sorte da equipe",
   "Você entende que tecnologia + processo + pessoas = crescimento real",
-  "Você está pronto para transformar sua clínica numa operação de alta performance",
+  "Você está pronto para transformar seu negócio numa operação de alta performance",
 ];
 
 export function CTAFinalV4() {
@@ -68,13 +68,13 @@ export function CTAFinalV4() {
               </h2>
 
               <p className="text-lg md:text-xl text-[#4A4A4A] leading-relaxed font-medium">
-                Limitamos o número de clínicas que assessoramos ao mesmo tempo. Não por falta de demanda — por compromisso real com o seu resultado.
+                Limitamos o número de negócios que assessoramos ao mesmo tempo. Não por falta de demanda — por compromisso real com o seu resultado.
               </p>
 
               <div className="bg-[#1A1A1A] text-white p-8 rounded-[32px] shadow-2xl relative overflow-hidden group">
                 <div className="absolute top-0 right-0 w-32 h-32 bg-[#0090FF]/20 blur-3xl group-hover:scale-150 transition-transform duration-1000" />
                 <p className="relative z-10 text-lg leading-relaxed font-medium italic">
-                  "Se você chegou até aqui, é provável que sua clínica esteja pronta para o próximo nível."
+                  "Se você chegou até aqui, é provável que seu negócio esteja pronto para o próximo nível."
                 </p>
               </div>
             </div>
@@ -134,7 +134,7 @@ export function CTAFinalV4() {
             viewport={{ once: true }}
             className="text-3xl md:text-5xl font-black tracking-tighter leading-tight"
           >
-            <span className="text-[#1A1A1A]">Esta é a decisão mais rentável que sua clínica</span>
+            <span className="text-[#1A1A1A]">Esta é a decisão mais rentável que seu negócio</span>
             <span className="block text-transparent bg-clip-text bg-gradient-to-r from-[#0090FF] to-[#00D1FF]">pode tomar nos próximos 12 meses.</span>
           </motion.h3>
 

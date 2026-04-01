@@ -5,20 +5,20 @@ import { CONFIG } from '../config';
 
 const FAQV4s = [
   {
-    question: "Funciona para clínica odontológica?",
-    answer: "Sim, é nossa especialidade. Trabalhamos com OdontoCompany, Sorridents, Odonto Special, B Facial Clinic e Cotia Clínica, entre outras. A Intalky AI é treinada para o fluxo específico de clínicas: anúncio → lead → qualificação → agendamento de avaliação → fechamento do plano de tratamento."
+    question: "Funciona para o meu negócio local?",
+    answer: "Sim, é nossa especialidade. Trabalhamos com diversos nichos (serviços, clínicas, escritórios e autônomos). A Intalky AI é treinada para o fluxo específico de negócios locais: anúncio → lead → qualificação → agendamento de serviço → fechamento da venda."
   },
   {
-    question: "A IA vai parecer um robô e afastar meus pacientes?",
-    answer: "Não. A Intalky AI é treinada com os 7 Pilares da Persuasão de Danilo Oliveira para conversar de forma natural e empática. Ela entende contexto, intenção e até manda áudios com tom humano — seu paciente não vai perceber que é IA."
+    question: "A IA vai parecer um robô e afastar meus clientes?",
+    answer: "Não. A Intalky AI é treinada com os 7 Pilares da Persuasão de Danilo Oliveira para conversar de forma natural e empática. Ela entende contexto, intenção e até manda áudios com tom humano — seu cliente não vai perceber que é IA."
   },
   {
     question: "Qual a diferença entre Intalky Essencial e Pro?",
-    answer: "O Intalky Essencial é focado no topo do processo: a IA atende, filtra e agenda a consulta. Sua equipe assume para o fechamento. O Intalky Pro vai além: a IA gerencia o sistema de gestão completo, faz acompanhamento ativo com pacientes que não responderam, cuida do pós-venda, reativação de pacientes inativos e toda a jornada de valor. Nenhum paciente esquecido."
+    answer: "O Intalky Essencial é focado no topo do processo: a IA atende, filtra e agenda o serviço. Sua equipe assume para o fechamento. O Intalky Pro vai além: a IA gerencia o sistema de gestão completo, faz acompanhamento ativo com clientes que não responderam, cuida do pós-venda, reativação de clientes inativos e toda a jornada de valor. Nenhum cliente esquecido."
   },
   {
     question: "Como fica a supervisão? Posso confiar 100% na IA?",
-    answer: "Você tem acesso a um painel completo para acompanhar todas as conversas em tempo real. Além disso, nossa equipe supervisiona ativamente o sistema de gestão, fazemos treinamento semanal com Danilo Oliveira (simulação de atendimento, objeções, análise de resultados) e consultoria de marketing com Marcos. Suporte em horário comercial sempre disponível."
+    answer: "Você tem acesso a um painel completo para acompanhar todas as conversas em tempo real. Além disso, nossa equipe supervisiona ativamente o sistema de gestão, fazemos treinamento semanal com Danilo Oliveira (simulação de atendimento, objeções, análise de resultados) e consultoria de marketing estratégica. Suporte em horário comercial sempre disponível."
   },
   {
     question: "Funciona com meu CRM atual?",
@@ -29,16 +29,16 @@ const FAQV4s = [
     answer: "O setup, mapeamento de processos e treinamento da IA levam de 7 a 14 dias. Cuidamos de toda a parte técnica e entregamos a solução pronta, testada e integrada ao seu ecossistema."
   },
   {
-    question: "Como a IA reduz as faltas dos pacientes?",
-    answer: "A Intalky AI dispara uma sequência de confirmação 24h antes da consulta — mensagem de texto + áudio humanizado com a voz do assistente. Se o paciente não responder, a IA reengaja ativamente com uma nova mensagem personalizada. Se ainda não houver resposta, o sistema alerta sua equipe para ligação manual. Com esse processo, nossas clínicas parceiras registram redução média de 70% nas faltas."
+    question: "Como a IA reduz as faltas dos clientes?",
+    answer: "A Intalky AI dispara uma sequência de confirmação 24h antes do serviço — mensagem de texto + áudio humanizado com a voz do assistente. Se o cliente não responder, a IA reengaja ativamente com uma nova mensagem personalizada. Se ainda não houver resposta, o sistema alerta sua equipe para ligação manual. Com esse processo, nossas empresas parceiras registram redução média de 70% nas faltas."
   },
   {
     question: "A IA substitui minha equipe de atendimento?",
-    answer: "Não substitui — complementa de forma estratégica. A IA cuida do volume 24/7: atende todos os contatos, filtra, agenda e faz acompanhamento. Seus atendentes humanos focam nos pacientes de maior valor e nos fechamentos complexos, onde o toque humano importa. E o melhor: quando um atendente sai (e eles saem), a metodologia dos 7 Pilares da Persuasão continua operando na IA. Sem tempo de adaptação. Sem risco."
+    answer: "Não substitui — complementa de forma estratégica. A IA cuida do volume 24/7: atende todos os contatos, filtra, agenda e faz acompanhamento. Seus atendentes humanos focam nos clientes de maior valor e nos fechamentos complexos, onde o toque humano importa. E o melhor: quando um atendente sai (e eles saem), a metodologia dos 7 Pilares da Persuasão continua operando na IA. Sem tempo de adaptação. Sem risco."
   },
   {
     question: "Qual o investimento?",
-    answer: "Varia de acordo com o plano (Essencial ou Pro) e o volume de leads da sua clínica. Agende uma conversa de 20 minutos — calculamos o ROI do seu negócio na hora e apresentamos uma proposta personalizada sem compromisso."
+    answer: "Varia de acordo com o plano (Essencial ou Pro) e o volume de leads do seu negócio. Agende uma conversa de 20 minutos — calculamos o ROI do seu negócio na hora e apresentamos uma proposta personalizada sem compromisso."
   }
 ];
 

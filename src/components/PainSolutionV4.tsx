@@ -60,7 +60,7 @@ export function PainSolutionV4() {
 
               <p className="text-lg md:text-xl text-[#4A4A4A] leading-relaxed font-medium">
                 <strong className="text-[#1A1A1A]">78% das vendas</strong> vão para quem responde primeiro. Com o método dos{' '}
-                <strong className="text-[#0090FF]">7 Pilares da Persuasão</strong> e IA treinada, seus pacientes interessados viram agendamentos confirmados — dia e noite.
+                <strong className="text-[#0090FF]">7 Pilares da Persuasão</strong> e IA treinada, seus clientes interessados viram agendamentos confirmados — dia e noite.
               </p>
 
               <div className="pt-4">

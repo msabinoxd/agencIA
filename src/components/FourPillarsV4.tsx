@@ -12,7 +12,7 @@ import 'swiper/css/pagination';
 const targetAudience = [
   {
     icon: Users,
-    title: 'Clínicas e Consultórios',
+    title: 'Negócios e Clínicas de Elite',
     desc: 'Que recebem muitas mensagens no WhatsApp, mas não conseguem dar conta de responder todo mundo com agilidade.',
     color: '#0090FF',
     rotation: -8,
@@ -20,7 +20,7 @@ const targetAudience = [
   },
   {
     icon: Zap,
-    title: 'Gestores de Saúde',
+    title: 'Gestores Comerciais',
     desc: 'Que buscam escalar o atendimento sem precisar contratar dezenas de secretárias e manter a qualidade 24/7.',
     color: '#00D1FF',
     rotation: -3,
@@ -28,15 +28,15 @@ const targetAudience = [
   },
   {
     icon: UserCircle,
-    title: 'Médicos e Especialistas',
-    desc: 'Que querem um processo de triagem inteligente para filtrar pacientes qualificados antes de chegarem ao agendamento.',
+    title: 'Profissionais e Especialistas',
+    desc: 'Que querem um processo de triagem inteligente para filtrar clientes qualificados antes de chegarem ao agendamento.',
     color: '#0090FF',
     rotation: 4,
     y: 10
   },
   {
     icon: Filter,
-    title: 'Empresas de Saúde',
+    title: 'Empresas de Serviços',
     desc: 'Que já rodam anúncios de tráfego pago, mas percebem que o gargalo da conversão está na demora do atendimento humano.',
     color: '#00D1FF',
     rotation: 9,
@@ -145,10 +145,10 @@ export function FourPillarsV4() {
         {/* Bottom Question */}
         <div className="mt-8 text-center max-w-3xl mx-auto border-t border-[#E9ECEF] pt-8">
           <h3 className="text-2xl md:text-3xl font-black text-[#1A1A1A] mb-6 italic">
-            "Eu nunca tive uma IA atendendo meus pacientes, é para mim?"
+            "Eu nunca tive uma IA atendendo meus clientes, é para mim?"
           </h3>
           <p className="text-lg text-[#4A4A4A] leading-relaxed">
-            Sim, e você terá nossa assessoria para configurar do jeito certo desde o início, sem erros e com a inteligência necessária para converter curiosos em pacientes reais.
+            Sim, e você terá nossa assessoria para configurar do jeito certo desde o início, sem erros e com a inteligência necessária para converter curiosos em clientes reais.
           </p>
         </div>
       </div>

@@ -19,9 +19,9 @@ const testimonials = [
   },
   {
     name: "Diretor Comercial",
-    role: "Clínica de Saúde",
-    content: "O anúncio sempre funcionou, mas o atendimento era o gargalo. Com a IA filtrando em 3 segundos e o Danilo treinando nosso time toda semana, o custo por paciente caiu e o fechamento explodiu.",
-    results: "-60% no custo por paciente",
+    role: "Negócio de Serviços",
+    content: "O anúncio sempre funcionou, mas o atendimento era o gargalo. Com a IA filtrando em 3 segundos e o Danilo treinando nosso time toda semana, o custo por cliente caiu e o fechamento explodiu.",
+    results: "-60% no custo por cliente",
     image: "https://i.pravatar.cc/150?img=33"
   }
 ];
@@ -37,7 +37,7 @@ export function SocialProofV4() {
             viewport={{ once: true }}
             className="text-3xl md:text-5xl font-bold text-[#1A1A1A] mb-6 tracking-tight"
           >
-            R$ 50M+ em vendas gerados. <br />
+            R$ 80M+ em vendas gerados. <br />
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#0090FF] to-[#00D1FF]">Cases reais.</span>
           </motion.h2>
           <motion.p
@@ -47,7 +47,7 @@ export function SocialProofV4() {
             transition={{ delay: 0.1 }}
             className="text-lg text-[#4A4A4A]"
           >
-            Resultados validados em grandes redes como OdontoCompany, Sorridents e Odonto Special.
+            Resultados validados em diversas redes de negócios locais e clínicas de elite.
           </motion.p>
         </div>
 

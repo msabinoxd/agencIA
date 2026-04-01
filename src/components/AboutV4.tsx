@@ -7,7 +7,7 @@ const values = [
   {
     icon: Target,
     title: "Método Validado",
-    desc: "Testados em OdontoCompany, Sorridents e Cotia Clínica. R$80M+ em resultados reais."
+    desc: "Testado em diversos negócios locais e clínicas de elite. R$80M+ em resultados reais."
   },
   {
     icon: Lightbulb,
@@ -95,7 +95,7 @@ export function AboutV4() {
               </motion.h2>
               
               <motion.p variants={fadeUp} className="text-lg md:text-xl text-[#4A4A4A] leading-relaxed font-medium">
-                <strong className="text-[#1A1A1A]">Danilo Oliveira</strong> (R$80M+ em vendas no nicho de saúde) + <strong className="text-[#1A1A1A]">Marcos</strong> (Full Stack Marketer, 10+ anos em performance). A venda como consequência inevitável.
+                <strong className="text-[#1A1A1A]">Danilo Oliveira</strong> (R$80M+ em vendas no setor comercial) + <strong className="text-[#1A1A1A]">Marcos</strong> (Full Stack Marketer, 10+ anos em performance). A venda como consequência inevitável.
               </motion.p>
             </div>
 

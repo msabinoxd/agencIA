@@ -7,7 +7,7 @@ const features = [
   {
     icon: <Zap className="w-6 h-6 text-[#0090FF]" />,
     title: "1. Tráfego Pago Estratégico",
-    description: "Anúncios calibrados para o perfil ideal da sua clínica. Cada real rastreado até o fechamento.",
+    description: "Anúncios calibrados para o perfil ideal do seu negócio. Cada real rastreado até o fechamento.",
     metric: "Retorno médio: 8x",
     image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?q=80&w=800&auto=format&fit=crop"
   },
@@ -28,7 +28,7 @@ const features = [
   {
     icon: <ShieldCheck className="w-6 h-6 text-[#0090FF]" />,
     title: "4. Intalky Pro",
-    description: "Acompanhamento, pós-venda e reativação de pacientes inativos. Sistema de gestão completo no automático.",
+    description: "Acompanhamento, pós-venda e reativação de clientes inativos. Sistema de gestão completo no automático.",
     metric: "Acompanhamento: automático",
     image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=800&auto=format&fit=crop"
   },

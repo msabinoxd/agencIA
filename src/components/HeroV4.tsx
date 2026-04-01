@@ -37,7 +37,7 @@ export function HeroV4({ onOpenSimulator }: { onOpenSimulator?: () => void }) {
         >
           <span className="flex h-2 w-2 rounded-full bg-[#0090FF] animate-pulse"></span>
           <span className="text-[10px] sm:text-xs font-bold text-[#4A4A4A] uppercase tracking-widest">
-            Ecossistema Comercial para Clínicas de Elite
+            Ecossistema Comercial para Negócios Locais e Autônomos
           </span>
         </motion.div>
 
@@ -48,8 +48,8 @@ export function HeroV4({ onOpenSimulator }: { onOpenSimulator?: () => void }) {
           initial="hidden"
           animate="visible"
         >
-          {["Toda", "semana", "você", "perde", "pacientes", "que", "já", "demonstraram", "interesse."].map((word, i) => {
-            const isHighlight = word === 'perde' || word === 'pacientes';
+          {["Toda", "semana", "você", "perde", "clientes", "que", "já", "demonstraram", "interesse."].map((word, i) => {
+            const isHighlight = word === 'perde' || word === 'clientes';
             return (
               <motion.span
                 key={i}
@@ -209,7 +209,7 @@ export function HeroV4({ onOpenSimulator }: { onOpenSimulator?: () => void }) {
             <span className="text-[10px] font-black text-[#888888] uppercase tracking-[0.2em] mt-2">Ticket Médio</span>
           </div>
           <div className="flex flex-col items-center">
-            <span className="text-4xl lg:text-5xl font-black text-red-500 italic tracking-tighter">
+            <span className="text-4xl lg:text-5xl font-black text-[#0090FF] italic tracking-tighter">
               <Counter value={70} prefix="-" suffix="%" />
             </span>
             <span className="text-[10px] font-black text-[#888888] uppercase tracking-[0.2em] mt-2">Não Comparecimento</span>

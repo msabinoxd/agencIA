@@ -1,4 +1,4 @@
-import { useState, useRef } from 'react';
+import { useState, useRef, MouseEvent } from 'react';
 import { motion, AnimatePresence } from 'motion/react';
 import {
   Megaphone,
@@ -102,7 +102,7 @@ export function CustomerJourney() {
   const containerRef = useRef<HTMLDivElement>(null);
   const [mousePos, setMousePos] = useState({ x: 0, y: 0 });
 
-  const handleMouseMove = (e: React.MouseEvent) => {
+  const handleMouseMove = (e: MouseEvent) => {
     if (!containerRef.current) return;
     const rect = containerRef.current.getBoundingClientRect();
     setMousePos({

@@ -13,7 +13,9 @@ export const CONFIG = {
     name:    "Intalky",
     tagline: "Assessoria comercial e automação",
   },
+  funnelWebhookUrl: "https://hook.us1.make.com/placeholder-webhook-url", // TODO: Substituir pelo URL real do Make/N8N
 };
+
 
 export const waURL = (msg = CONFIG.wa.msgHero) =>
   `https://wa.me/${CONFIG.wa.phone}?text=${encodeURIComponent(msg)}`;

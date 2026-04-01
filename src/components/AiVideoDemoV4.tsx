@@ -35,7 +35,7 @@ const workflowCards = [
   {
     id: 'calendar', icon: Calendar, title: 'Agendamentos',
     badge: 'Agenda Inteligente',
-    description: 'Confirmação de consultas e marcação direto na agenda da clínica. Zero faltas.',
+    description: 'Confirmação de serviços e marcação direto na sua agenda. Zero faltas.',
     textColor: 'text-[#1A1A1A]', iconHover: 'group-hover:text-[#0090FF]',
     bgGlow: 'bg-[#0090FF]/20', gradient: 'from-[#0090FF]/5 to-transparent',
     borderHover: 'hover:border-[#0090FF]/30', glow: 'hover:shadow-[0_8px_24px_rgba(0,144,255,0.15)]'
@@ -43,11 +43,11 @@ const workflowCards = [
 ];
 
 const tasks = [
-  'Lead capturado do anúncio de Invisalign',
+  'Lead capturado do seu anúncio',
   'Qualificando: queixa, urgência e verba',
-  'Consulta agendada na agenda da clínica',
+  'Agendado diretamente na sua agenda',
   'Confirmação enviada 24h antes (áudio)',
-  'Paciente confirmou presença ✅'
+  'Cliente confirmou presença ✅'
 ];
 
 
@@ -86,11 +86,11 @@ export function AiVideoDemoV4() {
                 Dois Planos. Um Resultado.
               </div>
               <h2 className="text-3xl md:text-5xl font-bold text-[#1A1A1A] mb-6 tracking-tight leading-tight">
-                Da captação à confirmação de consulta.{' '}
+                Da captação à confirmação do serviço.{' '}
                 <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#0090FF] to-[#00D1FF]">Sem faltas. Sem depender de SDR.</span>
               </h2>
               <p className="text-lg text-[#4A4A4A] leading-relaxed">
-                Veja como a Intalky AI qualifica o lead, agenda a consulta e ainda confirma a presença — <strong className="text-[#1A1A1A]">tudo automaticamente</strong>.
+                Veja como a Intalky AI qualifica o lead, agenda o serviço e ainda confirma a presença — <strong className="text-[#1A1A1A]">tudo automaticamente</strong>.
               </p>
             </div>
 

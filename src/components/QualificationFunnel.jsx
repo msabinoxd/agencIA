@@ -1,6 +1,8 @@
 import { useState } from 'react'
 import { motion, AnimatePresence } from 'motion/react'
 import { useNavigate } from 'react-router-dom'
+import { CONFIG } from '../config'
+
 
 // ─── PERGUNTAS ────────────────────────────────────────────────────────────────
 const STEPS = [
@@ -9,7 +11,7 @@ const STEPS = [
   {
     id: 'sensacao',
     type: 'choice',
-    question: 'Seja honesto: quando você pensa no atendimento de leads da sua clínica hoje, qual é a sensação mais frequente?',
+    question: 'Seja honesto: quando você pensa no atendimento de leads do seu negócio hoje, qual é a sensação mais frequente?',
     subtitle: 'Não existe resposta errada. Queremos entender o ponto de partida.',
     options: [
       {
@@ -43,7 +45,7 @@ const STEPS = [
   {
     id: 'leads_perdidos',
     type: 'choice',
-    question: 'Pense no último mês. Quantos leads chegaram e não viraram pacientes — por qualquer razão?',
+    question: 'Pense no último mês. Quantos leads chegaram e não viraram clientes — por qualquer razão?',
     subtitle: 'Não respondeu rápido, sumiu, não fechou na avaliação. Some tudo.',
     options: [
       {
@@ -67,7 +69,7 @@ const STEPS = [
       {
         icon: '🚨',
         label: 'Mais de 60 leads perdidos',
-        sublabel: 'É a maior sangria da clínica hoje',
+        sublabel: 'É a maior sangria do negócio hoje',
         value: 'mais_60',
       },
     ],
@@ -77,7 +79,7 @@ const STEPS = [
   {
     id: 'onde_morre',
     type: 'choice',
-    question: 'Onde a venda costuma morrer na sua clínica? Seja específico.',
+    question: 'Onde a venda costuma morrer no seu negócio? Seja específico.',
     subtitle: 'Isso vai definir onde começamos a implementação.',
     options: [
       {
@@ -100,8 +102,8 @@ const STEPS = [
       },
       {
         icon: '💸',
-        label: 'Na avaliação',
-        sublabel: 'O paciente chegou mas não fechou o tratamento',
+        label: 'No fechamento',
+        sublabel: 'O cliente chegou mas não fechou a venda',
         value: 'avaliacao',
       },
     ],
@@ -145,7 +147,7 @@ const STEPS = [
   {
     id: 'volume_leads',
     type: 'choice',
-    question: 'Quantos novos leads entram na sua clínica por mês, em média?',
+    question: 'Quantos novos leads entram no seu negócio por mês, em média?',
     subtitle: 'Considere todas as fontes: tráfego pago, orgânico, indicações.',
     options: [
       {
@@ -180,7 +182,7 @@ const STEPS = [
   {
     id: 'equipe',
     type: 'choice',
-    question: 'Além de você, tem alguém responsável pelo atendimento ou vendas na clínica hoje?',
+    question: 'Além de você, tem alguém responsável pelo atendimento ou vendas hoje?',
     subtitle: 'Não perguntamos quantidade — perguntamos sobre a qualidade da operação.',
     options: [
       {
@@ -214,7 +216,7 @@ const STEPS = [
   {
     id: 'urgencia',
     type: 'choice',
-    question: 'O que vai acontecer com sua clínica se você não resolver isso nos próximos 6 meses?',
+    question: 'O que vai acontecer com seu negócio se você não resolver isso nos próximos 6 meses?',
     subtitle: 'Seja realista. Essa resposta define como priorizamos sua implementação.',
     options: [
       {
@@ -238,7 +240,7 @@ const STEPS = [
       {
         icon: '🔥',
         label: 'Não consigo escalar sem resolver isso',
-        sublabel: 'É o principal bloqueio do crescimento da clínica',
+        sublabel: 'É o principal bloqueio do crescimento do negócio',
         value: 'bloqueio_urgente',
       },
     ],
@@ -248,7 +250,7 @@ const STEPS = [
   {
     id: 'contato',
     type: 'contact',
-    question: 'Sua clínica tem o perfil que buscamos.',
+    question: 'Seu negócio tem o perfil que buscamos.',
     subtitle: 'Preencha seus dados. Nossa equipe entra em contato em até 24 horas úteis para uma sessão estratégica gratuita.',
   },
 ]
@@ -270,7 +272,7 @@ export default function QualificationFunnel() {
   const [selected, setSelected]   = useState(null)
   const [disqualified, setDisq]   = useState(null)
   const [direction, setDirection] = useState(1)
-  const [contact, setContact]     = useState({ nome: '', clinica: '', whatsapp: '' })
+  const [contact, setContact]     = useState({ nome: '', negocio: '', whatsapp: '' })
   const [submitting, setSubmitting] = useState(false)
 
   const current   = STEPS[step]
@@ -279,20 +281,23 @@ export default function QualificationFunnel() {
 
   // ── Selecionar opção ────────────────────────────────────────────────────────
   function pick(opt) {
+    if (selected) return // Evita múltiplos cliques rápidos
+    
     setSelected(opt.value)
     setTimeout(() => {
       if (opt.disqualify) {
         setDisq(opt.value)
         return
       }
-      const next = { ...answers, [current.id]: opt.value }
-      setAnswers(next)
+      
+      setAnswers(prev => ({ ...prev, [current.id]: opt.value }))
+      
       if (step < total - 1) {
         setDirection(1)
         setStep(s => s + 1)
         setSelected(null)
       }
-    }, 380)
+    }, 400)
   }
 
   // ── Voltar ──────────────────────────────────────────────────────────────────
@@ -307,27 +312,37 @@ export default function QualificationFunnel() {
   // ── Enviar ──────────────────────────────────────────────────────────────────
   async function submit(e) {
     e.preventDefault()
+    if (submitting) return
     setSubmitting(true)
 
-    const payload = {
-      ...answers,
-      ...contact,
-      score: calcScore(answers),
-      timestamp: new Date().toISOString(),
-      origem: window.location.href,
+    try {
+      const payload = {
+        ...answers,
+        ...contact,
+        score: calcScore(answers),
+        timestamp: new Date().toISOString(),
+        origem: window.location.href,
+        projeto: CONFIG.brand.name
+      }
+
+      // Envia para o webhook configurado
+      await fetch(CONFIG.funnelWebhookUrl, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(payload),
+      })
+
+      console.log('Lead qualificado e enviado:', payload)
+      await new Promise(r => setTimeout(r, 800))
+      navigate('/obrigado')
+    } catch (error) {
+      console.error('Erro ao enviar aplicação:', error)
+      // Mesmo em erro, vamos para a página de obrigado para não frustrar o lead,
+      // mas o ideal seria salvar localmente ou tentar de novo.
+      navigate('/obrigado')
+    } finally {
+      setSubmitting(false)
     }
-
-    // TODO: substituir pela URL do webhook (Make, N8N, Zapier, etc.)
-    // await fetch('https://hook.make.com/SEU_WEBHOOK', {
-    //   method: 'POST',
-    //   headers: { 'Content-Type': 'application/json' },
-    //   body: JSON.stringify(payload),
-    // })
-
-    console.log('Lead qualificado:', payload)
-    await new Promise(r => setTimeout(r, 1200))
-    setSubmitting(false)
-    navigate('/obrigado')
   }
 
   // ── Score automático para o vendedor ────────────────────────────────────────
@@ -386,7 +401,7 @@ export default function QualificationFunnel() {
             <span className="text-[#0090FF]">E isso é proposital.</span>
           </h2>
           <p className="text-[#6B7280] text-base max-w-lg mx-auto">
-            Responda as perguntas abaixo para descobrir se sua clínica tem
+            Responda as perguntas abaixo para descobrir se seu negócio tem
             o perfil para o ecossistema Intalky.
           </p>
         </div>
@@ -497,14 +512,14 @@ export default function QualificationFunnel() {
                     </div>
                     <div>
                       <label className="block text-sm font-medium text-[#374151] mb-1.5">
-                        Nome da clínica
+                        Nome da empresa/negócio
                       </label>
                       <input
                         type="text"
                         required
-                        placeholder="Clínica Exemplo"
-                        value={contact.clinica}
-                        onChange={e => setContact(c => ({ ...c, clinica: e.target.value }))}
+                        placeholder="Empresa Exemplo"
+                        value={contact.negocio}
+                        onChange={e => setContact(c => ({ ...c, negocio: e.target.value }))}
                         className="w-full px-4 py-3 rounded-xl border border-[#E9ECEF] bg-[#F8F9FA] text-[#1A1A1A] text-sm placeholder:text-[#C1C9D2] focus:outline-none focus:border-[#0090FF] focus:bg-white transition-colors"
                       />
                     </div>
@@ -524,7 +539,7 @@ export default function QualificationFunnel() {
 
                     <button
                       type="submit"
-                      disabled={submitting || !contact.nome || !contact.clinica || !contact.whatsapp}
+                      disabled={submitting || !contact.nome || !contact.negocio || !contact.whatsapp}
                       className="mt-1 w-full py-4 rounded-xl bg-[#0090FF] text-white font-semibold text-sm transition-all duration-200 hover:bg-[#007EE0] active:scale-[0.98] disabled:opacity-40 disabled:cursor-not-allowed flex items-center justify-center gap-2"
                     >
                       {submitting ? (
