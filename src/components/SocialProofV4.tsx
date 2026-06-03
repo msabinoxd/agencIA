@@ -29,7 +29,7 @@ const testimonials = [
 export function SocialProofV4() {
   return (
     <section id="depoimentos" className="py-12 md:py-16 bg-white relative overflow-hidden">
-      <div className="max-w-7xl mx-auto px-6 relative z-10">
+      <div className="section-container">
         <div className="text-center max-w-3xl mx-auto mb-10">
           <motion.h2
             initial={{ opacity: 0, y: 20 }}

@@ -36,6 +36,28 @@
   @apply bg-white/70 backdrop-blur-[10px] border border-white/40 shadow-[var(--sh)];
 }
 
+/* ── Layout centralization utilities ─────────────────────────────────────── */
+
+@utility section-container {
+  @apply max-w-7xl mx-auto px-6 relative z-10;
+}
+
+@utility section-header {
+  @apply text-center max-w-3xl mx-auto mb-12;
+}
+
+@utility section-badge {
+  @apply inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white border border-[#E9ECEF] shadow-[var(--sh)] mb-6;
+}
+
+@utility section-title {
+  @apply text-4xl md:text-5xl font-black text-[#1A1A1A] tracking-tight;
+}
+
+@utility section-subtitle {
+  @apply text-lg text-[#4A4A4A] leading-relaxed;
+}
+
 @utility floating {
   animation: floating 3s ease-in-out infinite;
 }

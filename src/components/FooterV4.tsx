@@ -1,4 +1,4 @@
-ï»¿import { useState } from 'react';
+import { useState } from 'react';
 import { CONFIG } from '../config';
 import { PrivacyPolicy } from './PrivacyPolicy';
 
@@ -14,7 +14,7 @@ export function FooterV4() {
               <span className="text-white text-[10px] font-black">IN</span>
             </div>
             <span className="text-[#888888] text-sm">
-              Â© {new Date().getFullYear()} {CONFIG.brand.name}. Todos os direitos reservados.
+              © {new Date().getFullYear()} {CONFIG.brand.name}. Todos os direitos reservados.
             </span>
           </div>
 
@@ -23,7 +23,7 @@ export function FooterV4() {
               onClick={() => setShowPrivacy(true)}
               className="text-[#888888] hover:text-white transition-colors"
             >
-              PolÃ­tica de Privacidade
+              Política de Privacidade
             </button>
             <button
               onClick={() => setShowPrivacy(true)}

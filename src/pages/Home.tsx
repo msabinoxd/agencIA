@@ -1,1 +1,1 @@
-export { default as Home } from '../App';
+export { HomeV4 as Home } from './HomeV4';

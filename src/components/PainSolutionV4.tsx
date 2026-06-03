@@ -9,7 +9,7 @@ export function PainSolutionV4() {
     <section className="relative py-20 md:py-32 overflow-hidden bg-[var(--color-bg-gradient)]">
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[700px] h-[700px] bg-red-500/5 rounded-full blur-[120px] pointer-events-none" />
 
-      <div className="max-w-7xl mx-auto px-6 relative z-10">
+      <div className="section-container">
         <div className="grid lg:grid-cols-2 gap-16 lg:gap-24 items-center">
           
           {/* Imagem à Esquerda com Card SaaS */}

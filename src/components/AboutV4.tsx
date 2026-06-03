@@ -26,7 +26,7 @@ export function AboutV4() {
     <section id="sobre" className="py-24 md:py-32 bg-[#F8F9FA] relative overflow-hidden border-t border-[#E9ECEF]">
       <div className="absolute left-0 top-1/2 -translate-y-1/2 w-[500px] h-[500px] bg-[#0090FF]/5 rounded-full blur-[120px] pointer-events-none" />
 
-      <div className="max-w-7xl mx-auto px-6 relative z-10">
+      <div className="section-container">
         <div className="grid lg:grid-cols-2 gap-16 lg:gap-24 items-center">
 
           {/* Visual Side (Left on Desktop) */}

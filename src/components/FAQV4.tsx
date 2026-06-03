@@ -59,7 +59,7 @@ export function FAQV4() {
       {/* Background Glow */}
       <div className="absolute top-1/2 right-0 w-[600px] h-[600px] bg-[#0090FF]/5 rounded-full blur-[120px] pointer-events-none translate-x-1/2 -translate-y-1/2" />
 
-      <div className="max-w-7xl mx-auto px-6 relative z-10">
+      <div className="section-container">
 
         <div className="mb-20 text-center lg:text-left">
           <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white border border-[#E9ECEF] text-[#0090FF] text-[10px] font-black uppercase tracking-widest shadow-sm mb-8">

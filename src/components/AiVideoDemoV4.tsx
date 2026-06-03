@@ -69,7 +69,7 @@ export function AiVideoDemoV4() {
     <section className="py-16 md:py-20 bg-white relative overflow-hidden">
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-[#0090FF]/5 rounded-full blur-[120px] pointer-events-none" />
 
-      <div className="max-w-7xl mx-auto px-6 relative z-10">
+      <div className="section-container">
         <div className="grid lg:grid-cols-2 gap-16 items-center">
 
           {/* Text Content */}
